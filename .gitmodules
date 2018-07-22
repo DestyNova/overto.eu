@@ -1,3 +1,6 @@
 [submodule "themes/darksimplicity"]
 	path = themes/darksimplicity
 	url = git@github.com:kritoke/darksimplicity.git
+[submodule "themes/kiera"]
+	path = themes/kiera
+	url = https://github.com/avianto/hugo-kiera.git

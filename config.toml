@@ -1,7 +1,21 @@
 baseURL = "https://overto.eu/"
 languageCode = "en-ie"
 title = "Over to you"
-theme = "darksimplicity"
+theme = "kiera"
 
-[taxonomies]
-tag = "tags"
+pygmentsCodeFences = true
+disqusShortname = "exolon"
+
+[author]
+  name = "Oisín"
+  github = "DestyNova"
+
+[[menu.main]]
+  identifier = "music"
+  name = "Music"
+  url = "/categories/music"
+
+[[menu.main]]
+  identifier = "code"
+  name = "Code"
+  url = "/software"
