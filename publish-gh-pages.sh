@@ -25,4 +25,4 @@ hugo
 
 echo "Updating gh-pages branch"
 cp CNAME public
-cd public && git add --all && git commit -m "Publishing to gh-pages (publish-gh-pages.sh)" && cd .. && git push origin gh-pages
+cd public && git add --all && git commit -m "Publishing to gh-pages (publish-gh-pages.sh)" && cd .. && git push --force origin gh-pages
