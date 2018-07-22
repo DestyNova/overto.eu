@@ -16,6 +16,6 @@ disqusShortname = "exolon"
   url = "/categories/music"
 
 [[menu.main]]
-  identifier = "code"
-  name = "Code"
+  identifier = "software"
+  name = "Software"
   url = "/software"
