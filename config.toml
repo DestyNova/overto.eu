@@ -4,7 +4,6 @@ title = "Over to you"
 theme = "kiera"
 
 pygmentsCodeFences = true
-disqusShortname = "exolon"
 
 [author]
   name = "Oisín"
