@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Music on Over to you</title>
+    <link>https://overto.eu/tags/music/</link>
+    <description>Recent content in Music on Over to you</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-ie</language>
+    <lastBuildDate>Sun, 22 Jul 2018 18:07:44 +0100</lastBuildDate>
+    
+	<atom:link href="https://overto.eu/tags/music/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Jazz chords from Paul Barton&#39;s &#34;Piano Sounds Never Heard Before!&#34;</title>
+      <link>https://overto.eu/posts/barton-piano-sounds-chords/</link>
+      <pubDate>Sun, 22 Jul 2018 18:07:44 +0100</pubDate>
+      
+      <guid>https://overto.eu/posts/barton-piano-sounds-chords/</guid>
+      <description>There&amp;#8217;s a really nice sequence of jazzy chords in Paul Barton&amp;#8217;s YouTube video &#34;Piano Sounds Never Heard Before!&#34; at the 7:44 mark:
+    I really liked the chord progression and tried to transcribe it. You can find it here.
+ </description>
+    </item>
+    
+  </channel>
+</rss>

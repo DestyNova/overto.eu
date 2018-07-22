@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Over to you</title>
+    <link>https://overto.eu/</link>
+    <description>Recent content on Over to you</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-ie</language>
+    <lastBuildDate>Sun, 22 Jul 2018 20:06:08 +0100</lastBuildDate>
+    
+	<atom:link href="https://overto.eu/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Software</title>
+      <link>https://overto.eu/software/</link>
+      <pubDate>Sun, 22 Jul 2018 20:06:08 +0100</pubDate>
+      
+      <guid>https://overto.eu/software/</guid>
+      <description>Some software I&amp;#8217;ve written and released as open-source:
+   The Iconic Memory Game (source)&amp;#8201;&amp;#8212;&amp;#8201;a memory game based on the tachistoscope experiments by George Sperling in the 1960s which sought to characterise the visual short-term memory system. Implemented in Elm.
+  Blinkenwords (source)&amp;#8201;&amp;#8212;&amp;#8201;a minimalist rapid serial visual presentation (RSVP) reading utility. Implemented in Elm.
+   </description>
+    </item>
+    
+    <item>
+      <title>Jazz chords from Paul Barton&#39;s &#34;Piano Sounds Never Heard Before!&#34;</title>
+      <link>https://overto.eu/posts/barton-piano-sounds-chords/</link>
+      <pubDate>Sun, 22 Jul 2018 18:07:44 +0100</pubDate>
+      
+      <guid>https://overto.eu/posts/barton-piano-sounds-chords/</guid>
+      <description>There&amp;#8217;s a really nice sequence of jazzy chords in Paul Barton&amp;#8217;s YouTube video &#34;Piano Sounds Never Heard Before!&#34; at the 7:44 mark:
+    I really liked the chord progression and tried to transcribe it. You can find it here.
+ </description>
+    </item>
+    
+  </channel>
+</rss>
