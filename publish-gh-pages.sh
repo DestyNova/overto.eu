@@ -2,14 +2,6 @@
 
 set -euo pipefail
 
-DIR=$(dirname "$0")
-
-cd $DIR/..
-
-echo "Now in: $(pwd)"
-
-wat
-
 if [[ $(git status -s) ]]
 then
     echo "The working directory is dirty. Please commit any pending changes."
