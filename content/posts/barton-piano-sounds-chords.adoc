@@ -1,0 +1,9 @@
+---
+title: "Jazz chords from Paul Barton's \"Piano Sounds Never Heard Before!\""
+date: 2018-07-22T18:07:44+01:00
+draft: true
+---
+
+There's a really nice sequence of jazzy chords in Paul Barton's YouTube video ...
+
+I really liked the chord progression and tried to transcribe it. You can find it https://overto.eu/static/Mystery_Jazz_Progression__Paul_Barton.pdf[here].
