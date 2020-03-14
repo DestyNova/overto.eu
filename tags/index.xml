@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Over to you</title>
@@ -12,7 +12,7 @@
     
     
     <item>
-      <title>Music</title>
+      <title>music</title>
       <link>https://overto.eu/tags/music/</link>
       <pubDate>Tue, 24 Jul 2018 22:17:52 +0100</pubDate>
       
@@ -21,7 +21,7 @@
     </item>
     
     <item>
-      <title>Transcription</title>
+      <title>transcription</title>
       <link>https://overto.eu/tags/transcription/</link>
       <pubDate>Tue, 24 Jul 2018 22:17:52 +0100</pubDate>
       
