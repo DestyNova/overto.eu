@@ -3,6 +3,16 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://overto.eu/</loc>
+    <lastmod>2020-03-14T21:33:00+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://overto.eu/software/</loc>
+    <lastmod>2020-03-14T21:33:00+01:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://overto.eu/categories/</loc>
     <lastmod>2018-07-24T22:17:52+01:00</lastmod>
   </url>
@@ -35,16 +45,6 @@
   <url>
     <loc>https://overto.eu/tags/transcription/</loc>
     <lastmod>2018-07-24T22:17:52+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://overto.eu/</loc>
-    <lastmod>2018-07-22T20:06:08+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://overto.eu/software/</loc>
-    <lastmod>2018-07-22T20:06:08+01:00</lastmod>
   </url>
   
   <url>
