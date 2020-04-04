@@ -3,11 +3,18 @@ languageCode = "en-ie"
 title = "Over to you"
 theme = "kiera"
 
-pygmentsCodeFences = true
+pygmentsCodefences = true
+pygmentsCodefencesGuessSyntax = true
+pygmentsStyle = "dracula"
 
 [author]
   name = "Oisín"
   github = "DestyNova"
+
+[[menu.main]]
+  identifier = "tech"
+  name = "Tech"
+  url = "/categories/tech"
 
 [[menu.main]]
   identifier = "music"

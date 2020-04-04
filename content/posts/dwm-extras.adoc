@@ -1,0 +1,93 @@
+---
+title: "Living with dwm"
+date: 2020-04-04T17:19:11+01:00
+draft: false
+categories: ["tech"]
+tags: ["tech"]
+---
+
+You may have heard of tiling window managers like https://dwm.suckless.org[dwm] or https://i3wm.org/[i3]. These are pretty interesting from a nerdy elitist hacker perspective ("I know Unix!"), but can also look quite nice and make good use of on-screen space. I switched to dwm yesterday and enjoyed spending some time to figure out the absolute basics. On my old, small laptop though, I realised that it suits me best to just have a separate tag per application. Tags are like workspaces, but more flexible; in my case though it's just a separate desktop for each app.
+
+== What's missing?
+
+Lots of things are missing that you normally take for granted in a full desktop environment like Gnome or KDE. Here are some of the things I've noticed so far:
+
+* Keyboard mapping is unset (defaults to `en_US`).
+* No keyboard hotkeys for e.g. changing volume.
+* System status bar only tells you about the window manager. You don't even get a clock!
+* `notify-send` popups are ugly.
+* No screensaver / lock.
+
+There's probably a bunch of other things I haven't even noticed yet. So if you want to live with a minimalist window manager, you have two choices:
+
+1. just live without these things and do everything from the command line (you can launch one with `Alt+Shift+Enter`, or in my case `Super+Shift+Enter` since `Alt` was conflicting with shortcuts in Firefox)... or
+2. find and configure (or write your own) external tools to replace the missing parts.
+
+== Adding what you need
+Let's take a look at my `~/.xsessionrc` file which should run a bunch of programs when I next start dwm. (I say should because I haven't logged out and back in yet.)
+
+_.xsessionrc_
+{{< highlight bash >}}
+setxkbmap ie
+dunst & disown
+xautolock -time 10 -locker "xset dpms force off && slock" && disown
+~/bin/scripts/dwm_status & disown
+xbindkeys -f /home/omf/.xbindkeysrc
+{{</ highlight >}}
+
+The first command is straightforward -- it just tells X to use the "English (Ireland)" layout for the keyboard. No problem.
+
+Next, we use https://dunst-project.org/[Dunst] as the system notifier, so that messages displayed with `notify-send` can be formatted and have arbitrary timeouts. Note the use of `command & disown` to launch programs as daemons that stay the background.
+
+We then use `xautolock` and the extremely barebones https://tools.suckless.org/slock/[slock] to lock the screen after 10 minutes of inactivity. I also want the screen to turn off when locking, so `xset dpms force off` does that until we move the mouse or hit a key.
+
+Then, we run a script called `dwm_status` to periodically update the dwm status bar at the top of the screen. Updating the status bar is done by calling `xsetroot -name "(new text)"`. Let's have a look at the `dwm_status` script.
+
+_dwm_status_
+{{< highlight bash >}}
+while true; do
+  ~/bin/scripts/dwm_status_update
+  sleep 30
+done
+{{</ highlight >}}
+
+We can see that it just sleeps in a loop, calling `dwm_status_update` once every 30 seconds. Okay, what's in that file?
+
+_scripts/dwm_status_update_
+{{< highlight bash >}}
+DATE=$(date +"%F %H:%M")
+VOLUME=$(pactl list sinks | grep 'Volume: front-left' | awk '{print $5}')
+
+xsetroot -name "⏰ $DATE | 🔊 $VOLUME"
+{{</ highlight >}}
+
+Okay, now we have something. So our status bar so far just has the date/time and system volume. We used `pactl` and some ugly grep/awk to get what we needed. It's a shame there's no machine-readable output from `pactl`. You set the volume by calling `set-sink-volume` but there's no `get-sink-volume` which would have been handy.
+
+You might ask why this is split into two scripts. That's because I want to be able to do things that immediately update the status bar without waiting 30 seconds. The last action in `.xsessionrc`, calling `xbindkeys`, gives an example of that.
+
+_.xbindkeysrc_
+{{< highlight bash >}}
+"~/bin/scripts/vol_up"
+Mod4 + KP_Add
+
+"~/bin/scripts/vol_down"
+Mod4 + KP_Subtract
+{{</ highlight >}}
+
+Note that `Mod4` means `Super`, otherwise known as "Windows key". So `Super+Numkey_PLUS/MINUS` raise or lower the volume by a small increment. Let's look at one of those scripts.
+
+_scripts/vol_up_
+{{< highlight bash >}}
+pactl set-sink-volume alsa_output.pci-0000_00_1b.0.analog-stereo +5%
+~/bin/scripts/dwm_status_update
+{{</ highlight >}}
+
+This sets the volume up by 5% then calls the status bar update script. Note that you can get the desired sink name with `pactl list sinks | grep Name:`.
+
+== Thoughts
+
+So far it's been a fun journey, and it certainly seems to yield a noticeable performance improvement on this fairly old laptop. There are a few limitations that I'm still not super happy with, like the fact that you can only run one instance of `xautolock`, so you can't have e.g. the screen switching off (with DPMS) after 2 minutes idle, but locking after 10 minutes. They have to both happen in the same single step.
+
+On the other hand, dwm includes the fantastic `dmenu` which functions as an application launcher, but can also be used in interactive scripts to do cool things. More on that in future maybe.
+
+I'm not sure if I'll stick with this minimalist setup, but it's certainly doable and you'll undoubtedly learn from the process.
