@@ -3,6 +3,36 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://overto.eu/categories/</loc>
+    <lastmod>2020-04-04T17:19:11+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://overto.eu/posts/dwm-extras/</loc>
+    <lastmod>2020-04-04T17:19:11+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://overto.eu/posts/</loc>
+    <lastmod>2020-04-04T17:19:11+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://overto.eu/tags/</loc>
+    <lastmod>2020-04-04T17:19:11+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://overto.eu/tags/tech/</loc>
+    <lastmod>2020-04-04T17:19:11+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://overto.eu/categories/tech/</loc>
+    <lastmod>2020-04-04T17:19:11+01:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://overto.eu/</loc>
     <lastmod>2020-03-14T21:33:00+01:00</lastmod>
   </url>
@@ -10,11 +40,6 @@
   <url>
     <loc>https://overto.eu/software/</loc>
     <lastmod>2020-03-14T21:33:00+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://overto.eu/categories/</loc>
-    <lastmod>2018-07-24T22:17:52+01:00</lastmod>
   </url>
   
   <url>
@@ -29,16 +54,6 @@
   
   <url>
     <loc>https://overto.eu/categories/music/</loc>
-    <lastmod>2018-07-24T22:17:52+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://overto.eu/posts/</loc>
-    <lastmod>2018-07-24T22:17:52+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://overto.eu/tags/</loc>
     <lastmod>2018-07-24T22:17:52+01:00</lastmod>
   </url>
   

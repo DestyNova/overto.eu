@@ -1,0 +1,273 @@
+<!doctype html>
+
+<html lang="en-ie">
+
+<head>
+  <title>Over to you</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="The HTML5 Herald" />
+  <meta name="author" content="Oisín" /><meta name="generator" content="Hugo 0.68.0-DEV" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css" />
+  <script src="https://kit.fontawesome.com/b76b73e8e8.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab|Ruda" />
+  <link rel="stylesheet" type="text/css" href="/css/styles.css" /></head>
+
+<body>
+  <div id="container">
+    <header>
+      <h1>
+                <a href="/">Over to you</a>
+            </h1>
+
+      <ul id="social-media">
+        
+        
+          
+        <li><a href="https://github.com/DestyNova"><i class="fab fa-github fa-lg" aria-hidden="true"></i></a></li>
+           
+      </ul>
+      
+    </header>
+
+    
+<nav>
+    <ul>
+        
+        <li>
+            <a class="" href="/categories/music">
+                <i class="fa-li fa  fa-lg"></i><span>Music</span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="" href="/software">
+                <i class="fa-li fa  fa-lg"></i><span>Software</span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="" href="/categories/tech">
+                <i class="fa-li fa  fa-lg"></i><span>Tech</span>
+            </a>
+        </li>
+        
+    </ul>
+</nav>
+
+    <main>
+
+
+
+
+<article>
+
+    <h1>Living with dwm</h1>
+
+    
+        <aside>
+    <ul>
+        <li>
+            <time class="post-date" datetime="2020-04-04T17:19:11&#43;01:00">Apr 4, 2020</time>
+        </li>
+        
+        <li>
+            Categories:
+            <em>
+                
+                    
+                    <a href="/categories/tech">tech</a>
+                
+            </em>
+        </li>
+        
+
+        
+        <li>
+            <em>
+                
+                    
+                    <a href="/tags/tech">#tech</a>
+                
+            </em>
+        </li>
+        
+
+        <li>4 minutes read</li>
+    </ul>
+</aside>
+
+    
+
+    <div class="paragraph">
+<p>You may have heard of tiling window managers like <a href="https://dwm.suckless.org">dwm</a> or <a href="https://i3wm.org/">i3</a>. These are pretty interesting from a nerdy elitist hacker perspective ("I know Unix!"), but can also look quite nice and make good use of on-screen space. I switched to dwm yesterday and enjoyed spending some time to figure out the absolute basics. On my old, small laptop though, I realised that it suits me best to just have a separate tag per application. Tags are like workspaces, but more flexible; in my case though it&#8217;s just a separate desktop for each app.</p>
+</div>
+<div class="sect1">
+<h2 id="_whats_missing">What&#8217;s missing?</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Lots of things are missing that you normally take for granted in a full desktop environment like Gnome or KDE. Here are some of the things I&#8217;ve noticed so far:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Keyboard mapping is unset (defaults to <code>en_US</code>).</p>
+</li>
+<li>
+<p>No keyboard hotkeys for e.g. changing volume.</p>
+</li>
+<li>
+<p>System status bar only tells you about the window manager. You don&#8217;t even get a clock!</p>
+</li>
+<li>
+<p><code>notify-send</code> popups are ugly.</p>
+</li>
+<li>
+<p>No screensaver / lock.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>There&#8217;s probably a bunch of other things I haven&#8217;t even noticed yet. So if you want to live with a minimalist window manager, you have two choices:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>just live without these things and do everything from the command line (you can launch one with <code>Alt+Shift+Enter</code>, or in my case <code>Super+Shift+Enter</code> since <code>Alt</code> was conflicting with shortcuts in Firefox)&#8230;&#8203; or</p>
+</li>
+<li>
+<p>find and configure (or write your own) external tools to replace the missing parts.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_adding_what_you_need">Adding what you need</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Let&#8217;s take a look at my <code>~/.xsessionrc</code> file which should run a bunch of programs when I next start dwm. (I say should because I haven&#8217;t logged out and back in yet.)</p>
+</div>
+<div class="paragraph">
+<p><em>.xsessionrc</em>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">setxkbmap ie
+dunst &amp; <span style="color:#8be9fd;font-style:italic">disown</span>
+xautolock -time <span style="color:#bd93f9">10</span> -locker <span style="color:#f1fa8c">&#34;xset dpms force off &amp;&amp; slock&#34;</span> <span style="color:#ff79c6">&amp;&amp;</span> <span style="color:#8be9fd;font-style:italic">disown</span>
+~/bin/scripts/dwm_status &amp; <span style="color:#8be9fd;font-style:italic">disown</span>
+xbindkeys -f /home/omf/.xbindkeysrc</code></pre></div></p>
+</div>
+<div class="paragraph">
+<p>The first command is straightforward&#8201;&#8212;&#8201;it just tells X to use the "English (Ireland)" layout for the keyboard. No problem.</p>
+</div>
+<div class="paragraph">
+<p>Next, we use <a href="https://dunst-project.org/">Dunst</a> as the system notifier, so that messages displayed with <code>notify-send</code> can be formatted and have arbitrary timeouts. Note the use of <code>command &amp; disown</code> to launch programs as daemons that stay the background.</p>
+</div>
+<div class="paragraph">
+<p>We then use <code>xautolock</code> and the extremely barebones <a href="https://tools.suckless.org/slock/">slock</a> to lock the screen after 10 minutes of inactivity. I also want the screen to turn off when locking, so <code>xset dpms force off</code> does that until we move the mouse or hit a key.</p>
+</div>
+<div class="paragraph">
+<p>Then, we run a script called <code>dwm_status</code> to periodically update the dwm status bar at the top of the screen. Updating the status bar is done by calling <code>xsetroot -name "(new text)"</code>. Let&#8217;s have a look at the <code>dwm_status</code> script.</p>
+</div>
+<div class="paragraph">
+<p><em>dwm_status</em>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#ff79c6">while</span> true; <span style="color:#ff79c6">do</span>
+  ~/bin/scripts/dwm_status_update
+  sleep <span style="color:#bd93f9">30</span>
+<span style="color:#ff79c6">done</span></code></pre></div></p>
+</div>
+<div class="paragraph">
+<p>We can see that it just sleeps in a loop, calling <code>dwm_status_update</code> once every 30 seconds. Okay, what&#8217;s in that file?</p>
+</div>
+<div class="paragraph">
+<p><em>scripts/dwm_status_update</em>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#8be9fd;font-style:italic">DATE</span><span style="color:#ff79c6">=</span><span style="color:#ff79c6">$(</span>date +<span style="color:#f1fa8c">&#34;%F %H:%M&#34;</span><span style="color:#ff79c6">)</span>
+<span style="color:#8be9fd;font-style:italic">VOLUME</span><span style="color:#ff79c6">=</span><span style="color:#ff79c6">$(</span>pactl list sinks | grep <span style="color:#f1fa8c">&#39;Volume: front-left&#39;</span> | awk <span style="color:#f1fa8c">&#39;{print $5}&#39;</span><span style="color:#ff79c6">)</span>
+
+xsetroot -name <span style="color:#f1fa8c">&#34;⏰ </span><span style="color:#8be9fd;font-style:italic">$DATE</span><span style="color:#f1fa8c"> | 🔊 </span><span style="color:#8be9fd;font-style:italic">$VOLUME</span><span style="color:#f1fa8c">&#34;</span></code></pre></div></p>
+</div>
+<div class="paragraph">
+<p>Okay, now we have something. So our status bar so far just has the date/time and system volume. We used <code>pactl</code> and some ugly grep/awk to get what we needed. It&#8217;s a shame there&#8217;s no machine-readable output from <code>pactl</code>. You set the volume by calling <code>set-sink-volume</code> but there&#8217;s no <code>get-sink-volume</code> which would have been handy.</p>
+</div>
+<div class="paragraph">
+<p>You might ask why this is split into two scripts. That&#8217;s because I want to be able to do things that immediately update the status bar without waiting 30 seconds. The last action in <code>.xsessionrc</code>, calling <code>xbindkeys</code>, gives an example of that.</p>
+</div>
+<div class="paragraph">
+<p><em>.xbindkeysrc</em>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#f1fa8c">&#34;~/bin/scripts/vol_up&#34;</span>
+Mod4 + KP_Add
+
+<span style="color:#f1fa8c">&#34;~/bin/scripts/vol_down&#34;</span>
+Mod4 + KP_Subtract</code></pre></div></p>
+</div>
+<div class="paragraph">
+<p>Note that <code>Mod4</code> means <code>Super</code>, otherwise known as "Windows key". So <code>Super+Numkey_PLUS/MINUS</code> raise or lower the volume by a small increment. Let&#8217;s look at one of those scripts.</p>
+</div>
+<div class="paragraph">
+<p><em>scripts/vol_up</em>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">pactl set-sink-volume alsa_output.pci-0000_00_1b.0.analog-stereo +5%
+~/bin/scripts/dwm_status_update</code></pre></div></p>
+</div>
+<div class="paragraph">
+<p>This sets the volume up by 5% then calls the status bar update script. Note that you can get the desired sink name with <code>pactl list sinks | grep Name:</code>.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_thoughts">Thoughts</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>So far it&#8217;s been a fun journey, and it certainly seems to yield a noticeable performance improvement on this fairly old laptop. There are a few limitations that I&#8217;m still not super happy with, like the fact that you can only run one instance of <code>xautolock</code>, so you can&#8217;t have e.g. the screen switching off (with DPMS) after 2 minutes idle, but locking after 10 minutes. They have to both happen in the same single step.</p>
+</div>
+<div class="paragraph">
+<p>On the other hand, dwm includes the fantastic <code>dmenu</code> which functions as an application launcher, but can also be used in interactive scripts to do cool things. More on that in future maybe.</p>
+</div>
+<div class="paragraph">
+<p>I&#8217;m not sure if I&#8217;ll stick with this minimalist setup, but it&#8217;s certainly doable and you&#8217;ll undoubtedly learn from the process.</p>
+</div>
+</div>
+</div>
+
+
+</article>
+
+<hr style="height: 10px; border: 0; box-shadow: 0 10px 10px -10px #8c8b8b inset;">
+<section class="section">
+  <script src="https://utteranc.es/client.js"
+          repo="DestyNova/overto.eu"
+          issue-term="pathname"
+          label="comment"
+          theme="github-light"
+          crossorigin="anonymous"
+          async>
+  </script>
+</section>
+
+
+<section class="post-nav">
+    <ul>
+        
+        <li>
+            <a href="https://overto.eu/posts/jeff-schneider-sick-rnb-chords/"><i class="fa fa-chevron-circle-left"></i> Jeff Schneider&#39;s Sick R&amp;B Chords</a>
+        </li>
+        
+        
+    </ul>
+</section>
+    
+
+
+
+
+
+</main>
+    <footer>
+        <h6> |
+            Rendered by <a href="https://gohugo.io" title="Hugo">Hugo</a> |
+            <a href="https://overto.eu/index.xml">Subscribe</a></h6>
+    </footer>
+</div>
+<script src="/js/scripts.js"></script>
+
+</body>
+
+</html>
