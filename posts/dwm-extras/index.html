@@ -204,7 +204,9 @@ Mod4 + KP_Subtract</code></pre></div></p>
 </div>
 <div class="paragraph">
 <p><em>scripts/vol_up</em>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">pactl set-sink-volume alsa_output.pci-0000_00_1b.0.analog-stereo +5%
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#8be9fd;font-style:italic">SINK</span><span style="color:#ff79c6">=</span><span style="color:#ff79c6">$(</span>pactl list sinks short | grep RUNNING | awk <span style="color:#f1fa8c">&#39;{ print $2 }&#39;</span><span style="color:#ff79c6">)</span>
+
+pactl set-sink-volume <span style="color:#8be9fd;font-style:italic">$SINK</span> +5%
 ~/bin/scripts/dwm_status_update</code></pre></div></p>
 </div>
 <div class="paragraph">
