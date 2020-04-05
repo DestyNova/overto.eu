@@ -78,7 +78,9 @@ Note that `Mod4` means `Super`, otherwise known as "Windows key". So `Super+Numk
 
 _scripts/vol_up_
 {{< highlight bash >}}
-pactl set-sink-volume alsa_output.pci-0000_00_1b.0.analog-stereo +5%
+SINK=$(pactl list sinks short | grep RUNNING | awk '{ print $2 }')
+
+pactl set-sink-volume $SINK +5%
 ~/bin/scripts/dwm_status_update
 {{</ highlight >}}
 
