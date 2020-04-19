@@ -6,10 +6,19 @@
        <description>Recent content on Over to you</description>
        <generator>Hugo -- gohugo.io</generator>
        <language>en-ie</language>
-       <lastBuildDate>Sat, 14 Mar 2020 21:33:00 +0100</lastBuildDate>
+       <lastBuildDate>Sun, 19 Apr 2020 17:26:19 +0100</lastBuildDate>
        
            <atom:link href="https://overto.eu/index.xml" rel="self" type="application/rss+xml" />
        
+       
+       <item>
+         <title>Pages</title>
+         <link>https://overto.eu/pages/</link>
+         <pubDate>Sun, 19 Apr 2020 17:26:19 +0100</pubDate>
+         
+         <guid>https://overto.eu/pages/</guid>
+         <description></description>
+       </item>
        
        <item>
          <title>Posts</title>
@@ -18,37 +27,6 @@
          
          <guid>https://overto.eu/posts/</guid>
          <description></description>
-       </item>
-       
-       <item>
-         <title>Software</title>
-         <link>https://overto.eu/software/</link>
-         <pubDate>Sat, 14 Mar 2020 21:33:00 +0100</pubDate>
-         
-         <guid>https://overto.eu/software/</guid>
-         <description>&lt;div class=&#34;paragraph&#34;&gt;
-&lt;p&gt;Some software I&amp;#8217;ve written and released as open-source:&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&#34;ulist&#34;&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href=&#34;https://pitcher.overto.eu&#34;&gt;Pitcher&lt;/a&gt; (&lt;a href=&#34;https://github.com/DestyNova/pitcher&#34;&gt;source&lt;/a&gt;)&amp;#8201;&amp;#8212;&amp;#8201;a collection of exercises for training and testing absolute pitch (also known as perfect pitch). I&amp;#8217;ve been training with it for a while and still don&amp;#8217;t have perfect pitch, but maybe I&amp;#8217;ll update this if that changes. Implemented in &lt;a href=&#34;https://elm-lang.org&#34;&gt;Elm&lt;/a&gt; and uses the HTML5 webaudio API to control sounds.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href=&#34;https://shotclock.overto.eu&#34;&gt;Shotclock&lt;/a&gt; (&lt;a href=&#34;https://github.com/DestyNova/shotclock&#34;&gt;source&lt;/a&gt;)&amp;#8201;&amp;#8212;&amp;#8201;a shot clock for snooker shootout games. Implemented in &lt;a href=&#34;https://elm-lang.org&#34;&gt;Elm&lt;/a&gt; and uses the HTML5 webaudio API to control sounds.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href=&#34;https://iconic.overto.eu&#34;&gt;The Iconic Memory Game&lt;/a&gt; (&lt;a href=&#34;https://github.com/DestyNova/iconic-memory-game&#34;&gt;source&lt;/a&gt;)&amp;#8201;&amp;#8212;&amp;#8201;a memory game based on the tachistoscope experiments by George Sperling in the 1960s which sought to characterise the visual short-term memory system. Implemented in &lt;a href=&#34;https://elm-lang.org&#34;&gt;Elm&lt;/a&gt;.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href=&#34;https://bw.overto.eu&#34;&gt;Blinkenwords&lt;/a&gt; (&lt;a href=&#34;https://github.com/DestyNova/blinkenwords-elm&#34;&gt;source&lt;/a&gt;)&amp;#8201;&amp;#8212;&amp;#8201;a minimalist rapid serial visual presentation (RSVP) reading utility. Implemented in &lt;a href=&#34;https://elm-lang.org&#34;&gt;Elm&lt;/a&gt;.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href=&#34;https://github.com/DestyNova/Gluap&#34;&gt;Gluap&lt;/a&gt;&amp;#8201;&amp;#8212;&amp;#8201;a stalled implementation of the PushGP stack-based genetic programming framework. Implemented in &lt;a href=&#34;https://www.lua.org/&#34;&gt;Lua&lt;/a&gt;.&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-</description>
        </item>
        
      </channel>
