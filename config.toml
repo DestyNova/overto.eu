@@ -22,6 +22,11 @@ pygmentsStyle = "dracula"
   url = "/categories/music"
 
 [[menu.main]]
+  identifier = "learning"
+  name = "Learning"
+  url = "/pages/learning"
+
+[[menu.main]]
   identifier = "software"
   name = "Software"
-  url = "/software"
+  url = "/pages/software"

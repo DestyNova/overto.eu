@@ -1,0 +1,32 @@
+---
+title: "Learning"
+date: 2020-04-19T17:26:19+01:00
+draft: false
+---
+
+Experiences with tutorials, books or courses I've taken in recent times.
+
+## https://haskellbook.com/[The Haskell book]
+_October 2017 -- present_
+
+This is a very well-written book. But I found it hard to make progress quickly because some of the exercises were quite difficult and I felt compelled to complete them before moving on, although I think the author specifically advises to not get stuck on them and just move on if need be.
+
+## https://github.com/janestreet/learn-ocaml-workshop[OCaml workshop], part 2: exercises
+_March 2020_
+
+These were really nice and simple. Each exercise had a small, understandable scope and most were simple enough that I didn't get stuck. Each set of exercises was in a separate directory, numbered from 01 to 21, and running the test suite generally took a second or less, so I used a script to automatically call `dune runtest` whenever I saved changes to that exercise's `problem.ml` file. I wish more tutorials were written with this emphasis on manageable exercises and an easy UX. I'm not sure if I'll continue with the next sections which involve games and bigger projects, but we'll see.
+
+## The https://doc.rust-lang.org/stable/book[Rust tutorial]
+_2019 -- present_
+
+I come back to this one every couple of months. It's well-written but a bit verbose.
+
+## https://gobyexample.com[Go by example]
+_March 2020_
+
+This was fun and easy, perhaps as a byproduct of Go being quite a simple language. Unlike Rust and Haskell which require a lot of discussion about abstract concepts (and exercises to discover that you still didn't get it), Go's simplicity means you spend more time focusing on more immediately practical topics. I was surprised to note some strange idiosyncrasies with Go and its standard lib, though -- for example, when parsing a date, you need to provide a sample date in the desired format... the sample date needs to be a very specific reference date: `Mon Jan 2 15:04:05 MST 2006` (i.e. day of week 0, month 1, day 2, hour 3, minute 4, second 5, year (200)6... MST is https://en.wikipedia.org/wiki/Mountain_Time_Zone[Mountain Standard Time] which I assume was the time zone where one of the language authors lived). If you supply a different date, then times that you parse might _silently_ be parsed into incorrect timestamps. Weird. Still, the tutorial was refreshing and I managed to glide through over several days, spending maybe 30 minutes a day.
+
+## https://ucsd-progsys.github.io/liquidhaskell-tutorial/[Liquid Haskell tutorial]
+_April 2020 -- present_
+
+Another well-written and surprisingly concise tutorial. I didn't know much about refinement types (or automated proof checking in general) so expected this to be heavy on mathematical foundations. I'm on chapter 6 now and there's been none of that -- it's remarkably practical and usable right from the beginning, and I'm quite excited about using it in real projects (despite my poor knowledge of Haskell). One problem so far is that some of the samples and exercises can't be compiled for various reasons, so I've had to open a couple of issues on the Github repo to get help. Luckily, the authors have been very helpful and responsive, so I have no doubt this will improve in future.
