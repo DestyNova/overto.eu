@@ -93,3 +93,15 @@ So far it's been a fun journey, and it certainly seems to yield a noticeable per
 On the other hand, dwm includes the fantastic `dmenu` which functions as an application launcher, but can also be used in interactive scripts to do cool things. More on that in future maybe.
 
 I'm not sure if I'll stick with this minimalist setup, but it's certainly doable and you'll undoubtedly learn from the process.
+
+== Update 2020-04-19
+
+Some other things I've taken for granted with full desktop environments that don't come out of the box with dwm:
+
+* Screenshots.
+* More intelligent control of backlight via DPMS (i.e. don't turn it off when I'm playing a video, and if the display wakes while locked, but I don't unlock it, then it should sleep the display again after a few seconds).
+* Floating dialog boxes that look good.
+* Widgets for e.g. Bluetooth and wifi configuration.
+* Hitting a hotkey (`Super` in Gnome) to see all windows in a zoomed-out view, without generating mouse events in them.
+
+All of these are things you can probably replace with alternative tools (or write your own) without a huge effort, but it's easy to forget how useful they are until you don't have them.
