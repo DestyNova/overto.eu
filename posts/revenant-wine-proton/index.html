@@ -1,0 +1,287 @@
+<!doctype html>
+
+<html lang="en-ie">
+
+<head>
+  <title>Over to you</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="The HTML5 Herald" />
+  <meta name="author" content="Oisín" /><meta name="generator" content="Hugo 0.68.0-DEV" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css" />
+  <script src="https://kit.fontawesome.com/b76b73e8e8.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab|Ruda" />
+  <link rel="stylesheet" type="text/css" href="/css/styles.css" /></head>
+
+<body>
+  <div id="container">
+    <header>
+      <h1>
+                <a href="/">Over to you</a>
+            </h1>
+
+      <ul id="social-media">
+        
+        
+          
+        <li><a href="https://github.com/DestyNova"><i class="fab fa-github fa-lg" aria-hidden="true"></i></a></li>
+           
+      </ul>
+      
+    </header>
+
+    
+<nav>
+    <ul>
+        
+        <li>
+            <a class="" href="/pages/learning">
+                <i class="fa-li fa  fa-lg"></i><span>Learning</span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="" href="/categories/music">
+                <i class="fa-li fa  fa-lg"></i><span>Music</span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="" href="/pages/software">
+                <i class="fa-li fa  fa-lg"></i><span>Software</span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="" href="/categories/tech">
+                <i class="fa-li fa  fa-lg"></i><span>Tech</span>
+            </a>
+        </li>
+        
+    </ul>
+</nav>
+
+    <main>
+
+
+
+
+<article>
+
+    <h1>Playing Revenant using Wine and Proton</h1>
+
+    
+        <aside>
+    <ul>
+        <li>
+            <time class="post-date" datetime="2021-05-16T02:11:51&#43;01:00">May 16, 2021</time>
+        </li>
+        
+        <li>
+            Categories:
+            <em>
+                
+                    
+                    <a href="/categories/tech">tech</a>
+                
+            </em>
+        </li>
+        
+
+        
+        <li>
+            <em>
+                
+                    
+                    <a href="/tags/tech">#tech</a>
+                
+            </em>
+        </li>
+        
+
+        <li>3 minutes read</li>
+    </ul>
+</aside>
+
+    
+
+    <div class="paragraph">
+<p><em>TL;DR: I tried to run an old game called Revenant on Linux using both WINE and Proton, but both had problems. Here&#8217;s how I combined the powers of both to run the game on my Ubuntu machine.</em></p>
+</div>
+<div class="sect1">
+<h2 id="_background">Background</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The <a href="https://www.winehq.org/">WINE project</a> is an emulation layer that enables you to run a large amount of Windows programs on a Unix system. It can be difficult to configure, but it&#8217;s a fairly mature project that even supports some modern Windows games.</p>
+</div>
+<div class="paragraph">
+<p>I recently bought an old game called <a href="https://www.gog.com/game/revenant">Revenant</a> on a GOG sale, and was disappointed to find that it didn&#8217;t run at all well on my old Ubuntu laptop. The intro FMV and menu worked, and the game seemed to run alright until the sampled speech started playing back. For some reason, sample playback sounded choppy and every sound played twice with a one-second echo effect.</p>
+</div>
+<div class="paragraph">
+<p>My first thought was to try a different audio library (ALSA instead of PulseAudio) but this had no effect, nor did the usual low-latency tweaks for PulseAudio.</p>
+</div>
+<div class="paragraph">
+<p>Eventually I tried running the game with Steam&#8217;s Proton engine, which is a set of extensions to Steam that can provide better performance and compatibility for various games. In this case, the game played more smoothly and sample playback was perfect, but now the FMVs didn&#8217;t work at all, so every cutscene was a completely black screen.</p>
+</div>
+<div class="paragraph">
+<p>After several hours of investigation I was about to give up, but then tried running Wine on the "prefix" directory created by Proton. To my surprise, this gave me the best of both worlds: working (if slightly ugly) cutscene video and correct sample playback in-game.</p>
+</div>
+<div class="paragraph">
+<p>If you&#8217;ve found yourself in a similar situation, perhaps these steps may help you.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_install_proton">Install Proton</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>First, make sure you have a version of Proton installed. As far as I can tell, this involves installing a Steam game that requires Proton to run in Linux. You can choose your desired Proton version as follows:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Right-click the game in Steam</p>
+</li>
+<li>
+<p>Click "Properties"</p>
+</li>
+<li>
+<p>Go the the "General" tab</p>
+</li>
+<li>
+<p>Check the "Force the use of a specific Steam Play compatibility tool" box</p>
+</li>
+<li>
+<p>A dropdown menu will appear letting you select a Proton version.</p>
+</li>
+<li>
+<p>Save your changes and run the game once.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_set_environment_variables_for_wine_and_proton">Set environment variables for Wine and Proton</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>This will avoid having to specify them when running each command:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>export WINEPREFIX=~/proton
+export PROTON_NO_ESYNC=1</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>It&#8217;s probably a good idea to add these to a small script for launching the game once you have it working.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_create_a_new_prefix_directory_for_proton">Create a new prefix directory for Proton</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>When playing Steam games, Proton seems to create a separate prefix directory for each game. Since we&#8217;re not playing a Steam game, let&#8217;s create a separate prefix directory for Proton that we can use for this game (and hopefully others, since these directories can eat into your hard disk space):</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>mkdir ~/proton</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_install_the_game">Install the game</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Use Proton to run the Revenant installer (assuming you saved it to the current directory):</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>~/.steam/steam/steamapps/common/Proton\ 5.13/proton run setup_revenant_1.22l_\(21853\).exe</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>You may also need to run the game once with Proton to populate the prefix directory, but perhaps this step can be skipped:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>cd ~/proton/drive_c/GOG\ Games/Revenant/
+~/.steam/steam/steamapps/common/Proton\ 5.13/proton run Launcher.exe</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_install_corefonts">Install corefonts</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>When you run the game with Wine, it&#8217;ll be missing some standard system fonts and will look weird. You can fix that using <code>winetricks</code>:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>winetricks corefonts</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_launch_the_game_with_wine">Launch the game with Wine</h2>
+<div class="sectionbody">
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>cd ~/proton/drive_c/GOG\ Games/Revenant/
+wine Launcher.exe</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>That&#8217;s what worked for me. There&#8217;s probably a much neater way to do this that doesn&#8217;t involve Proton at all; if so, please leave a comment and let me know.</p>
+</div>
+</div>
+</div>
+
+
+</article>
+
+<hr style="height: 10px; border: 0; box-shadow: 0 10px 10px -10px #8c8b8b inset;">
+<section class="section">
+  <script src="https://utteranc.es/client.js"
+          repo="DestyNova/overto.eu"
+          issue-term="pathname"
+          label="comment"
+          theme="github-light"
+          crossorigin="anonymous"
+          async>
+  </script>
+</section>
+
+
+<section class="post-nav">
+    <ul>
+        
+        <li>
+            <a href="https://overto.eu/posts/dwm-extras/"><i class="fa fa-chevron-circle-left"></i> Living with dwm</a>
+        </li>
+        
+        
+    </ul>
+</section>
+    
+
+
+
+
+
+</main>
+    <footer>
+        <h6> |
+            Rendered by <a href="https://gohugo.io" title="Hugo">Hugo</a> |
+            <a href="https://overto.eu/index.xml">Subscribe</a></h6>
+    </footer>
+</div>
+<script src="/js/scripts.js"></script>
+
+</body>
+
+</html>
