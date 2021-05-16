@@ -1,0 +1,83 @@
+---
+title: "Playing Revenant using Wine and Proton"
+date: 2021-05-16T02:11:51+01:00
+categories: ["tech"]
+tags: ["tech"]
+---
+
+_TL;DR: I tried to run an old game called Revenant on Linux using both WINE and Proton, but both had problems. Here's how I combined the powers of both to run the game on my Ubuntu machine._
+
+== Background
+
+The https://www.winehq.org/[WINE project] is an emulation layer that enables you to run a large amount of Windows programs on a Unix system. It can be difficult to configure, but it's a fairly mature project that even supports some modern Windows games.
+
+I recently bought an old game called https://www.gog.com/game/revenant[Revenant] on a GOG sale, and was disappointed to find that it didn't run at all well on my old Ubuntu laptop. The intro FMV and menu worked, and the game seemed to run alright until the sampled speech started playing back. For some reason, sample playback sounded choppy and every sound played twice with a one-second echo effect.
+
+My first thought was to try a different audio library (ALSA instead of PulseAudio) but this had no effect, nor did the usual low-latency tweaks for PulseAudio.
+
+Eventually I tried running the game with Steam's Proton engine, which is a set of extensions to Steam that can provide better performance and compatibility for various games. In this case, the game played more smoothly and sample playback was perfect, but now the FMVs didn't work at all, so every cutscene was a completely black screen.
+
+After several hours of investigation I was about to give up, but then tried running Wine on the "prefix" directory created by Proton. To my surprise, this gave me the best of both worlds: working (if slightly ugly) cutscene video and correct sample playback in-game.
+
+If you've found yourself in a similar situation, perhaps these steps may help you.
+
+== Install Proton
+
+First, make sure you have a version of Proton installed. As far as I can tell, this involves installing a Steam game that requires Proton to run in Linux. You can choose your desired Proton version as follows:
+
+. Right-click the game in Steam
+. Click "Properties"
+. Go the the "General" tab
+. Check the "Force the use of a specific Steam Play compatibility tool" box
+. A dropdown menu will appear letting you select a Proton version.
+. Save your changes and run the game once.
+
+== Set environment variables for Wine and Proton
+
+This will avoid having to specify them when running each command:
+
+```
+export WINEPREFIX=~/proton
+export PROTON_NO_ESYNC=1
+```
+
+It's probably a good idea to add these to a small script for launching the game once you have it working.
+
+== Create a new prefix directory for Proton
+
+When playing Steam games, Proton seems to create a separate prefix directory for each game. Since we're not playing a Steam game, let's create a separate prefix directory for Proton that we can use for this game (and hopefully others, since these directories can eat into your hard disk space):
+
+```
+mkdir ~/proton
+```
+
+== Install the game
+
+Use Proton to run the Revenant installer (assuming you saved it to the current directory):
+
+```
+~/.steam/steam/steamapps/common/Proton\ 5.13/proton run setup_revenant_1.22l_\(21853\).exe
+```
+
+You may also need to run the game once with Proton to populate the prefix directory, but perhaps this step can be skipped:
+```
+cd ~/proton/drive_c/GOG\ Games/Revenant/
+~/.steam/steam/steamapps/common/Proton\ 5.13/proton run Launcher.exe
+```
+
+== Install corefonts
+
+When you run the game with Wine, it'll be missing some standard system fonts and will look weird. You can fix that using `winetricks`:
+
+```
+winetricks corefonts
+```
+
+== Launch the game with Wine
+
+```
+cd ~/proton/drive_c/GOG\ Games/Revenant/
+wine Launcher.exe
+```
+
+That's what worked for me. There's probably a much neater way to do this that doesn't involve Proton at all; if so, please leave a comment and let me know.
