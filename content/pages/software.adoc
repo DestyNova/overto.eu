@@ -6,7 +6,7 @@ meta: "false"
 ---
 Some software I've written and released as open-source:
 
-* https://metronome.overto.eu[Pitcher] (https://github.com/DestyNova/metron[source]) -- a minimal implementation of a metronome that allows you to only play the first of every <i>N</i> beats. Uses the HTML5 webaudio API to play clicks.
+* https://metronome.overto.eu[Metron] (https://github.com/DestyNova/metron[source]) -- a minimal implementation of a metronome that allows you to only play the first of every **N** beats. Uses the HTML5 webaudio API to play clicks.
 * https://pitcher.overto.eu[Pitcher] (https://github.com/DestyNova/pitcher[source]) -- a collection of exercises for training and testing absolute pitch (also known as perfect pitch). I've been training with it for a while and still don't have perfect pitch, but maybe I'll update this if that changes. Implemented in https://elm-lang.org[Elm] and uses the HTML5 webaudio API to control sounds.
 * https://shotclock.overto.eu[Shotclock] (https://github.com/DestyNova/shotclock[source]) -- a shot clock for snooker shootout games. Implemented in https://elm-lang.org[Elm] and uses the HTML5 webaudio API to control sounds.
 * https://iconic.overto.eu[The Iconic Memory Game] (https://github.com/DestyNova/iconic-memory-game[source]) -- a memory game based on the tachistoscope experiments by George Sperling in the 1960s which sought to characterise the visual short-term memory system. Implemented in https://elm-lang.org[Elm].
