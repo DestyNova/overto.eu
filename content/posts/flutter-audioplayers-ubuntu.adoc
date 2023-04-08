@@ -1,0 +1,67 @@
+---
+title: "Flutter Audioplayers error in Ubuntu"
+date: 2023-02-18T07:25:20Z
+draft: true
+categories: ["tech"]
+tags: ["tech"]
+---
+
+I've been thinking about making a mobile game for a while now, but as usual spent a bit of time flip-flopping between tools trying to figure out which was the absolutely most appropriate and best game library or engine for all situations. Which of course is a rabbit hole with no end, since each tool has its own specialties, strengths and weaknesses.
+
+For example, ...
+
+Quite early on however, I ran into this error when trying to build a sample game for Linux:
+
+[source]
+----
+❯ flutter run -d linux                                    
+Launching lib/main.dart on Linux in debug mode...                                                                     
+CMake Error at /snap/flutter/130/usr/share/cmake-3.16/Modules/FindPkgConfig.cmake:463 (message):
+  A required package was not found                                                                                    
+Call Stack (most recent call first):                      
+  /snap/flutter/130/usr/share/cmake-3.16/Modules/FindPkgConfig.cmake:643 (_pkg_check_modules_internal)
+  flutter/ephemeral/.plugin_symlinks/audioplayers_linux/linux/CMakeLists.txt:25 (pkg_check_modules)
+----
+
+I found some helpful clues on https://unix.stackexchange.com/questions/733335/cmake-complaining-about-a-required-package-was-not-found[Stack Overflow], confirmed by checking the contents of the file in question (note that the platform name `linux` needs to be prepended to the path printed on the last line of the error message):
+
+[source]
+----
+❯ sed -n 25p linux/flutter/ephemeral/.plugin_symlinks/audioplayers_linux/linux/CMakeLists.txt          
+pkg_check_modules(GSTREAMER REQUIRED gstreamer-1.0)
+----
+
+It appears that a couple of libraries need to be installed globally for the "audioplayers_linux" library to work. The following command sorted that out:
+
+[source]
+----
+sudo apt install libgstreamer1.0-dev libgstreamer-plugins-base1.0-dev
+----
+
+However, we still can't build the game. Running the build with `-v` produces this:
+
+[source]
+----
+[   +1 ms] /snap/flutter/current/usr/bin/ld: /lib/x86_64-linux-gnu/libdw.so.1: undefined reference to `dlopen@GLIBC_2.34'
+[        ] /snap/flutter/current/usr/bin/ld: /lib/x86_64-linux-gnu/libdw.so.1: undefined reference to `pthread_rwlock_init@GLIBC_2.34'
+[        ] /snap/flutter/current/usr/bin/ld: /lib/x86_64-linux-gnu/libdw.so.1: undefined reference to `pthread_rwlock_wrlock@GLIBC_2.34'
+[        ] /snap/flutter/current/usr/bin/ld: /lib/x86_64-linux-gnu/libgstreamer-1.0.so.0: undefined reference to `stat64@GLIBC_2.33'
+[        ] /snap/flutter/current/usr/bin/ld: /lib/x86_64-linux-gnu/libgstreamer-1.0.so.0: undefined reference to `g_pattern_spec_match_string'
+[        ] /snap/flutter/current/usr/bin/ld: /lib/x86_64-linux-gnu/libgstreamer-1.0.so.0: undefined reference to `g_time_zone_new_identifier'
+[        ] /snap/flutter/current/usr/bin/ld: /lib/x86_64-linux-gnu/libdw.so.1: undefined reference to `pthread_rwlock_tryrdlock@GLIBC_2.34'
+[        ] /snap/flutter/current/usr/bin/ld: /lib/x86_64-linux-gnu/libdw.so.1: undefined reference to `dlclose@GLIBC_2.34'
+[        ] /snap/flutter/current/usr/bin/ld: /lib/x86_64-linux-gnu/libdw.so.1: undefined reference to `pthread_rwlock_rdlock@GLIBC_2.34'
+[        ] /snap/flutter/current/usr/bin/ld: /lib/x86_64-linux-gnu/libunwind.so.8: undefined reference to `fstat@GLIBC_2.33'
+[        ] /snap/flutter/current/usr/bin/ld: /lib/x86_64-linux-gnu/libdw.so.1: undefined reference to `stat@GLIBC_2.33'
+[        ] /snap/flutter/current/usr/bin/ld: /lib/x86_64-linux-gnu/libgstreamer-1.0.so.0: undefined reference to `dladdr@GLIBC_2.34'
+[        ] /snap/flutter/current/usr/bin/ld: /lib/x86_64-linux-gnu/libdw.so.1: undefined reference to `pthread_rwlock_destroy@GLIBC_2.34'
+[        ] /snap/flutter/current/usr/bin/ld: /lib/x86_64-linux-gnu/libdw.so.1: undefined reference to `pthread_rwlock_unlock@GLIBC_2.34'
+[        ] /snap/flutter/current/usr/bin/ld: /lib/x86_64-linux-gnu/libdw.so.1: undefined reference to `dlsym@GLIBC_2.34'
+[        ] /snap/flutter/current/usr/bin/ld: /lib/x86_64-linux-gnu/libgstbase-1.0.so.0: undefined reference to `g_memdup2'
+[        ] clang: error: linker command failed with exit code 1 (use -v to see invocation)
+[   +1 ms] ninja: build stopped: subcommand failed.
+[  +10 ms] Building Linux application... (completed in 6.5s)
+[+4213 ms] Exception: Build process failed
+----
+
+
