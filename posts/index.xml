@@ -6,10 +6,35 @@
        <description>Recent content in Posts on Over to you</description>
        <generator>Hugo -- gohugo.io</generator>
        <language>en-ie</language>
-       <lastBuildDate>Sun, 16 May 2021 02:11:51 +0100</lastBuildDate>
+       <lastBuildDate>Tue, 18 Apr 2023 06:27:26 +0100</lastBuildDate>
        
            <atom:link href="https://overto.eu/posts/index.xml" rel="self" type="application/rss+xml" />
        
+       
+       <item>
+         <title>BAM! and the history is gone</title>
+         <link>https://overto.eu/posts/bam-history/</link>
+         <pubDate>Tue, 18 Apr 2023 06:27:26 +0100</pubDate>
+         
+         <guid>https://overto.eu/posts/bam-history/</guid>
+         <description>&lt;div class=&#34;paragraph&#34;&gt;
+&lt;p&gt;A few years ago I took this photo on Barrow Street near Ringsend, Dublin. BAM were tearing down some of the old &lt;a href=&#34;https://en.wikipedia.org/wiki/Boland%27s_Mill&#34;&gt;Boland&amp;#8217;s Mill&lt;/a&gt; site to make way for yet more shiny fancy corporate buildings. To be fair, they did repair some of the protected buildings which are part of the city&amp;#8217;s heritage.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;imageblock&#34;&gt;
+&lt;div class=&#34;content&#34;&gt;
+&lt;img src=&#34;https://res.cloudinary.com/destynova/image/upload/v1681795375/overto.eu/bam-history-is-gone_fb7sto.jpg&#34; alt=&#34;bam history is gone fb7sto&#34;&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&#34;paragraph&#34;&gt;
+&lt;p&gt;The graffiti quote is a pleasing reference to the catchphrase heard at the end of obnoxious &#34;Cillit Bang&#34; ads that used to run on UK and Irish TV:&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;videoblock&#34;&gt;
+&lt;div class=&#34;content&#34;&gt;
+&lt;iframe width=&#34;640&#34; height=&#34;480&#34; src=&#34;https://www.youtube.com/embed/t5ycJrJNMMo?rel=0&#34; frameborder=&#34;0&#34; allowfullscreen&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
+       </item>
        
        <item>
          <title>Playing Revenant using Wine and Proton</title>
