@@ -1,0 +1,13 @@
+---
+title: "BAM! and the history is gone"
+date: 2023-04-18T06:27:26+01:00
+draft: false
+---
+
+A few years ago I took this photo on Barrow Street near Ringsend, Dublin. BAM were tearing down some of the old https://en.wikipedia.org/wiki/Boland%27s_Mill[Boland's Mill] site to make way for yet more shiny fancy corporate buildings. To be fair, they did repair some of the protected buildings which are part of the city's heritage.
+
+image::https://res.cloudinary.com/destynova/image/upload/v1681795375/overto.eu/bam-history-is-gone_fb7sto.jpg[]
+
+The graffiti quote is a pleasing reference to the catchphrase heard at the end of obnoxious "Cillit Bang" ads that used to run on UK and Irish TV:
+
+video::t5ycJrJNMMo[youtube, 640, 480]
