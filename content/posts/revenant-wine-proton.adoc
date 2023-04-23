@@ -1,8 +1,7 @@
 ---
 title: "Playing Revenant using Wine and Proton"
 date: 2021-05-16T02:11:51+01:00
-categories: ["tech", "gaming"]
-tags: ["tech"]
+tags: ["tech", "gaming"]
 ---
 
 _TL;DR: I tried to run an old game called Revenant on Linux using both WINE and Proton, but both had problems. Here's how I combined the powers of both to run the game on my Ubuntu machine._

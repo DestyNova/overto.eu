@@ -2,7 +2,6 @@
 title: "Jazz chords from Paul Barton's \"Piano Sounds Never Heard Before!\""
 date: 2018-07-22T18:07:44+01:00
 draft: false
-categories: ["music"]
 tags: ["music", "transcription"]
 menu: "music"
 ---

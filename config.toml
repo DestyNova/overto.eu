@@ -1,13 +1,24 @@
 baseURL = "https://overto.eu/"
 languageCode = "en-ie"
 title = "Over to you"
-theme = "kiera"
+
+theme =  ["github.com/chollinger93/ink-free"]
 
 pygmentsCodefences = true
 pygmentsCodefencesGuessSyntax = true
 pygmentsStyle = "dracula"
 
 cloudinary_base_url="https://res.cloudinary.com/destynova/image/upload"
+
+[security]
+  [security.exec]
+    allow = ['^dart-sass-embedded$', '^go$', '^npx$', '^postcss$', '^asciidoctor$']
+
+[params]
+	mode = "dark"
+	toc = true
+	wpm = 200
+  maxTags = 20
 
 [author]
   name = "Oisín"
@@ -16,12 +27,12 @@ cloudinary_base_url="https://res.cloudinary.com/destynova/image/upload"
 [[menu.main]]
   identifier = "tech"
   name = "Tech"
-  url = "/categories/tech"
+  url = "/tags/tech"
 
 [[menu.main]]
   identifier = "music"
   name = "Music"
-  url = "/categories/music"
+  url = "/tags/music"
 
 [[menu.main]]
   identifier = "learning"

@@ -2,7 +2,6 @@
 title: "Flutter Audioplayers error in Ubuntu"
 date: 2023-02-18T07:25:20Z
 draft: true
-categories: ["tech"]
 tags: ["tech"]
 ---
 

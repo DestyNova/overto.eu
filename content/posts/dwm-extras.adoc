@@ -2,7 +2,6 @@
 title: "Living with dwm"
 date: 2020-04-04T17:19:11+01:00
 draft: false
-categories: ["tech"]
 tags: ["tech"]
 ---
 
