@@ -1,33 +1,82 @@
-
-   <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-     <channel>
-       <title>Over to you</title>
-       <link>https://overto.eu/</link>
-       <description>Recent content on Over to you</description>
-       <generator>Hugo -- gohugo.io</generator>
-       <language>en-ie</language>
-       <lastBuildDate>Tue, 18 Apr 2023 06:27:26 +0100</lastBuildDate>
-       
-           <atom:link href="https://overto.eu/index.xml" rel="self" type="application/rss+xml" />
-       
-       
-       <item>
-         <title>Posts</title>
-         <link>https://overto.eu/posts/</link>
-         <pubDate>Tue, 18 Apr 2023 06:27:26 +0100</pubDate>
-         
-         <guid>https://overto.eu/posts/</guid>
-         <description></description>
-       </item>
-       
-       <item>
-         <title>Pages</title>
-         <link>https://overto.eu/pages/</link>
-         <pubDate>Sun, 19 Apr 2020 17:26:19 +0100</pubDate>
-         
-         <guid>https://overto.eu/pages/</guid>
-         <description></description>
-       </item>
-       
-     </channel>
-   </rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Over to you</title>
+    <link>https://overto.eu/</link>
+    <description>Recent content on Over to you</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-ie</language>
+    <lastBuildDate>Tue, 18 Apr 2023 06:27:26 +0100</lastBuildDate><atom:link href="https://overto.eu/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>BAM! and the history is gone</title>
+      <link>https://overto.eu/posts/bam-history/</link>
+      <pubDate>Tue, 18 Apr 2023 06:27:26 +0100</pubDate>
+      
+      <guid>https://overto.eu/posts/bam-history/</guid>
+      <description>A few years ago I took this photo on Barrow Street near Ringsend, Dublin. BAM were tearing down some of the old Boland’s Mill site to make way for yet more shiny fancy corporate buildings. To be fair, they did repair some of the protected buildings which are part of the city’s heritage.
+The graffiti quote is a pleasing reference to the catchphrase heard at the end of obnoxious &amp;#34;Cillit Bang&amp;#34; ads that used to run on UK and Irish TV:</description>
+    </item>
+    
+    <item>
+      <title>Playing Revenant using Wine and Proton</title>
+      <link>https://overto.eu/posts/revenant-wine-proton/</link>
+      <pubDate>Sun, 16 May 2021 02:11:51 +0100</pubDate>
+      
+      <guid>https://overto.eu/posts/revenant-wine-proton/</guid>
+      <description>TL;DR: I tried to run an old game called Revenant on Linux using both WINE and Proton, but both had problems. Here’s how I combined the powers of both to run the game on my Ubuntu machine.
+Background The WINE project is an emulation layer that enables you to run a large amount of Windows programs on a Unix system. It can be difficult to configure, but it’s a fairly mature project that even supports some modern Windows games.</description>
+    </item>
+    
+    <item>
+      <title>Learning</title>
+      <link>https://overto.eu/pages/learning/</link>
+      <pubDate>Sun, 19 Apr 2020 17:26:19 +0100</pubDate>
+      
+      <guid>https://overto.eu/pages/learning/</guid>
+      <description>Experiences with tutorials, books or courses I’ve taken in recent times.
+The Haskell book October 2017 — present
+This is a very well-written book. But I found it hard to make progress quickly because some of the exercises were quite difficult and I felt compelled to complete them before moving on, although I think the author specifically advises to not get stuck on them and just move on if need be.</description>
+    </item>
+    
+    <item>
+      <title>Living with dwm</title>
+      <link>https://overto.eu/posts/dwm-extras/</link>
+      <pubDate>Sat, 04 Apr 2020 17:19:11 +0100</pubDate>
+      
+      <guid>https://overto.eu/posts/dwm-extras/</guid>
+      <description>You may have heard of tiling window managers like dwm or i3. These are pretty interesting from a nerdy elitist hacker perspective (&amp;#34;I know Unix!&amp;#34;), but can also look quite nice and make good use of on-screen space. I switched to dwm yesterday and enjoyed spending some time to figure out the absolute basics. On my old, small laptop though, I realised that it suits me best to just have a separate tag per application.</description>
+    </item>
+    
+    <item>
+      <title>Software</title>
+      <link>https://overto.eu/pages/software/</link>
+      <pubDate>Sat, 14 Mar 2020 21:33:00 +0100</pubDate>
+      
+      <guid>https://overto.eu/pages/software/</guid>
+      <description>Some software I’ve written and released as open-source:
+Metron (source) — a minimal implementation of a metronome that allows you to only play the first of every n beats. Uses the HTML5 webaudio API to play clicks.
+Pitcher (source) — a collection of exercises for training and testing absolute pitch (also known as perfect pitch). I’ve been training with it for a while and still don’t have perfect pitch, but maybe I’ll update this if that changes.</description>
+    </item>
+    
+    <item>
+      <title>Jeff Schneider&#39;s Sick R&amp;B Chords</title>
+      <link>https://overto.eu/posts/jeff-schneider-sick-rnb-chords/</link>
+      <pubDate>Tue, 24 Jul 2018 22:17:52 +0100</pubDate>
+      
+      <guid>https://overto.eu/posts/jeff-schneider-sick-rnb-chords/</guid>
+      <description>Jeff Schneider has some excellent instructive content on YouTube, and takes the time to explain some of the theory behind the music. Here, he plays a lush neo-soul chord progression, walks us through a nice tritone substitution and shows how we can use secondary dominants to introduce chords from outside the key.
+Here’s a transcription, made much easier than usual thanks to Jeff’s animated keyboard.</description>
+    </item>
+    
+    <item>
+      <title>Jazz chords from Paul Barton&#39;s &#34;Piano Sounds Never Heard Before!&#34;</title>
+      <link>https://overto.eu/posts/barton-piano-sounds-chords/</link>
+      <pubDate>Sun, 22 Jul 2018 18:07:44 +0100</pubDate>
+      
+      <guid>https://overto.eu/posts/barton-piano-sounds-chords/</guid>
+      <description>There’s a really nice sequence of jazzy chords in Paul Barton’s YouTube video &amp;#34;Piano Sounds Never Heard Before!&amp;#34; at the 7:44 mark:
+I really liked the chord progression and tried to transcribe it. You can find it here.</description>
+    </item>
+    
+  </channel>
+</rss>

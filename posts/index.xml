@@ -1,392 +1,60 @@
-
-   <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-     <channel>
-       <title>Posts on Over to you</title>
-       <link>https://overto.eu/posts/</link>
-       <description>Recent content in Posts on Over to you</description>
-       <generator>Hugo -- gohugo.io</generator>
-       <language>en-ie</language>
-       <lastBuildDate>Tue, 18 Apr 2023 06:27:26 +0100</lastBuildDate>
-       
-           <atom:link href="https://overto.eu/posts/index.xml" rel="self" type="application/rss+xml" />
-       
-       
-       <item>
-         <title>BAM! and the history is gone</title>
-         <link>https://overto.eu/posts/bam-history/</link>
-         <pubDate>Tue, 18 Apr 2023 06:27:26 +0100</pubDate>
-         
-         <guid>https://overto.eu/posts/bam-history/</guid>
-         <description>&lt;div class=&#34;paragraph&#34;&gt;
-&lt;p&gt;A few years ago I took this photo on Barrow Street near Ringsend, Dublin. BAM were tearing down some of the old &lt;a href=&#34;https://en.wikipedia.org/wiki/Boland%27s_Mill&#34;&gt;Boland&amp;#8217;s Mill&lt;/a&gt; site to make way for yet more shiny fancy corporate buildings. To be fair, they did repair some of the protected buildings which are part of the city&amp;#8217;s heritage.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&#34;imageblock&#34;&gt;
-&lt;div class=&#34;content&#34;&gt;
-&lt;img src=&#34;https://res.cloudinary.com/destynova/image/upload/v1681795375/overto.eu/bam-history-is-gone_fb7sto.jpg&#34; alt=&#34;bam history is gone fb7sto&#34;&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class=&#34;paragraph&#34;&gt;
-&lt;p&gt;The graffiti quote is a pleasing reference to the catchphrase heard at the end of obnoxious &#34;Cillit Bang&#34; ads that used to run on UK and Irish TV:&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&#34;videoblock&#34;&gt;
-&lt;div class=&#34;content&#34;&gt;
-&lt;iframe width=&#34;640&#34; height=&#34;480&#34; src=&#34;https://www.youtube.com/embed/t5ycJrJNMMo?rel=0&#34; frameborder=&#34;0&#34; allowfullscreen&gt;&lt;/iframe&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-</description>
-       </item>
-       
-       <item>
-         <title>Playing Revenant using Wine and Proton</title>
-         <link>https://overto.eu/posts/revenant-wine-proton/</link>
-         <pubDate>Sun, 16 May 2021 02:11:51 +0100</pubDate>
-         
-         <guid>https://overto.eu/posts/revenant-wine-proton/</guid>
-         <description>&lt;div class=&#34;paragraph&#34;&gt;
-&lt;p&gt;&lt;em&gt;TL;DR: I tried to run an old game called Revenant on Linux using both WINE and Proton, but both had problems. Here&amp;#8217;s how I combined the powers of both to run the game on my Ubuntu machine.&lt;/em&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&#34;sect1&#34;&gt;
-&lt;h2 id=&#34;_background&#34;&gt;Background&lt;/h2&gt;
-&lt;div class=&#34;sectionbody&#34;&gt;
-&lt;div class=&#34;paragraph&#34;&gt;
-&lt;p&gt;The &lt;a href=&#34;https://www.winehq.org/&#34;&gt;WINE project&lt;/a&gt; is an emulation layer that enables you to run a large amount of Windows programs on a Unix system. It can be difficult to configure, but it&amp;#8217;s a fairly mature project that even supports some modern Windows games.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&#34;paragraph&#34;&gt;
-&lt;p&gt;I recently bought an old game called &lt;a href=&#34;https://www.gog.com/game/revenant&#34;&gt;Revenant&lt;/a&gt; on a GOG sale, and was disappointed to find that it didn&amp;#8217;t run at all well on my old Ubuntu laptop. The intro FMV and menu worked, and the game seemed to run alright until the sampled speech started playing back. For some reason, sample playback sounded choppy and every sound played twice with a one-second echo effect.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&#34;paragraph&#34;&gt;
-&lt;p&gt;My first thought was to try a different audio library (ALSA instead of PulseAudio) but this had no effect, nor did the usual low-latency tweaks for PulseAudio.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&#34;paragraph&#34;&gt;
-&lt;p&gt;Eventually I tried running the game with Steam&amp;#8217;s Proton engine, which is a set of extensions to Steam that can provide better performance and compatibility for various games. In this case, the game played more smoothly and sample playback was perfect, but now the FMVs didn&amp;#8217;t work at all, so every cutscene was a completely black screen.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&#34;paragraph&#34;&gt;
-&lt;p&gt;After several hours of investigation I was about to give up, but then tried running Wine on the &#34;prefix&#34; directory created by Proton. To my surprise, this gave me the best of both worlds: working (if slightly ugly) cutscene video and correct sample playback in-game.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&#34;paragraph&#34;&gt;
-&lt;p&gt;If you&amp;#8217;ve found yourself in a similar situation, perhaps these steps may help you.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class=&#34;sect1&#34;&gt;
-&lt;h2 id=&#34;_install_proton&#34;&gt;Install Proton&lt;/h2&gt;
-&lt;div class=&#34;sectionbody&#34;&gt;
-&lt;div class=&#34;paragraph&#34;&gt;
-&lt;p&gt;First, make sure you have a version of Proton installed. As far as I can tell, this involves installing a Steam game that requires Proton to run in Linux. You can choose your desired Proton version as follows:&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&#34;olist arabic&#34;&gt;
-&lt;ol class=&#34;arabic&#34;&gt;
-&lt;li&gt;
-&lt;p&gt;Right-click the game in Steam&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Click &#34;Properties&#34;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Go the the &#34;General&#34; tab&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Check the &#34;Force the use of a specific Steam Play compatibility tool&#34; box&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;A dropdown menu will appear letting you select a Proton version.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Save your changes and run the game once.&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class=&#34;sect1&#34;&gt;
-&lt;h2 id=&#34;_set_environment_variables_for_wine_and_proton&#34;&gt;Set environment variables for Wine and Proton&lt;/h2&gt;
-&lt;div class=&#34;sectionbody&#34;&gt;
-&lt;div class=&#34;paragraph&#34;&gt;
-&lt;p&gt;This will avoid having to specify them when running each command:&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&#34;listingblock&#34;&gt;
-&lt;div class=&#34;content&#34;&gt;
-&lt;pre class=&#34;highlight&#34;&gt;&lt;code&gt;export WINEPREFIX=~/proton
-export PROTON_NO_ESYNC=1&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class=&#34;paragraph&#34;&gt;
-&lt;p&gt;It&amp;#8217;s probably a good idea to add these to a small script for launching the game once you have it working.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class=&#34;sect1&#34;&gt;
-&lt;h2 id=&#34;_create_a_new_prefix_directory_for_proton&#34;&gt;Create a new prefix directory for Proton&lt;/h2&gt;
-&lt;div class=&#34;sectionbody&#34;&gt;
-&lt;div class=&#34;paragraph&#34;&gt;
-&lt;p&gt;When playing Steam games, Proton seems to create a separate prefix directory for each game. Since we&amp;#8217;re not playing a Steam game, let&amp;#8217;s create a separate prefix directory for Proton that we can use for this game (and hopefully others, since these directories can eat into your hard disk space):&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&#34;listingblock&#34;&gt;
-&lt;div class=&#34;content&#34;&gt;
-&lt;pre class=&#34;highlight&#34;&gt;&lt;code&gt;mkdir ~/proton&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class=&#34;sect1&#34;&gt;
-&lt;h2 id=&#34;_install_the_game&#34;&gt;Install the game&lt;/h2&gt;
-&lt;div class=&#34;sectionbody&#34;&gt;
-&lt;div class=&#34;paragraph&#34;&gt;
-&lt;p&gt;Use Proton to run the Revenant installer (assuming you saved it to the current directory):&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&#34;listingblock&#34;&gt;
-&lt;div class=&#34;content&#34;&gt;
-&lt;pre class=&#34;highlight&#34;&gt;&lt;code&gt;~/.steam/steam/steamapps/common/Proton\ 5.13/proton run setup_revenant_1.22l_\(21853\).exe&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class=&#34;paragraph&#34;&gt;
-&lt;p&gt;You may also need to run the game once with Proton to populate the prefix directory, but perhaps this step can be skipped:&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&#34;listingblock&#34;&gt;
-&lt;div class=&#34;content&#34;&gt;
-&lt;pre class=&#34;highlight&#34;&gt;&lt;code&gt;cd ~/proton/drive_c/GOG\ Games/Revenant/
-~/.steam/steam/steamapps/common/Proton\ 5.13/proton run Launcher.exe&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class=&#34;sect1&#34;&gt;
-&lt;h2 id=&#34;_install_corefonts&#34;&gt;Install corefonts&lt;/h2&gt;
-&lt;div class=&#34;sectionbody&#34;&gt;
-&lt;div class=&#34;paragraph&#34;&gt;
-&lt;p&gt;When you run the game with Wine, it&amp;#8217;ll be missing some standard system fonts and will look weird. You can fix that using &lt;code&gt;winetricks&lt;/code&gt;:&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&#34;listingblock&#34;&gt;
-&lt;div class=&#34;content&#34;&gt;
-&lt;pre class=&#34;highlight&#34;&gt;&lt;code&gt;winetricks corefonts&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class=&#34;sect1&#34;&gt;
-&lt;h2 id=&#34;_launch_the_game_with_wine&#34;&gt;Launch the game with Wine&lt;/h2&gt;
-&lt;div class=&#34;sectionbody&#34;&gt;
-&lt;div class=&#34;listingblock&#34;&gt;
-&lt;div class=&#34;content&#34;&gt;
-&lt;pre class=&#34;highlight&#34;&gt;&lt;code&gt;cd ~/proton/drive_c/GOG\ Games/Revenant/
-wine Launcher.exe&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class=&#34;paragraph&#34;&gt;
-&lt;p&gt;That&amp;#8217;s what worked for me. There&amp;#8217;s probably a much neater way to do this that doesn&amp;#8217;t involve Proton at all; if so, please leave a comment and let me know.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-</description>
-       </item>
-       
-       <item>
-         <title>Living with dwm</title>
-         <link>https://overto.eu/posts/dwm-extras/</link>
-         <pubDate>Sat, 04 Apr 2020 17:19:11 +0100</pubDate>
-         
-         <guid>https://overto.eu/posts/dwm-extras/</guid>
-         <description>&lt;div class=&#34;paragraph&#34;&gt;
-&lt;p&gt;You may have heard of tiling window managers like &lt;a href=&#34;https://dwm.suckless.org&#34;&gt;dwm&lt;/a&gt; or &lt;a href=&#34;https://i3wm.org/&#34;&gt;i3&lt;/a&gt;. These are pretty interesting from a nerdy elitist hacker perspective (&#34;I know Unix!&#34;), but can also look quite nice and make good use of on-screen space. I switched to dwm yesterday and enjoyed spending some time to figure out the absolute basics. On my old, small laptop though, I realised that it suits me best to just have a separate tag per application. Tags are like workspaces, but more flexible; in my case though it&amp;#8217;s just a separate desktop for each app.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&#34;sect1&#34;&gt;
-&lt;h2 id=&#34;_whats_missing&#34;&gt;What&amp;#8217;s missing?&lt;/h2&gt;
-&lt;div class=&#34;sectionbody&#34;&gt;
-&lt;div class=&#34;paragraph&#34;&gt;
-&lt;p&gt;Lots of things are missing that you normally take for granted in a full desktop environment like Gnome or KDE. Here are some of the things I&amp;#8217;ve noticed so far:&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&#34;ulist&#34;&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;Keyboard mapping is unset (defaults to &lt;code&gt;en_US&lt;/code&gt;).&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;No keyboard hotkeys for e.g. changing volume.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;System status bar only tells you about the window manager. You don&amp;#8217;t even get a clock!&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;code&gt;notify-send&lt;/code&gt; popups are ugly.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;No screensaver / lock.&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div class=&#34;paragraph&#34;&gt;
-&lt;p&gt;There&amp;#8217;s probably a bunch of other things I haven&amp;#8217;t even noticed yet. So if you want to live with a minimalist window manager, you have two choices:&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&#34;olist arabic&#34;&gt;
-&lt;ol class=&#34;arabic&#34;&gt;
-&lt;li&gt;
-&lt;p&gt;just live without these things and do everything from the command line (you can launch one with &lt;code&gt;Alt+Shift+Enter&lt;/code&gt;, or in my case &lt;code&gt;Super+Shift+Enter&lt;/code&gt; since &lt;code&gt;Alt&lt;/code&gt; was conflicting with shortcuts in Firefox)&amp;#8230;&amp;#8203; or&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;find and configure (or write your own) external tools to replace the missing parts.&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class=&#34;sect1&#34;&gt;
-&lt;h2 id=&#34;_adding_what_you_need&#34;&gt;Adding what you need&lt;/h2&gt;
-&lt;div class=&#34;sectionbody&#34;&gt;
-&lt;div class=&#34;paragraph&#34;&gt;
-&lt;p&gt;Let&amp;#8217;s take a look at my &lt;code&gt;~/.xsessionrc&lt;/code&gt; file which should run a bunch of programs when I next start dwm. (I say should because I haven&amp;#8217;t logged out and back in yet.)&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&#34;paragraph&#34;&gt;
-&lt;p&gt;&lt;em&gt;.xsessionrc&lt;/em&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;setxkbmap ie
-dunst &amp;amp; &lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;disown&lt;/span&gt;
-xautolock -time &lt;span style=&#34;color:#bd93f9&#34;&gt;10&lt;/span&gt; -locker &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;xset dpms force off &amp;amp;&amp;amp; slock&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;disown&lt;/span&gt;
-~/bin/scripts/dwm_status &amp;amp; &lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;disown&lt;/span&gt;
-xbindkeys -f /home/omf/.xbindkeysrc&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&#34;paragraph&#34;&gt;
-&lt;p&gt;The first command is straightforward&amp;#8201;&amp;#8212;&amp;#8201;it just tells X to use the &#34;English (Ireland)&#34; layout for the keyboard. No problem.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&#34;paragraph&#34;&gt;
-&lt;p&gt;Next, we use &lt;a href=&#34;https://dunst-project.org/&#34;&gt;Dunst&lt;/a&gt; as the system notifier, so that messages displayed with &lt;code&gt;notify-send&lt;/code&gt; can be formatted and have arbitrary timeouts. Note the use of &lt;code&gt;command &amp;amp; disown&lt;/code&gt; to launch programs as daemons that stay the background.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&#34;paragraph&#34;&gt;
-&lt;p&gt;We then use &lt;code&gt;xautolock&lt;/code&gt; and the extremely barebones &lt;a href=&#34;https://tools.suckless.org/slock/&#34;&gt;slock&lt;/a&gt; to lock the screen after 10 minutes of inactivity. I also want the screen to turn off when locking, so &lt;code&gt;xset dpms force off&lt;/code&gt; does that until we move the mouse or hit a key.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&#34;paragraph&#34;&gt;
-&lt;p&gt;Then, we run a script called &lt;code&gt;dwm_status&lt;/code&gt; to periodically update the dwm status bar at the top of the screen. Updating the status bar is done by calling &lt;code&gt;xsetroot -name &#34;(new text)&#34;&lt;/code&gt;. Let&amp;#8217;s have a look at the &lt;code&gt;dwm_status&lt;/code&gt; script.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&#34;paragraph&#34;&gt;
-&lt;p&gt;&lt;em&gt;dwm_status&lt;/em&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;while&lt;/span&gt; true; &lt;span style=&#34;color:#ff79c6&#34;&gt;do&lt;/span&gt;
-  ~/bin/scripts/dwm_status_update
-  sleep &lt;span style=&#34;color:#bd93f9&#34;&gt;30&lt;/span&gt;
-&lt;span style=&#34;color:#ff79c6&#34;&gt;done&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&#34;paragraph&#34;&gt;
-&lt;p&gt;We can see that it just sleeps in a loop, calling &lt;code&gt;dwm_status_update&lt;/code&gt; once every 30 seconds. Okay, what&amp;#8217;s in that file?&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&#34;paragraph&#34;&gt;
-&lt;p&gt;&lt;em&gt;scripts/dwm_status_update&lt;/em&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;DATE&lt;/span&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;$(&lt;/span&gt;date +&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;%F %H:%M&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;)&lt;/span&gt;
-&lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;VOLUME&lt;/span&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;$(&lt;/span&gt;pactl list sinks | grep &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#39;Volume: front-left&amp;#39;&lt;/span&gt; | awk &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#39;{print $5}&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;)&lt;/span&gt;
-
-xsetroot -name &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;⏰ &lt;/span&gt;&lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;$DATE&lt;/span&gt;&lt;span style=&#34;color:#f1fa8c&#34;&gt; | 🔊 &lt;/span&gt;&lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;$VOLUME&lt;/span&gt;&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&#34;paragraph&#34;&gt;
-&lt;p&gt;Okay, now we have something. So our status bar so far just has the date/time and system volume. We used &lt;code&gt;pactl&lt;/code&gt; and some ugly grep/awk to get what we needed. It&amp;#8217;s a shame there&amp;#8217;s no machine-readable output from &lt;code&gt;pactl&lt;/code&gt;. You set the volume by calling &lt;code&gt;set-sink-volume&lt;/code&gt; but there&amp;#8217;s no &lt;code&gt;get-sink-volume&lt;/code&gt; which would have been handy.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&#34;paragraph&#34;&gt;
-&lt;p&gt;You might ask why this is split into two scripts. That&amp;#8217;s because I want to be able to do things that immediately update the status bar without waiting 30 seconds. The last action in &lt;code&gt;.xsessionrc&lt;/code&gt;, calling &lt;code&gt;xbindkeys&lt;/code&gt;, gives an example of that.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&#34;paragraph&#34;&gt;
-&lt;p&gt;&lt;em&gt;.xbindkeysrc&lt;/em&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;~/bin/scripts/vol_up&amp;#34;&lt;/span&gt;
-Mod4 + KP_Add
-
-&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;~/bin/scripts/vol_down&amp;#34;&lt;/span&gt;
-Mod4 + KP_Subtract&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&#34;paragraph&#34;&gt;
-&lt;p&gt;Note that &lt;code&gt;Mod4&lt;/code&gt; means &lt;code&gt;Super&lt;/code&gt;, otherwise known as &#34;Windows key&#34;. So &lt;code&gt;Super+Numkey_PLUS/MINUS&lt;/code&gt; raise or lower the volume by a small increment. Let&amp;#8217;s look at one of those scripts.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&#34;paragraph&#34;&gt;
-&lt;p&gt;&lt;em&gt;scripts/vol_up&lt;/em&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;SINK&lt;/span&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;$(&lt;/span&gt;pactl list sinks short | grep RUNNING | awk &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#39;{ print $2 }&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;)&lt;/span&gt;
-
-pactl set-sink-volume &lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;$SINK&lt;/span&gt; +5%
-~/bin/scripts/dwm_status_update&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&#34;paragraph&#34;&gt;
-&lt;p&gt;This sets the volume up by 5% then calls the status bar update script. Note that you can get the desired sink name with &lt;code&gt;pactl list sinks | grep Name:&lt;/code&gt;.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class=&#34;sect1&#34;&gt;
-&lt;h2 id=&#34;_thoughts&#34;&gt;Thoughts&lt;/h2&gt;
-&lt;div class=&#34;sectionbody&#34;&gt;
-&lt;div class=&#34;paragraph&#34;&gt;
-&lt;p&gt;So far it&amp;#8217;s been a fun journey, and it certainly seems to yield a noticeable performance improvement on this fairly old laptop. There are a few limitations that I&amp;#8217;m still not super happy with, like the fact that you can only run one instance of &lt;code&gt;xautolock&lt;/code&gt;, so you can&amp;#8217;t have e.g. the screen switching off (with DPMS) after 2 minutes idle, but locking after 10 minutes. They have to both happen in the same single step.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&#34;paragraph&#34;&gt;
-&lt;p&gt;On the other hand, dwm includes the fantastic &lt;code&gt;dmenu&lt;/code&gt; which functions as an application launcher, but can also be used in interactive scripts to do cool things. More on that in future maybe.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&#34;paragraph&#34;&gt;
-&lt;p&gt;I&amp;#8217;m not sure if I&amp;#8217;ll stick with this minimalist setup, but it&amp;#8217;s certainly doable and you&amp;#8217;ll undoubtedly learn from the process.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class=&#34;sect1&#34;&gt;
-&lt;h2 id=&#34;_update_2020_04_19&#34;&gt;Update 2020-04-19&lt;/h2&gt;
-&lt;div class=&#34;sectionbody&#34;&gt;
-&lt;div class=&#34;paragraph&#34;&gt;
-&lt;p&gt;Some other things I&amp;#8217;ve taken for granted with full desktop environments that don&amp;#8217;t come out of the box with dwm:&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&#34;ulist&#34;&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;Screenshots.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;More intelligent control of backlight via DPMS (i.e. don&amp;#8217;t turn it off when I&amp;#8217;m playing a video, and if the display wakes while locked, but I don&amp;#8217;t unlock it, then it should sleep the display again after a few seconds).&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Floating dialog boxes that look good.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Widgets for e.g. Bluetooth and wifi configuration.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Hitting a hotkey (&lt;code&gt;Super&lt;/code&gt; in Gnome) to see all windows in a zoomed-out view, without generating mouse events in them.&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div class=&#34;paragraph&#34;&gt;
-&lt;p&gt;All of these are things you can probably replace with alternative tools (or write your own) without a huge effort, but it&amp;#8217;s easy to forget how useful they are until you don&amp;#8217;t have them.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-</description>
-       </item>
-       
-       <item>
-         <title>Jeff Schneider&#39;s Sick R&amp;B Chords</title>
-         <link>https://overto.eu/posts/jeff-schneider-sick-rnb-chords/</link>
-         <pubDate>Tue, 24 Jul 2018 22:17:52 +0100</pubDate>
-         
-         <guid>https://overto.eu/posts/jeff-schneider-sick-rnb-chords/</guid>
-         <description>&lt;div class=&#34;paragraph&#34;&gt;
-&lt;p&gt;Jeff Schneider has some excellent instructive content on YouTube, and takes the time to explain some of the theory behind the music. Here, he plays a lush neo-soul chord progression, walks us through a nice tritone substitution and shows how we can use secondary dominants to introduce chords from outside the key.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&#34;videoblock&#34;&gt;
-&lt;div class=&#34;content&#34;&gt;
-&lt;iframe width=&#34;640&#34; height=&#34;320&#34; src=&#34;https://www.youtube.com/embed/Scuot8Ts5Tg?rel=0&#34; frameborder=&#34;0&#34; allowfullscreen&gt;&lt;/iframe&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class=&#34;paragraph&#34;&gt;
-&lt;p&gt;Here&amp;#8217;s a &lt;a href=&#34;https://overto.eu/Schneider_RnB_chords.pdf&#34;&gt;transcription&lt;/a&gt;, made much easier than usual thanks to Jeff&amp;#8217;s animated keyboard.&lt;/p&gt;
-&lt;/div&gt;
-</description>
-       </item>
-       
-       <item>
-         <title>Jazz chords from Paul Barton&#39;s &#34;Piano Sounds Never Heard Before!&#34;</title>
-         <link>https://overto.eu/posts/barton-piano-sounds-chords/</link>
-         <pubDate>Sun, 22 Jul 2018 18:07:44 +0100</pubDate>
-         
-         <guid>https://overto.eu/posts/barton-piano-sounds-chords/</guid>
-         <description>&lt;div class=&#34;paragraph&#34;&gt;
-&lt;p&gt;There&amp;#8217;s a really nice sequence of jazzy chords in Paul Barton&amp;#8217;s YouTube video &#34;Piano Sounds Never Heard Before!&#34; at the 7:44 mark:&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&#34;videoblock&#34;&gt;
-&lt;div class=&#34;content&#34;&gt;
-&lt;iframe width=&#34;640&#34; height=&#34;320&#34; src=&#34;https://www.youtube.com/embed/zHWex94-mHg?rel=0&amp;amp;start=464&#34; frameborder=&#34;0&#34; allowfullscreen&gt;&lt;/iframe&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class=&#34;paragraph&#34;&gt;
-&lt;p&gt;I really liked the chord progression and tried to transcribe it. You can find it &lt;a href=&#34;https://overto.eu/Mystery_Jazz_Progression__Paul_Barton.pdf&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
-&lt;/div&gt;
-</description>
-       </item>
-       
-     </channel>
-   </rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Over to you</title>
+    <link>https://overto.eu/posts/</link>
+    <description>Recent content in Posts on Over to you</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-ie</language>
+    <lastBuildDate>Tue, 18 Apr 2023 06:27:26 +0100</lastBuildDate><atom:link href="https://overto.eu/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>BAM! and the history is gone</title>
+      <link>https://overto.eu/posts/bam-history/</link>
+      <pubDate>Tue, 18 Apr 2023 06:27:26 +0100</pubDate>
+      
+      <guid>https://overto.eu/posts/bam-history/</guid>
+      <description>A few years ago I took this photo on Barrow Street near Ringsend, Dublin. BAM were tearing down some of the old Boland’s Mill site to make way for yet more shiny fancy corporate buildings. To be fair, they did repair some of the protected buildings which are part of the city’s heritage.
+The graffiti quote is a pleasing reference to the catchphrase heard at the end of obnoxious &amp;#34;Cillit Bang&amp;#34; ads that used to run on UK and Irish TV:</description>
+    </item>
+    
+    <item>
+      <title>Playing Revenant using Wine and Proton</title>
+      <link>https://overto.eu/posts/revenant-wine-proton/</link>
+      <pubDate>Sun, 16 May 2021 02:11:51 +0100</pubDate>
+      
+      <guid>https://overto.eu/posts/revenant-wine-proton/</guid>
+      <description>TL;DR: I tried to run an old game called Revenant on Linux using both WINE and Proton, but both had problems. Here’s how I combined the powers of both to run the game on my Ubuntu machine.
+Background The WINE project is an emulation layer that enables you to run a large amount of Windows programs on a Unix system. It can be difficult to configure, but it’s a fairly mature project that even supports some modern Windows games.</description>
+    </item>
+    
+    <item>
+      <title>Living with dwm</title>
+      <link>https://overto.eu/posts/dwm-extras/</link>
+      <pubDate>Sat, 04 Apr 2020 17:19:11 +0100</pubDate>
+      
+      <guid>https://overto.eu/posts/dwm-extras/</guid>
+      <description>You may have heard of tiling window managers like dwm or i3. These are pretty interesting from a nerdy elitist hacker perspective (&amp;#34;I know Unix!&amp;#34;), but can also look quite nice and make good use of on-screen space. I switched to dwm yesterday and enjoyed spending some time to figure out the absolute basics. On my old, small laptop though, I realised that it suits me best to just have a separate tag per application.</description>
+    </item>
+    
+    <item>
+      <title>Jeff Schneider&#39;s Sick R&amp;B Chords</title>
+      <link>https://overto.eu/posts/jeff-schneider-sick-rnb-chords/</link>
+      <pubDate>Tue, 24 Jul 2018 22:17:52 +0100</pubDate>
+      
+      <guid>https://overto.eu/posts/jeff-schneider-sick-rnb-chords/</guid>
+      <description>Jeff Schneider has some excellent instructive content on YouTube, and takes the time to explain some of the theory behind the music. Here, he plays a lush neo-soul chord progression, walks us through a nice tritone substitution and shows how we can use secondary dominants to introduce chords from outside the key.
+Here’s a transcription, made much easier than usual thanks to Jeff’s animated keyboard.</description>
+    </item>
+    
+    <item>
+      <title>Jazz chords from Paul Barton&#39;s &#34;Piano Sounds Never Heard Before!&#34;</title>
+      <link>https://overto.eu/posts/barton-piano-sounds-chords/</link>
+      <pubDate>Sun, 22 Jul 2018 18:07:44 +0100</pubDate>
+      
+      <guid>https://overto.eu/posts/barton-piano-sounds-chords/</guid>
+      <description>There’s a really nice sequence of jazzy chords in Paul Barton’s YouTube video &amp;#34;Piano Sounds Never Heard Before!&amp;#34; at the 7:44 mark:
+I really liked the chord progression and tried to transcribe it. You can find it here.</description>
+    </item>
+    
+  </channel>
+</rss>

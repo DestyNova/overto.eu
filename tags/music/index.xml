@@ -1,55 +1,31 @@
-
-   <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-     <channel>
-       <title>music on Over to you</title>
-       <link>https://overto.eu/tags/music/</link>
-       <description>Recent content in music on Over to you</description>
-       <generator>Hugo -- gohugo.io</generator>
-       <language>en-ie</language>
-       <lastBuildDate>Tue, 24 Jul 2018 22:17:52 +0100</lastBuildDate>
-       
-           <atom:link href="https://overto.eu/tags/music/index.xml" rel="self" type="application/rss+xml" />
-       
-       
-       <item>
-         <title>Jeff Schneider&#39;s Sick R&amp;B Chords</title>
-         <link>https://overto.eu/posts/jeff-schneider-sick-rnb-chords/</link>
-         <pubDate>Tue, 24 Jul 2018 22:17:52 +0100</pubDate>
-         
-         <guid>https://overto.eu/posts/jeff-schneider-sick-rnb-chords/</guid>
-         <description>&lt;div class=&#34;paragraph&#34;&gt;
-&lt;p&gt;Jeff Schneider has some excellent instructive content on YouTube, and takes the time to explain some of the theory behind the music. Here, he plays a lush neo-soul chord progression, walks us through a nice tritone substitution and shows how we can use secondary dominants to introduce chords from outside the key.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&#34;videoblock&#34;&gt;
-&lt;div class=&#34;content&#34;&gt;
-&lt;iframe width=&#34;640&#34; height=&#34;320&#34; src=&#34;https://www.youtube.com/embed/Scuot8Ts5Tg?rel=0&#34; frameborder=&#34;0&#34; allowfullscreen&gt;&lt;/iframe&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class=&#34;paragraph&#34;&gt;
-&lt;p&gt;Here&amp;#8217;s a &lt;a href=&#34;https://overto.eu/Schneider_RnB_chords.pdf&#34;&gt;transcription&lt;/a&gt;, made much easier than usual thanks to Jeff&amp;#8217;s animated keyboard.&lt;/p&gt;
-&lt;/div&gt;
-</description>
-       </item>
-       
-       <item>
-         <title>Jazz chords from Paul Barton&#39;s &#34;Piano Sounds Never Heard Before!&#34;</title>
-         <link>https://overto.eu/posts/barton-piano-sounds-chords/</link>
-         <pubDate>Sun, 22 Jul 2018 18:07:44 +0100</pubDate>
-         
-         <guid>https://overto.eu/posts/barton-piano-sounds-chords/</guid>
-         <description>&lt;div class=&#34;paragraph&#34;&gt;
-&lt;p&gt;There&amp;#8217;s a really nice sequence of jazzy chords in Paul Barton&amp;#8217;s YouTube video &#34;Piano Sounds Never Heard Before!&#34; at the 7:44 mark:&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&#34;videoblock&#34;&gt;
-&lt;div class=&#34;content&#34;&gt;
-&lt;iframe width=&#34;640&#34; height=&#34;320&#34; src=&#34;https://www.youtube.com/embed/zHWex94-mHg?rel=0&amp;amp;start=464&#34; frameborder=&#34;0&#34; allowfullscreen&gt;&lt;/iframe&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class=&#34;paragraph&#34;&gt;
-&lt;p&gt;I really liked the chord progression and tried to transcribe it. You can find it &lt;a href=&#34;https://overto.eu/Mystery_Jazz_Progression__Paul_Barton.pdf&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
-&lt;/div&gt;
-</description>
-       </item>
-       
-     </channel>
-   </rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>music on Over to you</title>
+    <link>https://overto.eu/tags/music/</link>
+    <description>Recent content in music on Over to you</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-ie</language>
+    <lastBuildDate>Tue, 24 Jul 2018 22:17:52 +0100</lastBuildDate><atom:link href="https://overto.eu/tags/music/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Jeff Schneider&#39;s Sick R&amp;B Chords</title>
+      <link>https://overto.eu/posts/jeff-schneider-sick-rnb-chords/</link>
+      <pubDate>Tue, 24 Jul 2018 22:17:52 +0100</pubDate>
+      
+      <guid>https://overto.eu/posts/jeff-schneider-sick-rnb-chords/</guid>
+      <description>Jeff Schneider has some excellent instructive content on YouTube, and takes the time to explain some of the theory behind the music. Here, he plays a lush neo-soul chord progression, walks us through a nice tritone substitution and shows how we can use secondary dominants to introduce chords from outside the key.
+Here’s a transcription, made much easier than usual thanks to Jeff’s animated keyboard.</description>
+    </item>
+    
+    <item>
+      <title>Jazz chords from Paul Barton&#39;s &#34;Piano Sounds Never Heard Before!&#34;</title>
+      <link>https://overto.eu/posts/barton-piano-sounds-chords/</link>
+      <pubDate>Sun, 22 Jul 2018 18:07:44 +0100</pubDate>
+      
+      <guid>https://overto.eu/posts/barton-piano-sounds-chords/</guid>
+      <description>There’s a really nice sequence of jazzy chords in Paul Barton’s YouTube video &amp;#34;Piano Sounds Never Heard Before!&amp;#34; at the 7:44 mark:
+I really liked the chord progression and tried to transcribe it. You can find it here.</description>
+    </item>
+    
+  </channel>
+</rss>
