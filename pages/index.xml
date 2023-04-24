@@ -1,33 +1,5 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Pages on Over to you</title>
-    <link>https://overto.eu/pages/</link>
-    <description>Recent content in Pages on Over to you</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-ie</language>
-    <lastBuildDate>Sun, 19 Apr 2020 17:26:19 +0100</lastBuildDate><atom:link href="https://overto.eu/pages/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Learning</title>
-      <link>https://overto.eu/pages/learning/</link>
-      <pubDate>Sun, 19 Apr 2020 17:26:19 +0100</pubDate>
-      
-      <guid>https://overto.eu/pages/learning/</guid>
-      <description>Experiences with tutorials, books or courses I’ve taken in recent times.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Pages on Over to you</title><link>https://overto.eu/pages/</link><description>Recent content in Pages on Over to you</description><generator>Hugo -- gohugo.io</generator><language>en-ie</language><lastBuildDate>Sun, 19 Apr 2020 17:26:19 +0100</lastBuildDate><atom:link href="https://overto.eu/pages/index.xml" rel="self" type="application/rss+xml"/><item><title>Learning</title><link>https://overto.eu/pages/learning/</link><pubDate>Sun, 19 Apr 2020 17:26:19 +0100</pubDate><guid>https://overto.eu/pages/learning/</guid><description>Experiences with tutorials, books or courses I’ve taken in recent times.
 The Haskell book October 2017 — present
-This is a very well-written book. But I found it hard to make progress quickly because some of the exercises were quite difficult and I felt compelled to complete them before moving on, although I think the author specifically advises to not get stuck on them and just move on if need be.</description>
-    </item>
-    
-    <item>
-      <title>Software</title>
-      <link>https://overto.eu/pages/software/</link>
-      <pubDate>Sat, 14 Mar 2020 21:33:00 +0100</pubDate>
-      
-      <guid>https://overto.eu/pages/software/</guid>
-      <description>Some software I’ve written and released as open-source:
+This is a very well-written book. But I found it hard to make progress quickly because some of the exercises were quite difficult and I felt compelled to complete them before moving on, although I think the author specifically advises to not get stuck on them and just move on if need be.</description></item><item><title>Software</title><link>https://overto.eu/pages/software/</link><pubDate>Sat, 14 Mar 2020 21:33:00 +0100</pubDate><guid>https://overto.eu/pages/software/</guid><description>Some software I’ve written and released as open-source:
 Metron (source) — a minimal implementation of a metronome that allows you to only play the first of every n beats. Uses the HTML5 webaudio API to play clicks.
-Pitcher (source) — a collection of exercises for training and testing absolute pitch (also known as perfect pitch). I’ve been training with it for a while and still don’t have perfect pitch, but maybe I’ll update this if that changes.</description>
-    </item>
-    
-  </channel>
-</rss>
+Pitcher (source) — a collection of exercises for training and testing absolute pitch (also known as perfect pitch). I’ve been training with it for a while and still don’t have perfect pitch, but maybe I’ll update this if that changes.</description></item></channel></rss>

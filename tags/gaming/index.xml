@@ -1,21 +1,2 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>gaming on Over to you</title>
-    <link>https://overto.eu/tags/gaming/</link>
-    <description>Recent content in gaming on Over to you</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-ie</language>
-    <lastBuildDate>Sun, 16 May 2021 02:11:51 +0100</lastBuildDate><atom:link href="https://overto.eu/tags/gaming/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Playing Revenant using Wine and Proton</title>
-      <link>https://overto.eu/posts/revenant-wine-proton/</link>
-      <pubDate>Sun, 16 May 2021 02:11:51 +0100</pubDate>
-      
-      <guid>https://overto.eu/posts/revenant-wine-proton/</guid>
-      <description>TL;DR: I tried to run an old game called Revenant on Linux using both WINE and Proton, but both had problems. Here’s how I combined the powers of both to run the game on my Ubuntu machine.
-Background The WINE project is an emulation layer that enables you to run a large amount of Windows programs on a Unix system. It can be difficult to configure, but it’s a fairly mature project that even supports some modern Windows games.</description>
-    </item>
-    
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>gaming on Over to you</title><link>https://overto.eu/tags/gaming/</link><description>Recent content in gaming on Over to you</description><generator>Hugo -- gohugo.io</generator><language>en-ie</language><lastBuildDate>Sun, 16 May 2021 02:11:51 +0100</lastBuildDate><atom:link href="https://overto.eu/tags/gaming/index.xml" rel="self" type="application/rss+xml"/><item><title>Playing Revenant using Wine and Proton</title><link>https://overto.eu/posts/revenant-wine-proton/</link><pubDate>Sun, 16 May 2021 02:11:51 +0100</pubDate><guid>https://overto.eu/posts/revenant-wine-proton/</guid><description>TL;DR: I tried to run an old game called Revenant on Linux using both WINE and Proton, but both had problems. Here’s how I combined the powers of both to run the game on my Ubuntu machine.
+Background The WINE project is an emulation layer that enables you to run a large amount of Windows programs on a Unix system. It can be difficult to configure, but it’s a fairly mature project that even supports some modern Windows games.</description></item></channel></rss>
