@@ -2,7 +2,8 @@ baseURL = "https://overto.eu/"
 languageCode = "en-ie"
 title = "Over to you"
 
-theme =  ["github.com/chollinger93/ink-free"]
+# Use my fork to fix broken dark mode
+theme =  ["github.com/DestyNova/ink-free"]
 
 pygmentsCodefences = true
 pygmentsCodefencesGuessSyntax = true
