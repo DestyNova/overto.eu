@@ -1,0 +1,14 @@
+---
+title: "Benben"
+date: 2023-04-30T22:41:11+01:00
+tags: ["music", "crystal", "vgm"]
+draft: false
+---
+
+Today I was absolutely delighted to stumble upon a new command-line VGM (Video Game Music file) player called https://chiselapp.com/user/MistressRemilia/repository/benben/home[Benben]. The author mentioned it in the https://forum.crystal-lang.org/t/yunosynth-v0-1-0-and-benben-v0-1-0-released/5617[Crystal programming language forum] along with the underlying VGM playback library https://chiselapp.com/user/MistressRemilia/repository/yunosynth/index[YunoSynth].
+
+Benben is distributed as an executable AppImage file which worked perfectly out of the box on my Pop!_OS Linux system. Here's a video of it playing the soundtrack to the PC-98 game "Rusty":
+
+video::pKPR-95oY3Q[youtube, 640, 480]
+
+Give it a try! You can find a collection of files to test it on https://vgmrips.net/packs/[here].
