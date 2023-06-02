@@ -2,7 +2,7 @@
 title: "Rodland Intro Chords"
 date: 2023-06-02T04:32:59+01:00
 draft: false
-tags: ["music", "transcription"]
+tags: ["music", "transcription", "vgm"]
 ---
 
 I was watching cutscenes from the old arcade game "Rodland" and noticed a couple of chords with some nice voice leading.
