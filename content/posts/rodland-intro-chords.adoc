@@ -1,0 +1,12 @@
+---
+title: "Rodland Intro Chords"
+date: 2023-06-02T04:32:59+01:00
+draft: false
+tags: ["music", "transcription"]
+---
+
+I was watching cutscenes from the old arcade game "Rodland" and noticed a couple of chords with some nice voice leading.
+
+video::V_w9vxnAqGA[youtube,640,320,t=35]
+
+I'm not sure I picked out all the notes, but here's at least a partial link:/Rodland_intro_chords.pdf[transcription].
