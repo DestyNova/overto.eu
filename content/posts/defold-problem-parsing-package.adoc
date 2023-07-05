@@ -9,7 +9,7 @@ While working on my first hobby gamedev project with Defold, I ran into an issue
 
 > There was a problem parsing the package.
 
-Searching the Defold forums and the web generally didn't produce any immediately informative results, so I looked at the sample project and tried to figure out what was different in the project settings. Most of the configuration was the same (that is to say, default), so I tried looking at the contents of the APK with `unzip -l`. Yes, an APK is just a zipfile that seems to follow JAR conventions.
+Searching the Defold forums and the web didn't produce anything obviously relevant, so I looked at the sample project and tried to figure out what was different in the project settings. Most of the configuration was the same (that is to say, default), so I tried looking at the contents of the APK with `unzip -l`. Yes, an APK is just a zipfile that seems to follow JAR conventions.
 
 Inside the APK, I noticed a file named `lib/arm64-v8a/libpitch_instinct.so`. But the example project's APK had `lib/arm64-v8a/libColorslidetutorial.so`. Surely it wouldn't just be that an underscore is verboten there?
 
