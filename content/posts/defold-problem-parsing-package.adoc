@@ -1,7 +1,7 @@
 ---
 title: "Defold Android build issue: Problem parsing the package"
 date: 2023-07-05T01:59:25+01:00
-tags: ["gamedev", "lua", "android"]
+tags: ["gamedev", "android"]
 draft: false
 ---
 
