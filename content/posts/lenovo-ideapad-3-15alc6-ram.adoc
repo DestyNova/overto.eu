@@ -11,7 +11,7 @@ Anyway, eventually I decided more RAM would be nice, since I was starting to ham
 
 When I looked for compatible RAM upgrades, it seemed that the maximum installed RAM would be 24GB -- 8GB soldered RAM and one 16GB SODIMM. This felt like a bit of a weak upgrade given the cost. A bunch of discussions on the Lenovo site seemed to back this up, and the situation was worse for owners of the slightly lower-spec model with only 4GB soldered RAM. Additionally, Crucial and most other RAM shops that were aware of the 15ALC model would only offer a 16GB SODIMM.
 
-Then I found a German company called https://www.compuram.biz[CompuRAM] who guaranteed that a 32GB SODIMM would work. I was a bit sus because of the `.biz` TLD, and felt the card was a bit expensive (€110.45 including VAT and shipping), but there didn't seem to be many other options, so I pulled the trigger.
+Then I found a German company called https://www.compuram.biz[CompuRAM] who guaranteed that a 32GB SODIMM would work. I was a bit sus because of the `.biz` TLD, and felt the card was a bit expensive (€122.63 including VAT and shipping), but there didn't seem to be many other options, so I pulled the trigger.
 
 After a fairly unimpressive 9 day wait (nice one DHL), the SODIMM arrived and we installed it. The Ideapad sadly doesn't have a convenient removable panel for the RAM slot, so the case needs to be opened. There are around 8 screws in two different sizes (why...?) and some spudger action required to pop the bottom cover off, then a few more clips need to be prised out to get the SODIMM cover out of the way.
 
