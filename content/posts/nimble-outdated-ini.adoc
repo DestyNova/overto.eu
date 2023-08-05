@@ -1,0 +1,23 @@
+---
+title: "Nim: Outdated nimble.ini"
+date: 2023-08-05T19:28:22+01:00
+tags: ["tech", "programming", "nim"]
+draft: false
+---
+
+I was interested today in trying to write a simple GUI program using Nim's [nimx] library. But even with the latest Nim (2.0.0) and Nimble (0.14.2), I ran into this:
+
+```
+    Reading official package list                                                                                                                                                                                 
+nimble.nim(683)          getDownloadInfo                                                                                                                                                                          
+                                                                                                                                                                                                                  
+    Error:  Package darwin@any version not found.
+```
+
+This was confusing. I opened an issue on the nimx repo and the author pointed out that the `darwin` package is listed https://github.com/nim-lang/packages/blob/e52b18948feb1cca13ada322218aa19d03ef4fd4/packages.json#L19341C3-L19353[here], although I didn't see it in https://nim-lang.org/nimble/packages.json[this list]. So I started blowing away Nimble's local package files, then eventually the file `~/.config/nimble/nimble.ini` which contained URLs for multiple `package.json` files. I can't reproduce it here because the next thing I tried was to delete that file, but it did seem to include a link to the Github repo.
+
+In any case, deleting it and then running `nimble update` seems to have fixed the situation. I'm not sure how it ended up in that state, but perhaps some change was introduced to Nimble that wasn't backward compatible with old installations (going back to 2019, around 4 years ago).
+
+```
+¯\_(ツ)_/¯
+```
