@@ -14,7 +14,7 @@ nimble.nim(683)          getDownloadInfo
     Error:  Package darwin@any version not found.
 ```
 
-This was confusing. I opened an issue on the nimx repo and the author pointed out that the `darwin` package is listed https://github.com/nim-lang/packages/blob/e52b18948feb1cca13ada322218aa19d03ef4fd4/packages.json#L19341C3-L19353[here], although I didn't see it in https://nim-lang.org/nimble/packages.json[this list]. So I started blowing away Nimble's local package files, then eventually the file `~/.config/nimble/nimble.ini` which contained URLs for multiple `package.json` files. I can't reproduce it here because the next thing I tried was to delete that file, but it did seem to include a link to the Github repo.
+This was confusing. I opened an issue on the nimx repo and the author pointed out that the `darwin` package is listed https://github.com/nim-lang/packages/blob/e52b18948feb1cca13ada322218aa19d03ef4fd4/packages.json#L19341C3-L19353[here], although I didn't see it in https://nim-lang.org/nimble/packages.json[this list]. So I started blowing away Nimble's local package files, then eventually found the file `~/.config/nimble/nimble.ini` which contained URLs for multiple `package.json` files. I can't reproduce it here because the next thing I tried was to delete that file too, but it did seem to include a link to the Github repo.
 
 In any case, deleting it and then running `nimble update` seems to have fixed the situation. I'm not sure how it ended up in that state, but perhaps some change was introduced to Nimble that wasn't backward compatible with old installations (going back to 2019, around 4 years ago).
 
