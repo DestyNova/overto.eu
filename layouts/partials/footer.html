@@ -4,8 +4,14 @@
           repo="DestyNova/overto.eu"
           issue-term="pathname"
           label="comment"
-          theme="github-light"
+          theme="gruvbox-dark"
           crossorigin="anonymous"
           async>
   </script>
 </section>
+
+<div class="footer wrapper">
+	<nav class="nav">
+		<div>{{ default 2023 .Date.Year}} {{ with .Site.Copyright }} {{ . | safeHTML }} {{ end }}</div>
+	</nav>
+</div>

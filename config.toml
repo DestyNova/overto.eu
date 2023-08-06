@@ -3,7 +3,7 @@ languageCode = "en-ie"
 title = "Over to you"
 
 # Use my fork to fix broken dark mode
-theme =  ["github.com/DestyNova/ink-free"]
+theme =  ["github.com/chollinger93/ink-free"]
 
 pygmentsCodefences = true
 pygmentsCodefencesGuessSyntax = true
