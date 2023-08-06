@@ -197,6 +197,10 @@ ul {
     list-style: disc inside;
 }
 
+.post {
+    max-width: 800px;
+}
+
 .post ul li {
     margin-bottom: 10px;
 }
@@ -205,17 +209,19 @@ ul {
     display: inline;
 }
 
+/* Code */
 .highlight pre {
     margin-bottom: 0;
     margin-top: 0;
-    padding: 20px;
+    padding: 5px;
     /* background-color: black !important; */
 }
 
 .highlight {
     /* background: 0 0; */
     font-size: 0.8em;
-
+    max-width: 800px;
+    overflow-x: auto;
 }
 
 .wrapper {
@@ -225,6 +231,11 @@ ul {
 
 .container {
     max-width: 800px;
+    margin-top: 50px;
+}
+
+.container-wide {
+    max-width: 1000px;
     margin-top: 50px;
 }
 
@@ -369,8 +380,8 @@ ul {
     background-color: #f9f2f4;
 }
 
-.post .tags a {
-    display: inline-block;
+.post .tags a  {
+    display: inline-block; 
     border: 1px solid #3700ff;
     border-radius: 3px;
     padding: 0px 6px;
@@ -491,9 +502,6 @@ ul {
     font-size: 1em;
 }
 
-.toc {
-    line-height: normal;
-}
 
 .inline-img {
     margin: 0 0 0 0 !important;
@@ -517,8 +525,104 @@ code:not(pre *)  {
     font-size: 1em;
     background-color: rgb(239, 241, 243);
     font-size: 95%;
+    white-space: normal;
 }
 
 code {
     font-size: 0.8rem;
+    white-space: pre;
 }
+
+.footer-separator {
+    border-top: 0.1em dashed lightgray;
+}
+/* Table of contents */
+
+.toc {
+    line-height: normal;
+}
+
+.show-on-mobile {
+    display: none !important;
+}
+@media screen and (max-width: 1024px) {
+    .hide-on-mobile {
+        display: none !important;
+    }
+    .show-on-mobile {
+        display: block !important;
+    }
+    .container-wide {
+        max-width: 800px;
+    }
+  }
+
+@media only screen and (min-width: 1025px) {
+    .article-nav {
+      display: grid;
+      grid-template-columns: 1fr 15em;
+      max-width: 100em;
+      width: 100%;
+      margin: 0 auto;
+    }
+  }
+
+  nav {
+    position: sticky;
+    top: 2rem;
+    align-self: start;
+  }
+  
+  .section-nav li.active > a {
+    font-weight: 600;
+    color: black;
+  }
+  
+  .section-nav {
+    font-size: smaller;
+    padding-left: 0;
+    border-left: 2px solid #efefef;
+  }
+
+  .section-nav a {
+    text-decoration: none;
+    display: block;
+    color: #ccc;
+    transition: all 50ms ease-in-out; 
+  }
+
+  .section-nav li::marker {
+    color: #ccc;
+  }
+
+  .section-nav a:hover,
+.section-nav a:focus {
+    border: none;
+  color: #666;
+  font-weight: 600;
+}
+
+  .depth-nested {
+    display: none;
+  }
+
+  /* Static TOC */
+  .toc a {
+    text-decoration: none;
+    display: block;
+    color: #515151;
+    transition: all 50ms ease-in-out; 
+  }
+
+  .toc li::marker {
+    color: #515151;
+  }
+
+  .toc a:hover,
+  .toc a:focus {
+    border: none;
+    color: #666;
+    font-weight: 600;
+  }
+  
+
