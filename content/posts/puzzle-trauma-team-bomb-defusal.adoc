@@ -1,0 +1,38 @@
+---
+title: "Puzzle: Trauma Team bomb defusal #2"
+date: 2023-12-16T23:10:37Z
+tags: ["tech", "programming", "picat", "puzzle"]
+draft: false
+---
+
+One of my kids has gotten into the old Nintendo Wii game [Trauma Team](https://en.wikipedia.org/wiki/Trauma_Team), part of the [Trauma Center](https://en.wikipedia.org/wiki/Category:Trauma_Center_(video_game_series)) series by Atlus. It's much easier and less action-oriented than the previous games -- New Blood and Second Opinion, and more of a visual novel game for the most part, where the previous games involved quite difficult action-puzzling and strategy in real time.
+
+There's a section of the game where a series of bombs are placed, with puzzle hints left behind for disarming each bomb. Bomb number #2 has the following clues:
+
+>     "The sum of the first four is five.
+>     They are led by the largest.
+>     The sum of the last four is eleven.
+>     The smallest leads.
+>     What are they?"
+
+For fun, I wrote a Picat program to enumerate all possible solutions to the puzzle: 24 in total. This is obviously not good enough, but then exploring the scene in the game reveals another crucial clue: the only digits used in the disarming code are 1, 2 and 3. This small refinement immediately reduces the number of solutions to 1. Here's the code:
+
+```picat
+% Benchmark 1: picat trauma_team.pi
+% Time (mean ± σ):      13.2 ms ±   0.8 ms    [User: 4.6 ms, System: 8.8 ms]
+% Range (min … max):    11.4 ms …  15.5 ms    181 runs
+
+import cp.
+
+main =>
+  Nums = [A,B,C,D,E,F,G,H],   % 8 digits
+  Nums :: 1..3,               % only digits 1, 2 and 3 are used
+  sum([A,B,C,D]) #= 5,        % the sum of the first four is five
+  max([A,B,C,D]) #= A,        % they are led by the largest
+  sum([E,F,G,H]) #= 11,       % the sum of the last four is eleven
+  min([E,F,G,H]) #= E,        % the smallest leads
+
+  Sols = solve_all([], Nums), % what are they?
+  Sols.len = 1,               % there should only be one solution
+  println(Sols).
+```
