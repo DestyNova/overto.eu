@@ -15,7 +15,7 @@ There's a section of the game where a series of bombs are placed, with puzzle hi
 >     The smallest leads.
 >     What are they?"
 
-For fun, I wrote a Picat program to enumerate all possible solutions to the puzzle: 24 in total. This is obviously not good enough, but then exploring the scene in the game reveals another crucial clue: the only digits used in the disarming code are 1, 2 and 3. This small refinement immediately reduces the number of solutions to 1. Here's the code:
+For fun, I wrote a [Picat](http://picat-lang.org) program to enumerate all possible solutions to the puzzle: 24 in total. This is obviously not good enough, but then exploring the scene in the game reveals another crucial clue: the only digits used in the disarming code are 1, 2 and 3. This small refinement immediately reduces the number of solutions to 1. Here's the code:
 
 ```picat
 % Benchmark 1: picat trauma_team.pi
