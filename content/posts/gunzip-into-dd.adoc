@@ -1,0 +1,28 @@
+---
+title: "Gunzip into dd: don't forget `-c`"
+date: 2023-12-31T03:28:37Z
+draft: false
+tags: ["tech", "linux"]
+---
+
+Recently I was trying to copy the contents of one SD card to an identically-sized blank card, and ran into the problem of `dd` apparently stalling when writing to the new card, writing out zero records.
+
+Here's the command I used to read the first card:
+
+```
+sudo dd bs=4M if=/dev/sda1 status=progress|gzip > wee.img.gz
+```
+
+Notice the use of `gzip` to compress the output coming out of `dd`. This is just to reduce the 90 GB or so of empty space on the card to (almost) nothing so my hard disk could hold the image. It didn't have any positive or negative impact on the speed since `dd` still had to read those blank sectors from the card, so in all it took around 90 minutes to back up the card with my laptop's apparently slow built-in SD card reader.
+
+To write out the data to a newly-inserted blank card, I did the following:
+
+```
+gunzip wee.img.gz|sudo dd bs=4M of=/dev/sda1 status=progress oflag=direct
+```
+
+I'd read that `oflag=direct` was required to get meaningful progress numbers, but either way nothing happened and `dd` seemed to just stall when doing this. A bit of web searching soon informed me that the `-c` option is required for `gunzip` to write the data out to stdout rather than trying to unpack the data in place (which wouldn't fit on my hard disk anyway). With that change it's now writing happily at a blistering 15 MB/s:
+
+```
+gunzip -c wee.img.gz|sudo dd iflag=fullblock bs=4M of=/dev/sda1 status=progress oflag=direct
+```

@@ -1,0 +1,66 @@
+---
+title: "Programming languages"
+date: 2023-12-31T03:41:31Z
+type: "page"
+draft: false
+meta: "false"
+---
+
+Ever since getting a Commodore 64 as a kid around 1990 and reading the user's manual from cover to cover, I've always enjoyed programming, and learning new languages and concepts. Here's some of the ones I've played with in more recent years.
+
+== http://picat-lang.org[Picat]
+
+Picat is a really interesting language in the Prolog family, which adds imperative and convenience features like list comprehensions and mutable maps and arrays. It also includes a built-in constraint solver and SAT solver module, as well as support for calling out to external https://freuder.wordpress.com/2021/03/18/comparing-cp-and-mip[MIP and SMT solvers] like https://github.com/coin-or/Cbc[Cbc] and https://github.com/Z3Prover/z3[z3].
+
+I've rarely had success with the MIP and SMT modules -- perhaps it encodes the problems in a way that isn't optimal for those solvers -- but have had great success with `cp` and `sat`. For smaller problems, `cp` will often return a solution almost immediately, but quickly becomes intractable in situations where `sat` can produce a solution in just a few seconds.
+
+What's great about these solvers is their flexibility in solving many different kinds of problems, and (depending on the type of problem) it's generally pretty easy to convert a brute-force program into one that uses the solver to exclude huge parts of the search space quickly. It's also easy to ask the solver to try to maximise or minimise variables.
+
+=== Picat SAT/CP programs
+
+* https://github.com/DestyNova/advent_of_code_2023/blob/main/5/part2.pi[Advent of Code 2023, day 5 (part 2)]
+* https://github.com/DestyNova/advent_of_code_2023/blob/main/24/part2.pi[AoC 2023, day 24 (part 2)] -- it came in really handy here since I didn't have good enough maths skills to invent a "proper" solution. Instead, I just described the problem for the SAT solver and it produced the correct solution in a few seconds, getting me my first sub-1000 leaderboard result from the year's puzzles.
+Picat also includes a `planner` module which searches for optimal action plans by just defining how to transition from one state to all possible next states, and how to know if you've reached a goal state. You can also define a heuristic function like you would when implementing https://en.wikipedia.org/wiki/A*_search_algorithm[A*] to search the (potentially infinite) graph of actions and states. I've had some success with `planner` although it has sometimes led to very high memory consumption.
+
+=== Picat planner programs
+
+* https://github.com/DestyNova/advent_of_code_2023/blob/main/17/part2.pi[AoC 2023, day 17] -- the part 2 solution worked, but took 26 minutes compared to a https://github.com/DestyNova/advent_of_code_2023/blob/main/17/part2_dijkstra.pi[Dijkstra implementation] that took 2 minutes. I tried an A* implementation as well, but it took 4 minutes, even though my https://github.com/DestyNova/advent_of_code_2023/blob/main/17/part2.nim[Nim version] only took around half a second -- probably an implementation error on my part.
+* https://github.com/DestyNova/advent_of_code_2023/blob/main/23/part1.pi[AoC 2023, day 23 (part 1)] -- found an optimal solution with `planner` in 80 seconds, but it couldn't handle part 2 due to memory usage.
+
+=== Other Picat programs and libraries
+
+* https://github.com/DestyNova/picat_fixedpoint/tree/main[picat_fixedpoint] -- a small module providing basic fixed-point arithmetic functions. I wrote this while working on a https://projecteuler.net/problem=751[Project Euler problem] that called for rational arithmetic.
+
+== Nim
+
+This language crossed my radar a few years ago with people describing it as "Python-like" but with static, inferred types, and much faster. Upon playing with it, I decided it wasn't very Python-like (check out https://github.com/actonlang/acton[Acton] if you're really into that though), but it certainly was much faster and had static type inference. My brain seemed to put it into a similar hash slot as https://crystal-lang.org/[Crystal] even though they are different in many ways. Crystal is a little more terse and less syntatically noisy, but Nim is really elegant and incredibly memory efficient. The slightly higher level of syntactic/type noise (e.g. needing to declare types in function headers) provides extremely fast compile times in return, and the standard library is fantastic, at least for my needs so far. The default package manager https://github.com/nim-lang/nimble[Nimble] is also excellent.
+
+At the moment I'd say Nim is my favourite general-purpose language to work with, presenting an excellent balance between conciseness, expressivity, reliability, performance and usability.
+
+=== Nim programs
+
+* Almost all my solutions for https://github.com/DestyNova/advent_of_code_2022[Advent of Code 2022] are in Nim, and it was frankly a joy to work with. I missed some of the functional features and terseness of Haskell from previous years, but Nim just refused to get in my way and offered some nice functional features in the https://nim-lang.org/docs/sequtils.html[sequtils] library, as well as very efficient implementations of sets, heaps and maps.
+
+== Haskell
+
+I've been interested in Haskell for many, many years, and made several attempts to get into it. The first few ended in confusing failure where my brain just didn't feel big enough to really grok it, but eventually some of the concepts made sense.
+
+=== Haskell programs
+
+* Almost all my solutions for https://github.com/DestyNova/advent_of_code_2021[Advent of Code 2021] are in Haskell, and I learned a lot and had fun during the process. Most of the time it felt like an excellent tool for the job, but it felt suddenly very unwieldy when an obvious solution requiring heavy mutation was not straightforward to implement in pure Haskell. Eventually I figured out how to use `STArray`, but really missed mutable hashmaps, and debugging `ST` programs was awful since you can't just drop in a `print` command anywhere you like.
+* Ditto for https://github.com/DestyNova/advent_of_code_2020[AoC 2020].
+
+== https://github.com/urweb/urweb[Ur/web]
+
+This https://programming-group.com/assets/pdf/papers/2020_A-Survey-of-Multitier-Programming.pdf[multitier, aka tierless] programming language builds on https://en.wikipedia.org/wiki/Standard_ML[Standard ML] (an influential language that isn't popular nowadays but its ideas directly influenced https://ocaml.org[Ocaml] and probably Haskell too). The key idea is that it would be nice not to have to (manually) break up your program into frontend, backend and database layers, since that separation necessitates significant duplication of effort and tends to introduce errors, like:
+
+* Changing a field name in the DB and backend, but the frontend is still expecting the old name in the JSON.
+* Broken links in the frontend.
+
+Ur/web tries to solve this by allowing you to mix frontend and backend code in the same file (or even the same function), using the advanced type system to "slice" it apart automatically and transpile frontend-related code to Javascript. It also prevents many kinds of robustness and security errors like SQL injections and CSRF attacks.
+
+It's extremely frugal and compiles your web programs into small binaries that can be proxied behind a server like Nginx. Unfortunately, it's very hard for beginners to get started. The best source of documentation is the http://www.impredicative.com/ur/demo/[official demos] which are very helpful, but it still feels hard to understand any of the documentation without being an expert in the ML language family, and especially SML since it relies on notions of modules and functors that seem to originate there. The language manual is written in a very mathematical, academic style. As a result, participation seems to be minimal due to those accessibility barriers. I would love to see more activity around Ur/web but the community appears to have dried up, and the project isn't welcoming for people who don't have a heavy ML/FP background.
+
+=== Ur/web programs
+
+* https://github.com/DestyNova/memvalid[memvalid], a stateless little utility for memorising text from scripts, songs etc. It was hosted on Heroku until they pulled their free tier.

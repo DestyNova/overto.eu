@@ -41,6 +41,11 @@ cloudinary_base_url="https://res.cloudinary.com/destynova/image/upload"
   url = "/pages/learning"
 
 [[menu.main]]
+  identifier = "languages"
+  name = "Programming languages"
+  url = "/pages/languages"
+
+[[menu.main]]
   identifier = "software"
   name = "Software"
   url = "/pages/software"
