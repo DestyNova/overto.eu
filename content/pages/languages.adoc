@@ -14,18 +14,18 @@ Ever since getting a Commodore 64 as a kid around 1990 and reading the user's ma
 
 Picat is a really interesting language in the Prolog family, which adds imperative and convenience features like list comprehensions and mutable maps and arrays. It also includes a built-in constraint solver and SAT solver module, as well as support for calling out to external https://freuder.wordpress.com/2021/03/18/comparing-cp-and-mip[MIP and SMT solvers] like https://github.com/coin-or/Cbc[Cbc] and https://github.com/Z3Prover/z3[z3].
 
+=== Picat SAT/CP programs
+
 I've rarely had success with the MIP and SMT modules -- perhaps it encodes the problems in a way that isn't optimal for those solvers -- but have had great success with `cp` and `sat`. For smaller problems, `cp` will often return a solution almost immediately, but quickly becomes intractable in situations where `sat` can produce a solution in just a few seconds.
 
 What's great about these solvers is their flexibility in solving many different kinds of problems, and (depending on the type of problem) it's generally pretty easy to convert a brute-force program into one that uses the solver to exclude huge parts of the search space quickly. It's also easy to ask the solver to try to maximise or minimise variables.
 
-=== Picat SAT/CP programs
-
 * https://github.com/DestyNova/advent_of_code_2023/blob/main/5/part2.pi[Advent of Code 2023, day 5 (part 2)]
 * https://github.com/DestyNova/advent_of_code_2023/blob/main/24/part2.pi[AoC 2023, day 24 (part 2)] -- it came in really handy here since I didn't have good enough maths skills to invent a "proper" solution. Instead, I just described the problem for the SAT solver and it produced the correct solution in a few seconds, getting me my first sub-1000 leaderboard result from the year's puzzles.
 
-Picat also includes a `planner` module which searches for optimal action plans by just defining how to transition from one state to all possible next states, and how to know if you've reached a goal state. You can also define a heuristic function like you would when implementing https://en.wikipedia.org/wiki/A*_search_algorithm[A*] to search the (potentially infinite) graph of actions and states. I've had some success with `planner` although it has sometimes led to very high memory consumption.
-
 === Picat planner programs
+
+Picat also includes a `planner` module which searches for optimal action plans by just defining how to transition from one state to all possible next states, and how to know if you've reached a goal state. You can also define a heuristic function like you would when implementing https://en.wikipedia.org/wiki/A*_search_algorithm[A*] to search the (potentially infinite) graph of actions and states. I've had some success with `planner` although it has sometimes led to very high memory consumption.
 
 * https://github.com/DestyNova/advent_of_code_2023/blob/main/17/part2.pi[AoC 2023, day 17] -- the part 2 solution worked, but took 26 minutes compared to a https://github.com/DestyNova/advent_of_code_2023/blob/main/17/part2_dijkstra.pi[Dijkstra implementation] that took 2 minutes. I tried an A* implementation as well, but it took 4 minutes, even though my https://github.com/DestyNova/advent_of_code_2023/blob/main/17/part2.nim[Nim version] only took around half a second -- probably an implementation error on my part.
 * https://github.com/DestyNova/advent_of_code_2023/blob/main/23/part1.pi[AoC 2023, day 23 (part 1)] -- found an optimal solution with `planner` in 80 seconds, but it couldn't handle part 2 due to memory usage.
@@ -50,8 +50,7 @@ I've been interested in Haskell for many, many years, and made several attempts 
 
 === Haskell programs
 
-* Almost all my solutions for https://github.com/DestyNova/advent_of_code_2021[Advent of Code 2021] are in Haskell, and I learned a lot and had fun during the process. Most of the time it felt like an excellent tool for the job, but it felt suddenly very unwieldy when an obvious solution requiring heavy mutation was not straightforward to implement in pure Haskell. Eventually I figured out how to use `STArray`, but really missed mutable hashmaps, and debugging `ST` programs was awful since you can't just drop in a `print` command anywhere you like.
-* Ditto for https://github.com/DestyNova/advent_of_code_2020[AoC 2020].
+* Almost all my solutions for https://github.com/DestyNova/advent_of_code_2021[Advent of Code 2021] and https://github.com/DestyNova/advent_of_code_2020[2020] are in Haskell, and I learned a lot and had fun during the process. Most of the time it felt like an excellent tool for the job, but it felt suddenly very unwieldy when an obvious solution requiring heavy mutation was not straightforward to implement in pure Haskell. Eventually I figured out how to use `STArray`, but really missed mutable hashmaps, and debugging `ST` programs was awful since you can't just drop in a `print` command anywhere you like.
 
 == https://github.com/urweb/urweb[Ur/web]
 
