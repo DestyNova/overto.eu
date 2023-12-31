@@ -5,8 +5,10 @@ type: "page"
 draft: false
 meta: "false"
 ---
-
+:toc: "macro"
 Ever since getting a Commodore 64 as a kid around 1990 and reading the user's manual from cover to cover, I've always enjoyed programming, and learning new languages and concepts. Here's some of the ones I've played with in more recent years.
+
+{{< toc >}}
 
 == http://picat-lang.org[Picat]
 
