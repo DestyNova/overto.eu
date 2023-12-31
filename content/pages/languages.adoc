@@ -61,6 +61,7 @@ Ur/web tries to solve this by allowing you to mix frontend and backend code in t
 
 It's extremely frugal and compiles your web programs into small binaries that can be proxied behind a server like Nginx. Unfortunately, it's very hard for beginners to get started. The best source of documentation is the http://www.impredicative.com/ur/demo/[official demos] which are very helpful, but it still feels hard to understand any of the documentation without being an expert in the ML language family, and especially SML since it relies on notions of modules and functors that seem to originate there. The language manual is written in a very mathematical, academic style. As a result, participation seems to be minimal due to those accessibility barriers. I would love to see more activity around Ur/web but the community appears to have dried up, and the project isn't welcoming for people who don't have a heavy ML/FP background.
 
-=== Ur/web programs
+=== Ur/web programs / utilities
 
 * https://github.com/DestyNova/memvalid[memvalid], a stateless little utility for memorising text from scripts, songs etc. It was hosted on Heroku until they pulled their free tier.
+* A https://hub.docker.com/r/destynova/urweb[Docker Hub] image of Ur/web from 2021. Might be broken.
