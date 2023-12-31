@@ -22,6 +22,7 @@ What's great about these solvers is their flexibility in solving many different 
 
 * https://github.com/DestyNova/advent_of_code_2023/blob/main/5/part2.pi[Advent of Code 2023, day 5 (part 2)]
 * https://github.com/DestyNova/advent_of_code_2023/blob/main/24/part2.pi[AoC 2023, day 24 (part 2)] -- it came in really handy here since I didn't have good enough maths skills to invent a "proper" solution. Instead, I just described the problem for the SAT solver and it produced the correct solution in a few seconds, getting me my first sub-1000 leaderboard result from the year's puzzles.
+
 Picat also includes a `planner` module which searches for optimal action plans by just defining how to transition from one state to all possible next states, and how to know if you've reached a goal state. You can also define a heuristic function like you would when implementing https://en.wikipedia.org/wiki/A*_search_algorithm[A*] to search the (potentially infinite) graph of actions and states. I've had some success with `planner` although it has sometimes led to very high memory consumption.
 
 === Picat planner programs
