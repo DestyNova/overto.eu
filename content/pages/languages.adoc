@@ -40,7 +40,7 @@ Picat also includes a `planner` module which searches for optimal action plans b
 
 == Nim
 
-This language crossed my radar a few years ago with people describing it as "Python-like" but with static, inferred types, and much faster. Upon playing with it, I decided it wasn't very Python-like (check out https://github.com/actonlang/acton[Acton] if you're really into that though), but it certainly was much faster and had static type inference. My brain seemed to put it into a similar hash slot as https://crystal-lang.org/[Crystal] even though they are different in many ways. Crystal is a little more terse and less syntatically noisy, but Nim is really elegant and incredibly memory efficient. The slightly higher level of syntactic/type noise (e.g. needing to declare types in function headers) provides extremely fast compile times in return, and the standard library is fantastic, at least for my needs so far. The default package manager https://github.com/nim-lang/nimble[Nimble] is also excellent.
+This language crossed my radar a few years ago with people describing it as "Python-like" but with static, inferred types, and much faster. Upon playing with it, I decided it wasn't very Python-like (check out https://github.com/actonlang/acton[Acton] if you're really into that though), but it certainly was much faster and had static type inference. My brain seemed to put it into a similar hash slot as https://crystal-lang.org/[Crystal] even though they are different in many ways. Crystal is a little more terse and less syntactically noisy, but Nim is really elegant and incredibly memory efficient. The slightly higher level of syntactic/type noise (e.g. needing to declare types in function headers) provides extremely fast compile times in return, and the standard library is fantastic, at least for my needs so far. The default package manager https://github.com/nim-lang/nimble[Nimble] is also excellent.
 
 At the moment I'd say Nim is my favourite general-purpose language to work with, presenting an excellent balance between conciseness, expressivity, reliability, performance and usability.
 
@@ -62,6 +62,7 @@ This https://programming-group.com/assets/pdf/papers/2020_A-Survey-of-Multitier-
 
 * Changing a field name in the DB and backend, but the frontend is still expecting the old name in the JSON.
 * Broken links in the frontend.
+* Incorrectly parsing requests received from the frontend (mismatch in number or types of parameters)
 
 Ur/web tries to solve this by allowing you to mix frontend and backend code in the same file (or even the same function), using the advanced type system to "slice" it apart automatically and transpile frontend-related code to Javascript. It also prevents many kinds of robustness and security errors like SQL injections and CSRF attacks.
 
