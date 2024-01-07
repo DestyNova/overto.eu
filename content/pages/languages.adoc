@@ -36,7 +36,7 @@ Picat also includes a `planner` module which searches for optimal action plans b
 
 === Other Picat programs and libraries
 
-* https://github.com/DestyNova/picat_fixedpoint/tree/main[picat_fixedpoint] -- a small module providing basic fixed-point arithmetic functions. I wrote this while working on a https://projecteuler.net/problem=751[Project Euler problem] that called for rational arithmetic.
+* https://github.com/DestyNova/picat_rational/tree/main[picat_rational] -- a small module providing arbitrary-precision rational arithmetic functions. I wrote this while working on a https://projecteuler.net/problem=751[Project Euler problem] that called for rational arithmetic.
 
 == Nim
 
