@@ -46,6 +46,7 @@ At the moment I'd say Nim is my favourite general-purpose language to work with,
 
 === Nim programs
 
+* https://github.com/DestyNova/nimplication[Nimplication], a SAT solver using DPLL.
 * Almost all my solutions for https://github.com/DestyNova/advent_of_code_2022[Advent of Code 2022] are in Nim, and it was frankly a joy to work with. I missed some of the functional features and terseness of Haskell from previous years, but Nim just refused to get in my way and offered some nice functional features in the https://nim-lang.org/docs/sequtils.html[sequtils] library, as well as very efficient implementations of sets, heaps and maps.
 
 == Haskell
