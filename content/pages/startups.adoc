@@ -1,0 +1,29 @@
+---
+title: "Startups"
+date: 2024-02-13T00:23:42Z
+draft: false
+---
+
+Startups I've founded or co-founded with others.
+
+== Digifeye / Style-Eyes (2012-2016)
+
+* Problem: Finding the right clothes can be hard.
+* Answer: An app that lets the user take photos of an item of clothing (whether from a magazine, online or in the real world) and used computer vision to find visually similar products.
+* Business model: Initially, affiliate commission from product sales. Later, we had talks about a B2B offering, embedding the technology on retailers' websites, but it didn't pan out.
+* Status: Dissolved
+  * We shut it down after realising there wasn't sufficient customer demand to buy products through the app.
+* Learnings:
+  * Figure out earlier what implicit customer assumptions needed to be tested:
+    1. Can we find product matches good enough for our users?
+    2. Even if the product matches are good enough, will users actually buy them?
+  * Explore alternative business models sooner rather than waiting until you've released your product already and the market isn't interested.
+  * Don't automatically do things just because a business advisor says you should -- even if they're wearing a suit.
+  * Be straight up and open about the limitations of your product. Don't hype it up to be something it isn't -- that leads to frustrated customers.
+
+== Macrobalancer (2024-?)
+
+* Problem: Finding the right balance of macronutrients to suit one's personal dietary goals can be hard.
+* Answer: An app that lets you specify what foods you have and a desired range of how much you want to eat, then tries to determine an optimal plan that satisfies your desired dietary parameters (calorie intake and ratios of carbs/fats/protein).
+* Business model: SaaS monthly subscription.
+* Status: https://macrobalancer.com[Just a landing page] for now, but I actually implemented this with some R scripts and spreadsheets back in 2017. I'm working on a prototype using https://hexdocs.pm/phoenix_live_view[Phoenix LiveView] now, but it's really early stage.

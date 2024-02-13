@@ -46,6 +46,11 @@ cloudinary_base_url="https://res.cloudinary.com/destynova/image/upload"
   url = "/pages/languages"
 
 [[menu.main]]
+  identifier = "startups"
+  name = "Startups"
+  url = "/pages/startups"
+
+[[menu.main]]
   identifier = "software"
   name = "Software"
   url = "/pages/software"
