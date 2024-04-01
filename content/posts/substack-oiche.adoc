@@ -1,0 +1,9 @@
+---
+title: "New Substack publication: Scéalta na hOiche"
+date: 2024-04-01T09:10:29+01:00
+tags: ["writing"]
+---
+
+I've been unemployed for over a year now, which has given me extra time to do various things. While I mostly write (extremely sporadically) about technical things that catch my fancy, I recently started a Substack publication called https://oiche.substack.com[Scéalta na hOiche] (Irish for "stories of the night").
+
+I post there (sporadically...) with silly bedtime stories I make up with my youngest kid. Feel free to check it out in case that's your cup of tea!
