@@ -2,7 +2,6 @@ baseURL = "https://overto.eu/"
 languageCode = "en-ie"
 title = "Over to you"
 
-# Use my fork to fix broken dark mode
 theme =  ["github.com/chollinger93/ink-free"]
 
 pygmentsCodefences = true
@@ -25,32 +24,38 @@ cloudinary_base_url="https://res.cloudinary.com/destynova/image/upload"
   name = "Oisín"
   github = "DestyNova"
 
-[[menu.main]]
-  identifier = "tech"
-  name = "Tech"
-  url = "/tags/tech"
-
-[[menu.main]]
-  identifier = "music"
-  name = "Music"
-  url = "/tags/music"
-
-[[menu.main]]
+[[menus.main]]
   identifier = "learning"
   name = "Learning"
   url = "/pages/learning"
 
-[[menu.main]]
+[[menus.main]]
   identifier = "languages"
   name = "Programming languages"
   url = "/pages/languages"
 
-[[menu.main]]
+[[menus.main]]
   identifier = "startups"
   name = "Startups"
   url = "/pages/startups"
 
-[[menu.main]]
+[[menus.main]]
   identifier = "software"
   name = "Software"
   url = "/pages/software"
+
+[[menus.main]]
+  identifier = "about-me"
+  name = "About me"
+  url = "/pages/about-me"
+
+[[menus.tags]]
+  identifier = "tech"
+  name = "Tech"
+  url = "/tags/tech"
+
+[[menus.tags]]
+  identifier = "music"
+  name = "Music"
+  url = "/tags/music"
+

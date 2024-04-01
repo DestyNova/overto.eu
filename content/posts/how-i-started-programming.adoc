@@ -1,0 +1,49 @@
+---
+title: "How I started programming"
+date: 2024-04-01T10:40:44+01:00
+tags: ["tech", "programming", "personal"]
+---
+
+# 8-bits for an 8 year-old
+
+My parents got me a Commodore 64 really late in its lifespan, maybe around 1990. Although the machine felt almost magical when loading games from cassette tape, the user's manual called out to me almost immediately. C64 BASIC was pretty poor compared to dialects on other machines, and certainly compared to older languages like Lisp and Forth. But I didn't know about them, nor even that there was *anything* else, until an uncle bought me a copy of https://www.computinghistory.org.uk/det/69185/Choosing-and-using-your-home-computer-An-introductory-course[Choosing and Using Your Home Computer] by Orbis.
+
+image::https://res.cloudinary.com/destynova/image/upload/v1711960402/overto.eu/choosing-and-using-your-home-computer-orbis_xzbrli.jpg[The front cover of "Choosing and Using Your Home Computer" by Orbis Publishing Ltd]
+
+This book really kicked off my interest in the weird mixture of art and engineering that is computer science, even if it was woefully outdated even in 1990 -- it didn't feature any of the 16-bit computers that had burst onto the scene. But it did talk about other 8-bit computers, peripherals, how to write programs in BASIC, and even a brief taster of Forth that (again) seemed like alien magic to a young kid.
+
+# Spoilt with 16-bit luxury
+
+A couple of years later, I picked up an Atari STFM and another world of 16-bit power opened up. Of course, the width of the data bus wasn't what made it a step forward, but rather the amount of addressable memory (from 512kb up to 4mb, compared with 64kb on the C64), spacious screen resolution, mouse and https://en.wikipedia.org/wiki/GEM_(desktop_environment)#Atari_versions[GUI in ROM], and built-in floppy drive. These features all added up to make the ST a much more inviting general-purpose machine, with more attractive games and a comfortable environment for productivity work and programming.
+
+## Exotic overseas public domain libraries
+
+Thanks to the ST's 720kb floppy drive, running 3rd party software and having fast random access for my own files made programming more practical than my C64's tape drive setup. I discovered public domain libraries in England which would send over a jiffy bag of disks for a reasonable fee. This was slightly complicated by having to walk to my local post office, pay for a https://en.wikipedia.org/wiki/Giro_(banking)[giro], then mail it from Ireland to the UK along with a handwritten form listing the desired disk codes, obtained by reading the PD library's catalogue. About two weeks later a parcel would arrive containing the requested disks plus an updated catalogue disk. Without exaggeration I can say that the moment a package of PD disks arrived (from either New Age PDL in Essex or LAPD in Derbyshire) was the absolute height of excitement for me.
+
+## GFA Basic
+
+It wasn't long before I got hold of https://en.wikipedia.org/wiki/GFA_BASIC[GFA BASIC v2.0], a structured BASIC by legendary German programmer Frank Ostrowski. The cleanness of the language (procedures and no more line numbers!) and the usability of its code editing interface were a revelation after a couple of years with C64 BASIC. On top of that, it had specific commands for drawing lines and other graphics, where on the C64 the only way to write pixels to the screen was with `POKE` commands.
+
+## 68000 assembly
+
+Other disks arrived and I found several assemblers for the Motorola 68000 CPU used by the Atari ST. Some of these were awkward command-line tools, but there were also two assemblers that came with a GUI-based development environment -- https://www.atariuptodate.de/en/1085/devpac[Devpac] and https://www.atarimania.com/utility-atari-st-gfa-assembler_35270.html[GFA Assembler]. Both were good but GFA Assembler did some weird custom editor with double-buffering, whereas Devpac used standard GEM GUI elements and conventions. As a result, editing and launching programs in GFA Assembler was faster.
+
+Either way though, I only really played around with 68k assembly and didn't make anything more interesting than some visual effects and animations.
+
+## Sozobon C
+
+By the time I got the floppy disks for the https://temlib.org/AtariForumWiki/index.php/Sozobon_C[Sozobon C compiler], I'd swapped my 512kb STFM for another model with 4mb of RAM. This was the maximum possible on the ST without some kind of serious expansion board, but the ST wasn't really designed for that, unlike its contemporary -- the very successful Commodore Amiga.
+
+At any rate, 4 megabytes of RAM seemed like a ludicrous amount -- what program could possibly use all of that? The real limitation was the fact that I didn't have a hard disk, and was working entirely on 720kb double-density floppies.
+
+This was a problem: the C compiler was really designed to run from a fast hard disk, and trying to run from a floppy meant swapping disks constantly and waiting a *long* time for things to load. Compiling even a "Hello, world!" program probably took 5 to 10 minutes, and you had to be there ready to swap a disk at any moment.
+
+But with the new ST and its huge 4mb of RAM, an idea soon presented itself. On another PD floppy I'd encountered a utility called https://www.atarimania.com/utility-atari-st-maxidisk_40177.html[Maxidisk], by Max Böhm and Ulf Ronald Andersson. This was a ramdisk that was not only resetproof, but also transparently compressed data stored in it, without the user needing to be aware of it. Since the compiler came on two floppy disks of 720kb each, you could expect allocating 1.5mb to Maxidisk would easily fit the entire compiler into memory.
+
+Before long I managed to repack the compiler into a single self-extracting https://en.wikipedia.org/wiki/LHA_(file_format)[LZH archive] of around 500-600kb, small enough to fit on a single floppy disk along with the Maxidisk driver program and a text editor desk accessory called https://www.atariuptodate.de/en/9760/diary-16[DIARY.ACC]. All I had to do was boot from that floppy, open the virtual drive created by Maxidisk, extract the compiler archive into it, and I was good to go. Actually running the compiler was made easier with a command-line shell called https://www.atarimania.com/utility-atari-st-pcommand_33303.html[PCommand].
+
+To actually figure out how to write C programs, I printed the excellent http://egle.lanet.lv/ftp/mirror/x2ftp/msdos/programming/docs/genctxt.zip[Coronado C tutor] on my trusty https://www.commodore-news.com/news/item/9083/en[Star LC-10C colour printer]. That old 9-pin dot matrix was amazingly reliable and I wish I'd kept it.
+
+## 32-bits and beyond
+
+Much as I loved it, the Atari STFM was very old tech, and by 1998 it was time to splash out and get a PC. At that point I mostly forgot about programming until starting my undergrad in https://dcu.ie[DCU's] Computer Applications degree. There was no turning back then, but... that's enough rambling for now.

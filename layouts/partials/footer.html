@@ -1,14 +1,32 @@
-<hr style="height: 10px; border: 0; box-shadow: 0 10px 10px -10px #8c8b8b inset;">
-<section class="section">
-  <script src="https://utteranc.es/client.js"
-          repo="DestyNova/overto.eu"
-          issue-term="pathname"
-          label="comment"
-          theme="gruvbox-dark"
-          crossorigin="anonymous"
-          async>
-  </script>
-</section>
+{{ if (eq .RelPermalink "/") }}
+<div class="wrapper">
+  <nav class="nav">
+    All tags:
+    <ul style="display: inline">
+      {{ range $key, $tag := (.Site.Menus.tags) }}
+      {{ if (ne $key 0) }} • {{ end }}
+      <li style="display: inline">
+        <a href="{{ $tag.URL }}">{{ $tag.Name }}</a>
+      </li>
+      {{ end }}
+    </ul>
+  </nav>
+</div>
+
+{{ else }}
+
+  <section class="section">
+    <script src="https://utteranc.es/client.js"
+            repo="DestyNova/overto.eu"
+            issue-term="pathname"
+            label="comment"
+            theme="gruvbox-dark"
+            crossorigin="anonymous"
+            async>
+    </script>
+  </section>
+
+{{ end }}
 
 <div class="footer wrapper">
 	<nav class="nav">

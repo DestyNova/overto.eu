@@ -1,0 +1,11 @@
+---
+title: "About Me"
+date: 2024-04-01T09:19:19+01:00
+---
+
+Howye! I'm Oisín, a programmer and musician living in Dublin, Ireland. Here's a few of the things I'm into and may occasionally write something about here:
+
+* Programming in a link:{{< ref "/content/pages/languages.adoc" >}}[bajillion different languages], for fun and (once upon a time) profit
+* Music in many flavours, from jazz to traditional Irish tunes and old computer game soundtracks. From time to time I'll post transcriptions of music that catches my fancy.
+* Complaining about things.
+* Projects I'm working on.
