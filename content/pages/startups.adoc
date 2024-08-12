@@ -14,12 +14,12 @@ Startups I've founded or co-founded with others.
 * Status: Dissolved
   * We shut it down after realising there wasn't sufficient customer demand to buy products through the app.
 * Learnings:
-  * Figure out earlier what implicit customer assumptions needed to be tested:
+** Figure out earlier what implicit customer assumptions needed to be tested:
     1. Can we find product matches good enough for our users?
     2. Even if the product matches are good enough, will users actually buy them?
-  * Explore alternative business models sooner rather than waiting until you've released your product already and the market isn't interested.
-  * Don't automatically do things just because a business advisor says you should -- even if they're wearing a suit.
-  * Be straight up and open about the limitations of your product. Don't hype it up to be something it isn't -- that leads to frustrated customers.
+** Explore alternative business models sooner rather than waiting until you've released your product already and the market isn't interested.
+** Don't automatically do things just because a business advisor says you should -- even if they're wearing a suit.
+** Be straight up and open about the limitations of your product. Don't hype it up to be something it isn't -- that leads to frustrated customers.
 
 == Macrobalancer (2024-?)
 
