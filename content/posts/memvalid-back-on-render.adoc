@@ -1,0 +1,17 @@
+---
+title: "Memvalid Back on Render"
+date: 2024-12-08T22:00:56Z
+tags: ["tech", "programming"]
+---
+
+Some years ago I was trying to learn some short piece of text or lyrics verbatim, and stumbled upon an article that suggested a really neat way to quiz yourself on the contents: reduce the text to only the first letter of each word, then see if you can read it back by looking at those first letters.
+
+This piqued my interested, so I made a tiny web application called https://github.com/DestyNova/memvalid[Memvalid] which lets you paste in some text and hide all but the first letter, revealing one word at a time with the arrow buttons or cursor keys.
+
+I wrote it using the very interesting http://www.impredicative.com/ur[Ur/web] programming language, a so-called _tierless_ language which lets you combine front-end and back-end logic in the same source file, and automatically manages all marshalling between the client and server side, as well as providing a whole bunch of robustness and security guarantees that aren't normally present with web apps -- for example, there's an exceptionally good database model that mostly just looks like plain SQL, except it's type-safe. The only downside is that the language's development and community appears to be dead.
+
+Anyway, at some point I produced a https://github.com/DestyNova/urweb-docker[Docker image] and used it to deploy Memvalid on Heroku's free tier. Sadly this tier went away about two years ago, and the app was deleted.
+
+Today, I decided to redeploy it on https://render.com[Render]. I was a bit confused about how to it, but it turns out if you write a `Dockerfile` with an entrypoint that starts your program, that's enough. The only bit that caught me out was its automatic port scan to discover what port your service is running on: it uses HEAD requests, which Ur/web doesn't support (it's really designed to run behind something like Lighttpd or Nginx). But it turns out that Render's default port for web applications is 10000, and if you launch the app on this port, the portscan is unnecessary and the deployment works fine.
+
+The app is now up and running https://memvalid.overto.eu[here], although it's on the free tier and gets put to sleep when requests stop for a while.
