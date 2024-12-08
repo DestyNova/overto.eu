@@ -9,5 +9,5 @@ Contents Picat Picat and SAT/CP solving Optimal plan search with Picat’s plann
 The Haskell book October 2017 — present
 This is a very well-written book. But I found it hard to make progress quickly because some of the exercises were quite difficult and I felt compelled to complete them before moving on, although I think the author specifically advises to not get stuck on them and just move on if need be.</description></item><item><title>Software</title><link>https://overto.eu/pages/software/</link><pubDate>Sat, 14 Mar 2020 21:33:00 +0100</pubDate><guid>https://overto.eu/pages/software/</guid><description>Some software I’ve written and released as open-source:
 Nimplication — a toy SAT solver using the DPLL algorithm (and maybe CDCL in future).
-memvalid (source) — memorise prose or lyrics, or test that you can reconstruct a completed piece of text by just looking at the first letter of each word, and revealing one word at a time.
-vfconcat — generate videos from PNG frames with inconsistent durations. Timings are recovered from the difference in consecutive frame timestamps, producing a control file for ffmpeg.</description></item></channel></rss>
+memvalid (source) — memorise prose or lyrics, or test that you can reconstruct a completed piece of text by just looking at the first letter of each word, and revealing one word at a time. Implemented in Ur/web.
+vfconcat — generate videos from PNG frames with inconsistent durations.</description></item></channel></rss>
