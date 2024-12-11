@@ -72,5 +72,5 @@ It's extremely frugal and compiles your web programs into small binaries that ca
 
 === Ur/web programs / utilities
 
-* https://github.com/DestyNova/memvalid[memvalid], a stateless little utility for memorising text from scripts, songs etc. It was hosted on Heroku until they pulled their free tier.
+* https://github.com/DestyNova/memvalid[memvalid], a stateless little utility for memorising text from scripts, songs etc. It was hosted on Heroku until they pulled their free tier, now it's https://memvalid.overto.eu[running on Render].
 * A https://hub.docker.com/r/destynova/urweb[Docker Hub] image of Ur/web from 2021. Might be broken.
