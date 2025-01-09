@@ -1,0 +1,22 @@
+---
+title: "Can we Fight Shitflation?"
+date: 2025-01-09T22:26:54Z
+tags: ["tech", "consumer rights", "shitflation"]
+---
+
+Someone recently made a good video on the topic of "Shitflation":
+
+video::2JoWfQKQAzc[youtube, 640, 480]
+
+The video made some great points, but I was a bit disappointed that it ended on a sort of "there's not much we can do, oh well" note, and wrote the following comment which I'd like to repeat here:
+
+> I was disappointed with the end of the video: it isn't true that there's nothing we can do. Here's what we can do:
+> 
+> 1. We can make ourselves aware of what's happening.
+> 2. We can share that knowledge with others.
+> 3. We can unite and initiate public backlash and a mass boycott of the most abusive corporate shitflaters: this happened after Spotify announced "end of life" of their Car Thing, and advised customers to dispose of their perfectly functional devices in e-waste. After they were excoriated in the media, they backed down and committed to sharing the tools required to unlock the devices so open-source projects could turn them into something useful again.
+> 4. We can reduce our reliance on the shitflatiest services and products by learning how to self-host open-source services, repair existing devices, 3D print new parts, or find other people in the community who can do those things.
+> 
+> Shitflation is the inevitable consequence of the corporate obsession with constantly hyper-optimising for profit, spurred on since at least the early 1980s by people like Jack Welch (CEO of General Electric and compulsive short-term-win addict).
+> Another manifestation of this that should really be illegal at this point, is purposely non-repairable electronics. With each generation of games console, companies like Nintendo and Sony have added more and more ways for the devices to become permanently bricked: SSD card or BIOS chip fails? It had an encryption key that was irreparably linked to other chips in the system, so the device is now e-waste.
+> John Deere was central in the fight against their own customers' right to repair their tractors, and went so far as to claim that farmers don't actually own the tractors they've bought -- instead, they own "an implied license for the life of the vehicle to operate the vehicle". The list goes on, but the more we talk about it and fight back, the better our chances.
