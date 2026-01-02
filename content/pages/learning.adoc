@@ -7,7 +7,7 @@ draft: false
 Experiences with tutorials, books or courses I've taken in recent times.
 
 ## https://haskellbook.com/[The Haskell book]
-_October 2017 -- present_
+_October 2017 -- 2020_
 
 This is a very well-written book. But I found it hard to make progress quickly because some of the exercises were quite difficult and I felt compelled to complete them before moving on, although I think the author specifically advises to not get stuck on them and just move on if need be.
 

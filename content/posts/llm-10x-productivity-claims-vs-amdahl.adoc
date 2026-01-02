@@ -1,0 +1,19 @@
+---
+title: "LLM 10x productivity claims VS Amdahl's Law"
+date: 2026-01-02T20:57:51Z
+draft: false
+tags: ["tech", "programming", "ai"]
+---
+
+Okay, I really didn't want to add yet another post about LLMs and programming to an already tiresome sea of existing discourse, but wrote this as a comment on a LinkedIn post and thought it might be worth sharing here. The topic was about people posting hyped-up claims of 10x (or greater) productivity boosts by having LLMs write their code.
+
+I find the 10x (or even 100x!) claims ridiculous. Even if LLMs enabled the code to be written at _infinite speed_ and perfectly correct (which of course, it cannot), there would still be a massive problem:
+
+[discrete]
+== _No devs spend 100% of their time programming._
+
+If we exclude 1-person startups, then it probably ranges from 80% at _most_, down to 30% or below for process/meeting-heavy teams. Much of the time is spent on activities that can't be sped up with LLMs, like planning, alignment meetings, discussing requirements with the customer etc.
+
+Since less than 100% of the time is spent programming, this means https://en.wikipedia.org/wiki/Amdahl%27s_law[Amdahl's Law] applies. That is, if 50% of time is spent on activities that can't be sped up (meetings, thinking, reading requirements/design docs), then LLMs can provide AT BEST a 2x speedup, assuming they produce correct code instantly. Even if you would otherwise spend 80% of your time coding, LLMs can deliver at best 5x.
+
+I would suggest that anyone claiming 10x (or even, honestly, 2x) benefits is lying, unless they've eliminated all meetings and someone hands them perfectly clear requirements which they feed into a magical always-correct LLM, which would suggest that human serves no function anyway.

@@ -46,7 +46,7 @@ At the moment I'd say Nim is my favourite general-purpose language to work with,
 
 === Nim programs
 
-* https://github.com/DestyNova/nimplication[Nimplication], a SAT solver using DPLL.
+* https://github.com/DestyNova/nimplication[Nimplication], a toy SAT solver using DPLL.
 * https://github.com/DestyNova/vfconcat[vfconcat] -- generate videos from PNG frames with inconsistent durations, using https://ffmpeg.org[ffmpeg].
 * Almost all my solutions for https://github.com/DestyNova/advent_of_code_2022[Advent of Code 2022] are in Nim, and it was frankly a joy to work with. I missed some of the functional features and terseness of Haskell from previous years, but Nim just refused to get in my way and offered some nice functional features in the https://nim-lang.org/docs/sequtils.html[sequtils] library, as well as very efficient implementations of sets, heaps and maps.
 
@@ -72,5 +72,5 @@ It's extremely frugal and compiles your web programs into small binaries that ca
 
 === Ur/web programs / utilities
 
-* https://github.com/DestyNova/memvalid[memvalid], a stateless little utility for memorising text from scripts, songs etc. It was hosted on Heroku until they pulled their free tier, now it's https://memvalid.overto.eu[running on Render].
+* https://github.com/DestyNova/memvalid[memvalid], a stateless little utility for memorising text from scripts, songs etc. It was hosted on Heroku until they pulled their free tier, now it's https://memvalid.overto.eu[running on a tiny VPS] using the excellent https://github.com/swiftwave-org/swiftwave[Swiftwave].
 * A https://hub.docker.com/r/destynova/urweb[Docker Hub] image of Ur/web from 2021. Might be broken.
