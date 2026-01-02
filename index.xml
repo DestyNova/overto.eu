@@ -1,31 +1,287 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Over to you</title><link>https://overto.eu/</link><description>Recent content on Over to you</description><generator>Hugo -- gohugo.io</generator><language>en-ie</language><lastBuildDate>Thu, 09 Jan 2025 22:26:54 +0000</lastBuildDate><atom:link href="https://overto.eu/index.xml" rel="self" type="application/rss+xml"/><item><title>Can we Fight Shitflation?</title><link>https://overto.eu/posts/can-we-fight-shitflation/</link><pubDate>Thu, 09 Jan 2025 22:26:54 +0000</pubDate><guid>https://overto.eu/posts/can-we-fight-shitflation/</guid><description>Someone recently made a good video on the topic of &amp;#34;Shitflation&amp;#34;:
-The video made some great points, but I was a bit disappointed that it ended on a sort of &amp;#34;there’s not much we can do, oh well&amp;#34; note, and wrote the following comment which I’d like to repeat here:
-I was disappointed with the end of the video: it isn’t true that there’s nothing we can do. Here’s what we can do:</description></item><item><title>Memvalid Back on Render</title><link>https://overto.eu/posts/memvalid-back-on-render/</link><pubDate>Sun, 08 Dec 2024 22:00:56 +0000</pubDate><guid>https://overto.eu/posts/memvalid-back-on-render/</guid><description>Some years ago I was trying to learn some short piece of text or lyrics verbatim, and stumbled upon an article that suggested a really neat way to quiz yourself on the contents: reduce the text to only the first letter of each word, then see if you can read it back by looking at those first letters.
-This piqued my interested, so I made a tiny web application called Memvalid which lets you paste in some text and hide all but the first letter, revealing one word at a time with the arrow buttons or cursor keys.</description></item><item><title>RSSGuard without RSS: scraping with CSS selectors</title><link>https://overto.eu/posts/rssguard-scraping/</link><pubDate>Mon, 12 Aug 2024 04:41:18 +0100</pubDate><guid>https://overto.eu/posts/rssguard-scraping/</guid><description>Despite the modern internet’s tendency to centralise towards a small number of big content gateways (Reddit, Twitter, Hacker News etc), I still like the feeling of independence and self-directed deliberateness that comes with RSS. Rather than just stepping into the firehose of what the latest &amp;#34;Big Tech&amp;#34; recommender systems want to show me, it’s me deciding who I want to hear more from.
-These days I use RSSGuard, a very simple and lightweight reader for RSS/ATOM/JSON feeds.</description></item><item><title>How I started programming</title><link>https://overto.eu/posts/how-i-started-programming/</link><pubDate>Mon, 01 Apr 2024 10:40:44 +0100</pubDate><guid>https://overto.eu/posts/how-i-started-programming/</guid><description>My parents got me a Commodore 64 really late in its lifespan, maybe around 1990. Although the machine felt almost magical when loading games from cassette tape, the user’s manual called out to me almost immediately. C64 BASIC was pretty poor compared to dialects on other machines, and certainly compared to older languages like Lisp and Forth. But I didn’t know about them, nor even that there was anything else, until an uncle bought me a copy of Choosing and Using Your Home Computer by Orbis.</description></item><item><title>About Me</title><link>https://overto.eu/pages/about-me/</link><pubDate>Mon, 01 Apr 2024 09:19:19 +0100</pubDate><guid>https://overto.eu/pages/about-me/</guid><description>Howye! I’m Oisín, a programmer and musician living in Dublin, Ireland. Here’s a few of the things I’m into and may occasionally write something about here:
-Programming in a bajillion different languages, for fun and (once upon a time) profit
-Music in many flavours, from jazz to traditional Irish tunes and old computer game soundtracks. From time to time I’ll post transcriptions of music that catches my fancy.
-Complaining about things.</description></item><item><title>New Substack publication: Scéalta na hOiche</title><link>https://overto.eu/posts/substack-oiche/</link><pubDate>Mon, 01 Apr 2024 09:10:29 +0100</pubDate><guid>https://overto.eu/posts/substack-oiche/</guid><description>I’ve been unemployed for over a year now, which has given me extra time to do various things. While I mostly write (extremely sporadically) about technical things that catch my fancy, I recently started a Substack publication called Scéalta na hOiche (Irish for &amp;#34;stories of the night&amp;#34;).
-I post there (sporadically…​) with silly bedtime stories I make up with my youngest kid. Feel free to check it out in case that’s your cup of tea!</description></item><item><title>Startups</title><link>https://overto.eu/pages/startups/</link><pubDate>Tue, 13 Feb 2024 00:23:42 +0000</pubDate><guid>https://overto.eu/pages/startups/</guid><description>Startups I’ve founded or co-founded with others.
-Digifeye / Style-Eyes (2012-2016) Problem: Finding the right clothes can be hard.
-Answer: An app that lets the user take photos of an item of clothing (whether from a magazine, online or in the real world) and used computer vision to find visually similar products.
-Business model: Initially, affiliate commission from product sales. Later, we had talks about a B2B offering, embedding the technology on retailers&amp;#39; websites, but it didn’t pan out.</description></item><item><title>Programming languages</title><link>https://overto.eu/pages/languages/</link><pubDate>Sun, 31 Dec 2023 03:41:31 +0000</pubDate><guid>https://overto.eu/pages/languages/</guid><description>Ever since getting a Commodore 64 as a kid around 1990 and reading the user’s manual from cover to cover, I’ve always enjoyed programming, and learning new languages and concepts. Here’s some of the ones I’ve played with in more recent years.
-Contents Picat Picat and SAT/CP solving Optimal plan search with Picat’s planner Other Picat programs and libraries Nim Nim programs Haskell Haskell programs Ur/web Ur/web programs / utilities Picat Picat is a really interesting language in the Prolog family, which adds imperative and convenience features like list comprehensions and mutable maps and arrays.</description></item><item><title>Gunzip into dd: don't forget `-c`</title><link>https://overto.eu/posts/gunzip-into-dd/</link><pubDate>Sun, 31 Dec 2023 03:28:37 +0000</pubDate><guid>https://overto.eu/posts/gunzip-into-dd/</guid><description>Recently I was trying to copy the contents of one SD card to an identically-sized blank card, and ran into the problem of dd apparently stalling when writing to the new card, writing out zero records.
-Here’s the command I used to read the first card:
-sudo dd bs=4M if=/dev/sda1 status=progress|gzip &amp;gt; wee.img.gz Notice the use of gzip to compress the output coming out of dd. This is just to reduce the 90 GB or so of empty space on the card to (almost) nothing so my hard disk could hold the image.</description></item><item><title>Puzzle: Trauma Team bomb defusal #2</title><link>https://overto.eu/posts/puzzle-trauma-team-bomb-defusal/</link><pubDate>Sat, 16 Dec 2023 23:10:37 +0000</pubDate><guid>https://overto.eu/posts/puzzle-trauma-team-bomb-defusal/</guid><description>One of my kids has gotten into the old Nintendo Wii game Trauma Team, part of the Trauma Center series by Atlus. It’s much easier and less action-oriented than the previous games — New Blood and Second Opinion, and more of a visual novel game for the most part, where the previous games involved quite difficult action-puzzling and strategy in real time.
-There’s a section of the game where a series of bombs are placed, with puzzle hints left behind for disarming each bomb.</description></item><item><title>Nim: Outdated nimble.ini</title><link>https://overto.eu/posts/nimble-outdated-ini/</link><pubDate>Sat, 05 Aug 2023 19:28:22 +0100</pubDate><guid>https://overto.eu/posts/nimble-outdated-ini/</guid><description>I was interested today in trying to write a simple GUI program using Nim’s [nimx] library. But even with the latest Nim (2.0.0) and Nimble (0.14.2), I ran into this:
-Reading official package list nimble.nim(683) getDownloadInfo Error: Package darwin@any version not found. This was confusing. I opened an issue on the nimx repo and the author pointed out that the darwin package is listed here, although I didn’t see it in this list.</description></item><item><title>Lenovo Ideapad 3 15ALC6 RAM upgrade: ignore the official docs</title><link>https://overto.eu/posts/lenovo-ideapad-3-15alc6-ram/</link><pubDate>Wed, 26 Jul 2023 18:32:44 +0100</pubDate><guid>https://overto.eu/posts/lenovo-ideapad-3-15alc6-ram/</guid><description>In late 2021 I picked up a Lenovo Ideapad 3 (15ALC6), a Ryzen 7 5700U-based laptop with 16GB RAM and a nice 1TB SSD. It was surprisingly cheap for what it offered, and after it went out of stock I tried to find another but it was either unobtainable or the price had gone way up.
-Anyway, eventually I decided more RAM would be nice, since I was starting to hammer the SSD as swap.</description></item><item><title>Defold Android build issue: Problem parsing the package</title><link>https://overto.eu/posts/defold-problem-parsing-package/</link><pubDate>Wed, 05 Jul 2023 01:59:25 +0100</pubDate><guid>https://overto.eu/posts/defold-problem-parsing-package/</guid><description>While working on my first hobby gamedev project with Defold, I ran into an issue when trying to install the debug APK on my Android phone:
-There was a problem parsing the package.
-Searching the Defold forums and the web didn’t produce anything obviously relevant, so I looked at the sample project and tried to figure out what was different in the project settings. Most of the configuration was the same (that is to say, default), so I tried looking at the contents of the APK with unzip -l.</description></item><item><title>Rodland Intro Chords</title><link>https://overto.eu/posts/rodland-intro-chords/</link><pubDate>Fri, 02 Jun 2023 04:32:59 +0100</pubDate><guid>https://overto.eu/posts/rodland-intro-chords/</guid><description>I was watching cutscenes from the old arcade game &amp;#34;Rodland&amp;#34; and noticed a couple of chords with some nice voice leading.
-I’m not sure I picked out all the notes, but here’s at least a partial transcription.</description></item><item><title>Benben</title><link>https://overto.eu/posts/benben/</link><pubDate>Sun, 30 Apr 2023 22:41:11 +0100</pubDate><guid>https://overto.eu/posts/benben/</guid><description>Today I was absolutely delighted to stumble upon a new command-line VGM (Video Game Music file) player called Benben. The author mentioned it in the Crystal programming language forum along with the underlying VGM playback library YunoSynth.
-Benben is distributed as an executable AppImage file which worked perfectly out of the box on my Pop!_OS Linux system. Here’s a video of it playing the soundtrack to the PC-98 game &amp;#34;Rusty&amp;#34;:</description></item><item><title>BAM! and the history is gone</title><link>https://overto.eu/posts/bam-history/</link><pubDate>Tue, 18 Apr 2023 06:27:26 +0100</pubDate><guid>https://overto.eu/posts/bam-history/</guid><description>A few years ago I took this photo on Barrow Street near Ringsend, Dublin. BAM were tearing down some of the old Boland’s Mill site to make way for yet more shiny fancy corporate buildings. To be fair, they did repair some of the protected buildings which are part of the city’s heritage.
-The graffiti quote is a pleasing reference to the catchphrase heard at the end of obnoxious &amp;#34;Cillit Bang&amp;#34; ads that used to run on UK and Irish TV:</description></item><item><title>Playing Revenant using Wine and Proton</title><link>https://overto.eu/posts/revenant-wine-proton/</link><pubDate>Sun, 16 May 2021 02:11:51 +0100</pubDate><guid>https://overto.eu/posts/revenant-wine-proton/</guid><description>TL;DR: I tried to run an old game called Revenant on Linux using both WINE and Proton, but both had problems. Here’s how I combined the powers of both to run the game on my Ubuntu machine.
-Background The WINE project is an emulation layer that enables you to run a large amount of Windows programs on a Unix system. It can be difficult to configure, but it’s a fairly mature project that even supports some modern Windows games.</description></item><item><title>Learning</title><link>https://overto.eu/pages/learning/</link><pubDate>Sun, 19 Apr 2020 17:26:19 +0100</pubDate><guid>https://overto.eu/pages/learning/</guid><description>Experiences with tutorials, books or courses I’ve taken in recent times.
-The Haskell book October 2017 — present
-This is a very well-written book. But I found it hard to make progress quickly because some of the exercises were quite difficult and I felt compelled to complete them before moving on, although I think the author specifically advises to not get stuck on them and just move on if need be.</description></item><item><title>Living with dwm</title><link>https://overto.eu/posts/dwm-extras/</link><pubDate>Sat, 04 Apr 2020 17:19:11 +0100</pubDate><guid>https://overto.eu/posts/dwm-extras/</guid><description>You may have heard of tiling window managers like dwm or i3. These are pretty interesting from a nerdy elitist hacker perspective (&amp;#34;I know Unix!&amp;#34;), but can also look quite nice and make good use of on-screen space. I switched to dwm yesterday and enjoyed spending some time to figure out the absolute basics. On my old, small laptop though, I realised that it suits me best to just have a separate tag per application.</description></item><item><title>Software</title><link>https://overto.eu/pages/software/</link><pubDate>Sat, 14 Mar 2020 21:33:00 +0100</pubDate><guid>https://overto.eu/pages/software/</guid><description>Some software I’ve written and released as open-source:
-Nimplication — a toy SAT solver using the DPLL algorithm (and maybe CDCL in future).
-memvalid (source) — memorise prose or lyrics, or test that you can reconstruct a completed piece of text by just looking at the first letter of each word, and revealing one word at a time. Implemented in Ur/web.
-vfconcat — generate videos from PNG frames with inconsistent durations.</description></item><item><title>Jeff Schneider's Sick R&amp;B Chords</title><link>https://overto.eu/posts/jeff-schneider-sick-rnb-chords/</link><pubDate>Tue, 24 Jul 2018 22:17:52 +0100</pubDate><guid>https://overto.eu/posts/jeff-schneider-sick-rnb-chords/</guid><description>Jeff Schneider has some excellent instructive content on YouTube, and takes the time to explain some of the theory behind the music. Here, he plays a lush neo-soul chord progression, walks us through a nice tritone substitution and shows how we can use secondary dominants to introduce chords from outside the key.
-Here’s a transcription, made much easier than usual thanks to Jeff’s animated keyboard.</description></item><item><title>Jazz chords from Paul Barton's "Piano Sounds Never Heard Before!"</title><link>https://overto.eu/posts/barton-piano-sounds-chords/</link><pubDate>Sun, 22 Jul 2018 18:07:44 +0100</pubDate><guid>https://overto.eu/posts/barton-piano-sounds-chords/</guid><description>There’s a really nice sequence of jazzy chords in Paul Barton’s YouTube video &amp;#34;Piano Sounds Never Heard Before!&amp;#34; at the 7:44 mark:
-I really liked the chord progression and tried to transcribe it. You can find it here.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Over to you</title><link>https://overto.eu/</link><description>Recent content on Over to you</description><generator>Hugo</generator><language>en-ie</language><lastBuildDate>Fri, 02 Jan 2026 20:57:51 +0000</lastBuildDate><atom:link href="https://overto.eu/index.xml" rel="self" type="application/rss+xml"/><item><title>LLM 10x productivity claims VS Amdahl's Law</title><link>https://overto.eu/posts/llm-10x-productivity-claims-vs-amdahl/</link><pubDate>Fri, 02 Jan 2026 20:57:51 +0000</pubDate><guid>https://overto.eu/posts/llm-10x-productivity-claims-vs-amdahl/</guid><description>&lt;div class="paragraph"&gt;
+&lt;p&gt;Okay, I really didn’t want to add yet another post about LLMs and programming to an already tiresome sea of existing discourse, but wrote this as a comment on a LinkedIn post and thought it might be worth sharing here. The topic was about people posting hyped-up claims of 10x (or greater) productivity boosts by having LLMs write their code.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;I find the 10x (or even 100x!) claims ridiculous. Even if LLMs enabled the code to be written at &lt;em&gt;infinite speed&lt;/em&gt; and perfectly correct (which of course, it cannot), there would still be a massive problem:&lt;/p&gt;
+&lt;/div&gt;</description></item><item><title>Can we Fight Shitflation?</title><link>https://overto.eu/posts/can-we-fight-shitflation/</link><pubDate>Thu, 09 Jan 2025 22:26:54 +0000</pubDate><guid>https://overto.eu/posts/can-we-fight-shitflation/</guid><description>&lt;div class="paragraph"&gt;
+&lt;p&gt;Someone recently made a good video on the topic of &amp;#34;Shitflation&amp;#34;:&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="videoblock"&gt;
+&lt;div class="content"&gt;
+&lt;iframe width="640" height="480" src="https://www.youtube.com/embed/2JoWfQKQAzc?rel=0" frameborder="0" allowfullscreen=""&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;The video made some great points, but I was a bit disappointed that it ended on a sort of &amp;#34;there’s not much we can do, oh well&amp;#34; note, and wrote the following comment which I’d like to repeat here:&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="quoteblock"&gt;
+&lt;blockquote&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;I was disappointed with the end of the video: it isn’t true that there’s nothing we can do. Here’s what we can do:&lt;/p&gt;
+&lt;/div&gt;</description></item><item><title>Memvalid Back on Render</title><link>https://overto.eu/posts/memvalid-back-on-render/</link><pubDate>Sun, 08 Dec 2024 22:00:56 +0000</pubDate><guid>https://overto.eu/posts/memvalid-back-on-render/</guid><description>&lt;div class="paragraph"&gt;
+&lt;p&gt;Some years ago I was trying to learn some short piece of text or lyrics verbatim, and stumbled upon an article that suggested a really neat way to quiz yourself on the contents: reduce the text to only the first letter of each word, then see if you can read it back by looking at those first letters.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;This piqued my interested, so I made a tiny web application called &lt;a href="https://github.com/DestyNova/memvalid"&gt;Memvalid&lt;/a&gt; which lets you paste in some text and hide all but the first letter, revealing one word at a time with the arrow buttons or cursor keys.&lt;/p&gt;
+&lt;/div&gt;</description></item><item><title>RSSGuard without RSS: scraping with CSS selectors</title><link>https://overto.eu/posts/rssguard-scraping/</link><pubDate>Mon, 12 Aug 2024 04:41:18 +0100</pubDate><guid>https://overto.eu/posts/rssguard-scraping/</guid><description>&lt;div class="paragraph"&gt;
+&lt;p&gt;Despite the modern internet’s tendency to centralise towards a small number of big content gateways (Reddit, Twitter, Hacker News etc), I still like the feeling of independence and self-directed deliberateness that comes with &lt;a href="https://en.wikipedia.org/wiki/RSS"&gt;RSS&lt;/a&gt;. Rather than just stepping into the firehose of what the latest &amp;#34;Big Tech&amp;#34; recommender systems want to show me, it’s &lt;em&gt;me&lt;/em&gt; deciding who &lt;em&gt;I&lt;/em&gt; want to hear more from.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;These days I use &lt;a href="https://github.com/martinrotter/rssguard"&gt;RSSGuard&lt;/a&gt;, a very simple and lightweight reader for RSS/ATOM/JSON feeds.&lt;/p&gt;
+&lt;/div&gt;</description></item><item><title>How I started programming</title><link>https://overto.eu/posts/how-i-started-programming/</link><pubDate>Mon, 01 Apr 2024 10:40:44 +0100</pubDate><guid>https://overto.eu/posts/how-i-started-programming/</guid><description>&lt;div id="preamble"&gt;
+&lt;div class="sectionbody"&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;My parents got me a Commodore 64 really late in its lifespan, maybe around 1990. Although the machine felt almost magical when loading games from cassette tape, the user’s manual called out to me almost immediately. C64 BASIC was pretty poor compared to dialects on other machines, and certainly compared to older languages like Lisp and Forth. But I didn’t know about them, nor even that there was &lt;strong&gt;anything&lt;/strong&gt; else, until an uncle bought me a copy of &lt;a href="https://www.computinghistory.org.uk/det/69185/Choosing-and-using-your-home-computer-An-introductory-course"&gt;Choosing and Using Your Home Computer&lt;/a&gt; by Orbis.&lt;/p&gt;
+&lt;/div&gt;</description></item><item><title>About Me</title><link>https://overto.eu/pages/about-me/</link><pubDate>Mon, 01 Apr 2024 09:19:19 +0100</pubDate><guid>https://overto.eu/pages/about-me/</guid><description>&lt;div class="paragraph"&gt;
+&lt;p&gt;Howye! I’m Oisín, a programmer and musician living in Dublin, Ireland. Here’s a few of the things I’m into and may occasionally write something about here:&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="ulist"&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Programming in a &lt;a href="https://overto.eu/pages/languages/"&gt;bajillion different languages&lt;/a&gt;, for fun and (once upon a time) profit&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Music in many flavours, from jazz to traditional Irish tunes and old computer game soundtracks. From time to time I’ll post transcriptions of music that catches my fancy.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Complaining about things.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Projects I’m working on.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;</description></item><item><title>New Substack publication: Scéalta na hOiche</title><link>https://overto.eu/posts/substack-oiche/</link><pubDate>Mon, 01 Apr 2024 09:10:29 +0100</pubDate><guid>https://overto.eu/posts/substack-oiche/</guid><description>&lt;div class="paragraph"&gt;
+&lt;p&gt;I’ve been unemployed for over a year now, which has given me extra time to do various things. While I mostly write (extremely sporadically) about technical things that catch my fancy, I recently started a Substack publication called &lt;a href="https://oiche.substack.com"&gt;Scéalta na hOiche&lt;/a&gt; (Irish for &amp;#34;stories of the night&amp;#34;).&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;I post there (sporadically…​) with silly bedtime stories I make up with my youngest kid. Feel free to check it out in case that’s your cup of tea!&lt;/p&gt;
+&lt;/div&gt;</description></item><item><title>Startups</title><link>https://overto.eu/pages/startups/</link><pubDate>Tue, 13 Feb 2024 00:23:42 +0000</pubDate><guid>https://overto.eu/pages/startups/</guid><description>&lt;div class="paragraph"&gt;
+&lt;p&gt;Startups I’ve founded or co-founded with others.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="sect1"&gt;
+&lt;h2 id="_digifeye_style_eyes_2012_2016"&gt;Digifeye / Style-Eyes (2012-2016)&lt;/h2&gt;
+&lt;div class="sectionbody"&gt;
+&lt;div class="ulist"&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Problem: Finding the right clothes can be hard.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Answer: An app that lets the user take photos of an item of clothing (whether from a magazine, online or in the real world) and used computer vision to find visually similar products.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Business model: Initially, affiliate commission from product sales. Later, we had talks about a B2B offering, embedding the technology on retailers&amp;#39; websites, but it didn’t pan out.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Status: Dissolved&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;We shut it down after realising there wasn’t sufficient customer demand to buy products through the app.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Learnings:&lt;/p&gt;
+&lt;div class="ulist"&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Figure out earlier what implicit customer assumptions needed to be tested:&lt;/p&gt;
+&lt;div class="olist arabic"&gt;
+&lt;ol class="arabic"&gt;
+&lt;li&gt;
+&lt;p&gt;Can we find product matches good enough for our users?&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Even if the product matches are good enough, will users actually buy them?&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;</description></item><item><title>Programming languages</title><link>https://overto.eu/pages/languages/</link><pubDate>Sun, 31 Dec 2023 03:41:31 +0000</pubDate><guid>https://overto.eu/pages/languages/</guid><description>&lt;div class="paragraph"&gt;
+&lt;p&gt;Ever since getting a Commodore 64 as a kid around 1990 and reading the user’s manual from cover to cover, I’ve always enjoyed programming, and learning new languages and concepts. Here’s some of the ones I’ve played with in more recent years.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;aside&gt;
+ &lt;header&gt;
+ &lt;h4&gt;Contents&lt;/h4&gt;
+ &lt;/header&gt;
+
+ &lt;div style="border: thin dashed powderblue; background: darkslategrey"&gt;
+ &lt;nav id="TableOfContents"&gt;
+ &lt;ul&gt;
+ &lt;li&gt;&lt;a href="#_picat"&gt;Picat&lt;/a&gt;
+ &lt;ul&gt;
+ &lt;li&gt;&lt;a href="#_picat_and_satcp_solving"&gt;Picat and SAT/CP solving&lt;/a&gt;&lt;/li&gt;
+ &lt;li&gt;&lt;a href="#_optimal_plan_search_with_picats_planner"&gt;Optimal plan search with Picat’s planner&lt;/a&gt;&lt;/li&gt;
+ &lt;li&gt;&lt;a href="#_other_picat_programs_and_libraries"&gt;Other Picat programs and libraries&lt;/a&gt;&lt;/li&gt;
+ &lt;/ul&gt;
+ &lt;/li&gt;
+ &lt;li&gt;&lt;a href="#_nim"&gt;Nim&lt;/a&gt;
+ &lt;ul&gt;
+ &lt;li&gt;&lt;a href="#_nim_programs"&gt;Nim programs&lt;/a&gt;&lt;/li&gt;
+ &lt;/ul&gt;
+ &lt;/li&gt;
+ &lt;li&gt;&lt;a href="#_haskell"&gt;Haskell&lt;/a&gt;
+ &lt;ul&gt;
+ &lt;li&gt;&lt;a href="#_haskell_programs"&gt;Haskell programs&lt;/a&gt;&lt;/li&gt;
+ &lt;/ul&gt;
+ &lt;/li&gt;
+ &lt;li&gt;&lt;a href="#_urweb"&gt;Ur/web&lt;/a&gt;
+ &lt;ul&gt;
+ &lt;li&gt;&lt;a href="#_urweb_programs_utilities"&gt;Ur/web programs / utilities&lt;/a&gt;&lt;/li&gt;
+ &lt;/ul&gt;
+ &lt;/li&gt;
+ &lt;/ul&gt;
+&lt;/nav&gt;
+ &lt;/div&gt;</description></item><item><title>Gunzip into dd: don't forget `-c`</title><link>https://overto.eu/posts/gunzip-into-dd/</link><pubDate>Sun, 31 Dec 2023 03:28:37 +0000</pubDate><guid>https://overto.eu/posts/gunzip-into-dd/</guid><description>&lt;div class="paragraph"&gt;
+&lt;p&gt;Recently I was trying to copy the contents of one SD card to an identically-sized blank card, and ran into the problem of &lt;code&gt;dd&lt;/code&gt; apparently stalling when writing to the new card, writing out zero records.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;Here’s the command I used to read the first card:&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="listingblock"&gt;
+&lt;div class="content"&gt;
+&lt;pre class="highlight"&gt;&lt;code&gt;sudo dd bs=4M if=/dev/sda1 status=progress|gzip &amp;gt; wee.img.gz&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;Notice the use of &lt;code&gt;gzip&lt;/code&gt; to compress the output coming out of &lt;code&gt;dd&lt;/code&gt;. This is just to reduce the 90 GB or so of empty space on the card to (almost) nothing so my hard disk could hold the image. It didn’t have any positive or negative impact on the speed since &lt;code&gt;dd&lt;/code&gt; still had to read those blank sectors from the card, so in all it took around 90 minutes to back up the card with my laptop’s apparently slow built-in SD card reader.&lt;/p&gt;
+&lt;/div&gt;</description></item><item><title>Puzzle: Trauma Team bomb defusal #2</title><link>https://overto.eu/posts/puzzle-trauma-team-bomb-defusal/</link><pubDate>Sat, 16 Dec 2023 23:10:37 +0000</pubDate><guid>https://overto.eu/posts/puzzle-trauma-team-bomb-defusal/</guid><description>&lt;div class="paragraph"&gt;
+&lt;p&gt;One of my kids has gotten into the old Nintendo Wii game &lt;a href="https://en.wikipedia.org/wiki/Trauma_Team"&gt;Trauma Team&lt;/a&gt;, part of the &lt;a href="https://en.wikipedia.org/wiki/Category:Trauma_Center_(video_game_series)"&gt;Trauma Center&lt;/a&gt; series by Atlus. It’s much easier and less action-oriented than the previous games — New Blood and Second Opinion, and more of a visual novel game for the most part, where the previous games involved quite difficult action-puzzling and strategy in real time.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;There’s a section of the game where a series of bombs are placed, with puzzle hints left behind for disarming each bomb. Bomb number #2 has the following clues:&lt;/p&gt;
+&lt;/div&gt;</description></item><item><title>Nim: Outdated nimble.ini</title><link>https://overto.eu/posts/nimble-outdated-ini/</link><pubDate>Sat, 05 Aug 2023 19:28:22 +0100</pubDate><guid>https://overto.eu/posts/nimble-outdated-ini/</guid><description>&lt;div class="paragraph"&gt;
+&lt;p&gt;I was interested today in trying to write a simple GUI program using Nim’s [nimx] library. But even with the latest Nim (2.0.0) and Nimble (0.14.2), I ran into this:&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="listingblock"&gt;
+&lt;div class="content"&gt;
+&lt;pre class="highlight"&gt;&lt;code&gt; Reading official package list
+nimble.nim(683) getDownloadInfo
+
+ Error: Package darwin@any version not found.&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;This was confusing. I opened an issue on the nimx repo and the author pointed out that the &lt;code&gt;darwin&lt;/code&gt; package is listed &lt;a href="https://github.com/nim-lang/packages/blob/e52b18948feb1cca13ada322218aa19d03ef4fd4/packages.json#L19341C3-L19353"&gt;here&lt;/a&gt;, although I didn’t see it in &lt;a href="https://nim-lang.org/nimble/packages.json"&gt;this list&lt;/a&gt;. So I started blowing away Nimble’s local package files, then eventually found the file &lt;code&gt;~/.config/nimble/nimble.ini&lt;/code&gt; which contained URLs for multiple &lt;code&gt;package.json&lt;/code&gt; files. I can’t reproduce it here because the next thing I tried was to delete that file too, but it did seem to include a link to the Github repo.&lt;/p&gt;
+&lt;/div&gt;</description></item><item><title>Lenovo Ideapad 3 15ALC6 RAM upgrade: ignore the official docs</title><link>https://overto.eu/posts/lenovo-ideapad-3-15alc6-ram/</link><pubDate>Wed, 26 Jul 2023 18:32:44 +0100</pubDate><guid>https://overto.eu/posts/lenovo-ideapad-3-15alc6-ram/</guid><description>&lt;div class="paragraph"&gt;
+&lt;p&gt;In late 2021 I picked up a Lenovo Ideapad 3 (15ALC6), a Ryzen 7 5700U-based laptop with 16GB RAM and a nice 1TB SSD. It was surprisingly cheap for what it offered, and after it went out of stock I tried to find another but it was either unobtainable or the price had gone way up.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;Anyway, eventually I decided more RAM would be nice, since I was starting to hammer the SSD as swap. The Radeon integrated graphics unit steals around 3GB of system RAM, so the remainder wasn’t enough to comfortably run Firefox, Chromium, Defold, Inkscape and a few other apps all at the same time.&lt;/p&gt;
+&lt;/div&gt;</description></item><item><title>Defold Android build issue: Problem parsing the package</title><link>https://overto.eu/posts/defold-problem-parsing-package/</link><pubDate>Wed, 05 Jul 2023 01:59:25 +0100</pubDate><guid>https://overto.eu/posts/defold-problem-parsing-package/</guid><description>&lt;div class="paragraph"&gt;
+&lt;p&gt;While working on my first hobby gamedev project with Defold, I ran into an issue when trying to install the debug APK on my Android phone:&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="quoteblock"&gt;
+&lt;blockquote&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;There was a problem parsing the package.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/blockquote&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;Searching the Defold forums and the web didn’t produce anything obviously relevant, so I looked at the sample project and tried to figure out what was different in the project settings. Most of the configuration was the same (that is to say, default), so I tried looking at the contents of the APK with &lt;code&gt;unzip -l&lt;/code&gt;. Yes, an APK is just a zipfile that seems to follow JAR conventions.&lt;/p&gt;
+&lt;/div&gt;</description></item><item><title>Rodland Intro Chords</title><link>https://overto.eu/posts/rodland-intro-chords/</link><pubDate>Fri, 02 Jun 2023 04:32:59 +0100</pubDate><guid>https://overto.eu/posts/rodland-intro-chords/</guid><description>&lt;div class="paragraph"&gt;
+&lt;p&gt;I was watching cutscenes from the old arcade game &amp;#34;Rodland&amp;#34; and noticed a couple of chords with some nice voice leading.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="videoblock"&gt;
+&lt;div class="content"&gt;
+&lt;iframe width="640" height="320" src="https://www.youtube.com/embed/V_w9vxnAqGA?rel=0&amp;amp;start=36" frameborder="0" allowfullscreen=""&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;I’m not sure I picked out all the notes, but here’s at least a partial &lt;a href="https://overto.eu/Rodland_intro_chords.pdf"&gt;transcription&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;</description></item><item><title>Benben</title><link>https://overto.eu/posts/benben/</link><pubDate>Sun, 30 Apr 2023 22:41:11 +0100</pubDate><guid>https://overto.eu/posts/benben/</guid><description>&lt;div class="paragraph"&gt;
+&lt;p&gt;Today I was absolutely delighted to stumble upon a new command-line VGM (Video Game Music file) player called &lt;a href="https://chiselapp.com/user/MistressRemilia/repository/benben/home"&gt;Benben&lt;/a&gt;. The author mentioned it in the &lt;a href="https://forum.crystal-lang.org/t/yunosynth-v0-1-0-and-benben-v0-1-0-released/5617"&gt;Crystal programming language forum&lt;/a&gt; along with the underlying VGM playback library &lt;a href="https://chiselapp.com/user/MistressRemilia/repository/yunosynth/index"&gt;YunoSynth&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;Benben is distributed as an executable AppImage file which worked perfectly out of the box on my Pop!_OS Linux system. Here’s a video of it playing the soundtrack to the PC-98 game &amp;#34;Rusty&amp;#34;:&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="videoblock"&gt;
+&lt;div class="content"&gt;
+&lt;iframe width="640" height="480" src="https://www.youtube.com/embed/pKPR-95oY3Q?rel=0" frameborder="0" allowfullscreen=""&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;Give it a try! You can find a collection of files to test it on &lt;a href="https://vgmrips.net/packs/"&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;</description></item><item><title>BAM! and the history is gone</title><link>https://overto.eu/posts/bam-history/</link><pubDate>Tue, 18 Apr 2023 06:27:26 +0100</pubDate><guid>https://overto.eu/posts/bam-history/</guid><description>&lt;div class="paragraph"&gt;
+&lt;p&gt;A few years ago I took this photo on Barrow Street near Ringsend, Dublin. BAM were tearing down some of the old &lt;a href="https://en.wikipedia.org/wiki/Boland%27s_Mill"&gt;Boland’s Mill&lt;/a&gt; site to make way for yet more shiny fancy corporate buildings. To be fair, they did repair some of the protected buildings which are part of the city’s heritage.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="imageblock"&gt;
+&lt;div class="content"&gt;
+&lt;img src="https://res.cloudinary.com/destynova/image/upload/v1681795375/overto.eu/bam-history-is-gone_fb7sto.jpg" alt="bam history is gone fb7sto"/&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;The graffiti quote is a pleasing reference to the catchphrase heard at the end of obnoxious &amp;#34;Cillit Bang&amp;#34; ads that used to run on UK and Irish TV:&lt;/p&gt;
+&lt;/div&gt;</description></item><item><title>Playing Revenant using Wine and Proton</title><link>https://overto.eu/posts/revenant-wine-proton/</link><pubDate>Sun, 16 May 2021 02:11:51 +0100</pubDate><guid>https://overto.eu/posts/revenant-wine-proton/</guid><description>&lt;div class="paragraph"&gt;
+&lt;p&gt;&lt;em&gt;TL;DR: I tried to run an old game called Revenant on Linux using both WINE and Proton, but both had problems. Here’s how I combined the powers of both to run the game on my Ubuntu machine.&lt;/em&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="sect1"&gt;
+&lt;h2 id="_background"&gt;Background&lt;/h2&gt;
+&lt;div class="sectionbody"&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;The &lt;a href="https://www.winehq.org/"&gt;WINE project&lt;/a&gt; is an emulation layer that enables you to run a large amount of Windows programs on a Unix system. It can be difficult to configure, but it’s a fairly mature project that even supports some modern Windows games.&lt;/p&gt;
+&lt;/div&gt;</description></item><item><title>Learning</title><link>https://overto.eu/pages/learning/</link><pubDate>Sun, 19 Apr 2020 17:26:19 +0100</pubDate><guid>https://overto.eu/pages/learning/</guid><description>&lt;div class="paragraph"&gt;
+&lt;p&gt;Experiences with tutorials, books or courses I’ve taken in recent times.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="sect1"&gt;
+&lt;h2 id="_the_haskell_book"&gt;&lt;a href="https://haskellbook.com/"&gt;The Haskell book&lt;/a&gt;&lt;/h2&gt;
+&lt;div class="sectionbody"&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;&lt;em&gt;October 2017 — 2020&lt;/em&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;This is a very well-written book. But I found it hard to make progress quickly because some of the exercises were quite difficult and I felt compelled to complete them before moving on, although I think the author specifically advises to not get stuck on them and just move on if need be.&lt;/p&gt;
+&lt;/div&gt;</description></item><item><title>Living with dwm</title><link>https://overto.eu/posts/dwm-extras/</link><pubDate>Sat, 04 Apr 2020 17:19:11 +0100</pubDate><guid>https://overto.eu/posts/dwm-extras/</guid><description>&lt;div class="paragraph"&gt;
+&lt;p&gt;You may have heard of tiling window managers like &lt;a href="https://dwm.suckless.org"&gt;dwm&lt;/a&gt; or &lt;a href="https://i3wm.org/"&gt;i3&lt;/a&gt;. These are pretty interesting from a nerdy elitist hacker perspective (&amp;#34;I know Unix!&amp;#34;), but can also look quite nice and make good use of on-screen space. I switched to dwm yesterday and enjoyed spending some time to figure out the absolute basics. On my old, small laptop though, I realised that it suits me best to just have a separate tag per application. Tags are like workspaces, but more flexible; in my case though it’s just a separate desktop for each app.&lt;/p&gt;
+&lt;/div&gt;</description></item><item><title>Software</title><link>https://overto.eu/pages/software/</link><pubDate>Sat, 14 Mar 2020 21:33:00 +0100</pubDate><guid>https://overto.eu/pages/software/</guid><description>&lt;div class="paragraph"&gt;
+&lt;p&gt;Some software I’ve written and released as open-source:&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="ulist"&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="https://github.com/DestyNova/nimplication"&gt;Nimplication&lt;/a&gt; — a toy &lt;a href="https://en.wikipedia.org/wiki/SAT_solver"&gt;SAT solver&lt;/a&gt; using the &lt;a href="https://en.wikipedia.org/wiki/DPLL_algorithm"&gt;DPLL algorithm&lt;/a&gt; (and maybe &lt;a href="https://cse442-17f.github.io/Conflict-Driven-Clause-Learning"&gt;CDCL&lt;/a&gt; in future).&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="https://memvalid.overto.eu"&gt;memvalid&lt;/a&gt; (&lt;a href="https://github.com/DestyNova/memvalid"&gt;source&lt;/a&gt;) — memorise prose or lyrics, or test that you can reconstruct a completed piece of text by just looking at the first letter of each word, and revealing one word at a time. Implemented in &lt;a href="https://github.com/urweb/urweb"&gt;Ur/web&lt;/a&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="https://github.com/DestyNova/vfconcat"&gt;vfconcat&lt;/a&gt; — generate videos from PNG frames with inconsistent durations. Timings are recovered from the difference in consecutive frame timestamps, producing a control file for &lt;a href="https://ffmpeg.org"&gt;ffmpeg&lt;/a&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="https://fun.overto.eu/metron"&gt;Metron&lt;/a&gt; (&lt;a href="https://github.com/DestyNova/fun/tree/main/docs/metron"&gt;source&lt;/a&gt;) — a minimal implementation of a metronome that allows you to only play the first of every &lt;em&gt;n&lt;/em&gt; beats. Uses the HTML5 webaudio API to play clicks.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="https://pitcher.overto.eu"&gt;Pitcher&lt;/a&gt; (&lt;a href="https://github.com/DestyNova/pitcher"&gt;source&lt;/a&gt;) — a collection of exercises for training and testing absolute pitch (also known as perfect pitch). I trained with it for a while and didn’t make much progress, and took part in a research study in training absolute pitch via another method which was much more effective. But I still use the pitch test from time to time to check how reliable my sense of pitch is (my mean absolute error is usually around 0.2-0.5 semitones). Implemented in &lt;a href="https://elm-lang.org"&gt;Elm&lt;/a&gt; and uses the HTML5 webaudio API to control sounds.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="https://shotclock.overto.eu"&gt;Shotclock&lt;/a&gt; (&lt;a href="https://github.com/DestyNova/shotclock"&gt;source&lt;/a&gt;) — a shot clock for snooker shootout games. Implemented in &lt;a href="https://elm-lang.org"&gt;Elm&lt;/a&gt; and uses the HTML5 webaudio API to control sounds.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="https://iconic.overto.eu"&gt;The Iconic Memory Game&lt;/a&gt; (&lt;a href="https://github.com/DestyNova/iconic-memory-game"&gt;source&lt;/a&gt;) — a memory game based on the tachistoscope experiments by George Sperling in the 1960s which sought to characterise the visual short-term memory system. Implemented in &lt;a href="https://elm-lang.org"&gt;Elm&lt;/a&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="https://bw.overto.eu"&gt;Blinkenwords&lt;/a&gt; (&lt;a href="https://github.com/DestyNova/blinkenwords-elm"&gt;source&lt;/a&gt;) — a minimalist rapid serial visual presentation (RSVP) reading utility. Implemented in &lt;a href="https://elm-lang.org"&gt;Elm&lt;/a&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="https://github.com/DestyNova/Gluap"&gt;Gluap&lt;/a&gt; — a stalled implementation of the PushGP stack-based genetic programming framework. Implemented in &lt;a href="https://www.lua.org/"&gt;Lua&lt;/a&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;</description></item><item><title>Jeff Schneider's Sick R&amp;B Chords</title><link>https://overto.eu/posts/jeff-schneider-sick-rnb-chords/</link><pubDate>Tue, 24 Jul 2018 22:17:52 +0100</pubDate><guid>https://overto.eu/posts/jeff-schneider-sick-rnb-chords/</guid><description>&lt;div class="paragraph"&gt;
+&lt;p&gt;Jeff Schneider has some excellent instructive content on YouTube, and takes the time to explain some of the theory behind the music. Here, he plays a lush neo-soul chord progression, walks us through a nice tritone substitution and shows how we can use secondary dominants to introduce chords from outside the key.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="videoblock"&gt;
+&lt;div class="content"&gt;
+&lt;iframe width="640" height="320" src="https://www.youtube.com/embed/Scuot8Ts5Tg?rel=0" frameborder="0" allowfullscreen=""&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;Here’s a &lt;a href="https://overto.eu/Schneider_RnB_chords.pdf"&gt;transcription&lt;/a&gt;, made much easier than usual thanks to Jeff’s animated keyboard.&lt;/p&gt;
+&lt;/div&gt;</description></item><item><title>Jazz chords from Paul Barton's "Piano Sounds Never Heard Before!"</title><link>https://overto.eu/posts/barton-piano-sounds-chords/</link><pubDate>Sun, 22 Jul 2018 18:07:44 +0100</pubDate><guid>https://overto.eu/posts/barton-piano-sounds-chords/</guid><description>&lt;div class="paragraph"&gt;
+&lt;p&gt;There’s a really nice sequence of jazzy chords in Paul Barton’s YouTube video &amp;#34;Piano Sounds Never Heard Before!&amp;#34; at the 7:44 mark:&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="videoblock"&gt;
+&lt;div class="content"&gt;
+&lt;iframe width="640" height="320" src="https://www.youtube.com/embed/zHWex94-mHg?rel=0&amp;amp;start=464" frameborder="0" allowfullscreen=""&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;I really liked the chord progression and tried to transcribe it. You can find it &lt;a href="https://overto.eu/Mystery_Jazz_Progression__Paul_Barton.pdf"&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;</description></item></channel></rss>
