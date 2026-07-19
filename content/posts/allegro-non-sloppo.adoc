@@ -1,0 +1,30 @@
+---
+title: "Allegro non Sloppo: LLM-free software and programming toolchains"
+date: 2026-07-18T16:23:26+01:00
+draft: false
+tags: ["tech", "programming", "ai"]
+---
+
+When ChatGPT came out, I tried it as a "coding assistant" and soon discovered that it sucked every ounce of joy out of the craft for me. I could feel my critical thinking and problem-solving skills weaken as the machine continually offered vaguely plausible suggestions on how to proceed. After a few weeks I hated it so much that I stopped using it, except as a sort of semantic search engine for academic papers. It turned out to be terrible at that as well, either fabricating claims made within real papers, or citing papers that didn't exist. Given recent indications of mass-scale academic fraud in meta-reviews and journal-published research papers citing non-existent research, it's fair to assume that https://blog.bgcarlisle.com/2025/05/16/a-plausible-scalable-and-slightly-wrong-black-box-why-large-language-models-are-a-fascist-technology-that-cannot-be-redeemed/[LLMs are not fit for this purpose and never will be].
+
+== Why do I dislike LLMs?
+
+Despite having done my doctorate on an AI-related topic (pre-LLM/genAI era), I've become more and more wary of any LLM-generated "content", including software, for at least the following reasons:
+
+1. They don't reason at all, and instead act as a single-step autocomplete. This means they produce plausible-looking garbage. "Chain of thought" modes are utter bollox and only magnify errors.
+2. They produce *tons* of code output very quickly. This is touted as a benefit, but is clearly an anti-feature since humans quickly stop paying attention to their outputs. I can't trust code produced by such a process and neither should you.
+3. They encourage programmers to cede more and more decisions to the machine, wasting whatever effortful human craft and thinking they had left to offer.
+4. The data centres that power them use enormous amounts of power and water, driving prices of both up for normal people (and forget about RAM and GPUs).
+5. Their main beneficiaries are lazy, greedy company execs who want to save pennies by firing staff with zero concern for their livelihoods or the impact on customers (who are growing tired of corporate slop).
+6. It's driving experienced people who cared about the craft of software development to retire or quit the industry, leaving the field worse off.
+
+Also see https://gist.github.com/richhickey/ea94e3741ff0a4e3af55b9fe6287887f[Rich Hickey's "Thanks, AI!"] post which manages to say more in fewer words.
+
+== The trap, and some ways out of it
+
+Unfortunately, due to laziness and greed, LLM-generated code has found its way into more and more projects, even the Linux kernel and programming language toolchains like Go, Crystal, Nim (nooooo, I liked that one) and Rust. For those of us who want to minimise the impact of these thought-terminating slop machines on our lives, how do we avoid them?
+
+First, let me point you to the excellent https://codeberg.org/ethical-foss/open-slopware[open-slopware repo] which lists projects that have been tainted by LLMs (whether code itself or PR reviews by Copilot etc), and alternative non-slop projects where possible. There are quite a few alternatives tools and programming languages that either don't __yet__ use LLMs, or even have an explicit no-LLM-contributions policy (e.g. Clojure, Chicken Scheme, Zig and somewhat surprisingly, Java).
+
+Now: "This is all moot; your operating system almost certainly has LLM-generated code in it by now", you might say. Well, that would be defeatist and silly, but in any case there are still a few alternative operating systems which haven't been touched, including Haiku and several BSDs which also have an anti-LLM policy.
+There are alternatives *now*, and there's never been a better time to get involved and create more options.
