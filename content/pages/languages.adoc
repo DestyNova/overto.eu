@@ -42,7 +42,7 @@ Picat also includes a `planner` module which searches for optimal action plans b
 
 This language crossed my radar a few years ago with people describing it as "Python-like" but with static, inferred types, and much faster. Upon playing with it, I decided it wasn't very Python-like (check out https://github.com/actonlang/acton[Acton] if you're really into that though), but it certainly was much faster and had static type inference. My brain seemed to put it into a similar hash slot as https://crystal-lang.org/[Crystal] even though they are different in many ways. Crystal is a little more terse and less syntactically noisy, but Nim is really elegant and incredibly memory efficient. The slightly higher level of syntactic/type noise (e.g. needing to declare types in function headers) provides extremely fast compile times in return, and the standard library is fantastic, at least for my needs so far. The default package manager https://github.com/nim-lang/nimble[Nimble] is also excellent.
 
-~~At the moment I'd say Nim is my favourite general-purpose language to work with, presenting an excellent balance between conciseness, expressivity, reliability, performance and usability.~~
++++<del>+++At the moment I'd say Nim is my favourite general-purpose language to work with, presenting an excellent balance between conciseness, expressivity, reliability, performance and usability.+++</del>+++ 
 
 __(Note: As of mid-2026 I stopped using Nim because the project has allowed LLM-generated code into the compiler and standard library https://github.com/nim-lang/Nim/pull/25832#issuecomment-4507847576[without a second thought]. I can't trust code produced by LLMs or projects that rely on it.)__
 
